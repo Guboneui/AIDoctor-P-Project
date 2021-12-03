@@ -3,40 +3,54 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인 홈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o1-Pb-nyd">
-                                <rect key="frame" x="183" y="437.5" width="48.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoColor" translatesAutoresizingMaskIntoConstraints="NO" id="osW-Nu-hI9">
+                                <rect key="frame" x="17" y="25" width="148" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="osW-Nu-hI9" secondAttribute="height" id="Cuo-7I-dpm"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-Yy-h3x">
+                                <rect key="frame" x="0.0" y="173" width="414" height="640"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0o1-Pb-nyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bsv-Bc-X3I"/>
-                            <constraint firstItem="0o1-Pb-nyd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vjc-7p-IwJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DVf-Yy-h3x" secondAttribute="bottom" id="0zL-zE-4J6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osW-Nu-hI9" secondAttribute="trailing" constant="249" id="H3N-kV-YiY"/>
+                            <constraint firstItem="DVf-Yy-h3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R6t-Sp-4hg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DVf-Yy-h3x" secondAttribute="trailing" id="inK-9a-eGl"/>
+                            <constraint firstItem="DVf-Yy-h3x" firstAttribute="top" secondItem="osW-Nu-hI9" secondAttribute="bottom" id="kL3-QN-M05"/>
+                            <constraint firstItem="osW-Nu-hI9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="mtC-bf-fH5"/>
+                            <constraint firstItem="osW-Nu-hI9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="yQi-Pg-DMd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="star" catalog="system" id="JC1-SI-392"/>
+                    <tabBarItem key="tabBarItem" title="" image="homeDefault" selectedImage="homeSelected" id="JC1-SI-392"/>
+                    <connections>
+                        <outlet property="homeTableView" destination="DVf-Yy-h3x" id="cpv-EV-R7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="-281"/>
         </scene>
-        <!--Item-->
+        <!--Third View Controller-->
         <scene sceneID="ZFB-Uq-kUO">
             <objects>
                 <viewController id="Owc-PV-RJX" customClass="ThirdViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,13 +72,13 @@
                             <constraint firstItem="iOU-MR-vWv" firstAttribute="centerY" secondItem="U7D-1m-65l" secondAttribute="centerY" id="tP9-gW-oay"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="sun.max" catalog="system" id="PYF-Ti-dqK"/>
+                    <tabBarItem key="tabBarItem" title="" image="settingDefault" selectedImage="settingSelected" id="PYF-Ti-dqK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hw-Z8-a9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="620"/>
         </scene>
-        <!--Item-->
+        <!--Second View Controller-->
         <scene sceneID="Mri-xf-LDY">
             <objects>
                 <viewController restorationIdentifier="SecondViewController" storyboardIdentifier="SecondViewController" id="HZu-93-pGg" customClass="SecondViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,8 +100,8 @@
                             <constraint firstItem="8YZ-BC-cOU" firstAttribute="centerY" secondItem="l6Q-DM-qXd" secondAttribute="centerY" id="wlf-Bu-n8I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="moon" catalog="system" id="SYa-x7-yTj">
-                        <inset key="imageInsets" minX="0.0" minY="-30" maxX="0.0" maxY="0.0"/>
+                    <tabBarItem key="tabBarItem" title="" image="homeDoctor" id="SYa-x7-yTj">
+                        <inset key="imageInsets" minX="0.0" minY="950" maxX="0.0" maxY="1000"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                 </viewController>
@@ -98,6 +112,7 @@
         <!--Test View Controller-->
         <scene sceneID="FZ7-Lk-EXi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NZ-cG-pKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="TestViewController" storyboardIdentifier="TestViewController" id="ozQ-8b-gkz" customClass="TestViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4JW-nc-E8q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -118,7 +133,6 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0NZ-cG-pKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2625" y="127"/>
         </scene>
@@ -147,7 +161,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ePY-hg-t7t">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="primary2"/>
+                        <color key="barTintColor" name="primary2"/>
+                        <color key="selectedImageTintColor" name="primary2"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5Ol-l1-AlE"/>
@@ -161,9 +178,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="moon" catalog="system" width="128" height="121"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="homeDefault" width="30" height="30"/>
+        <image name="homeDoctor" width="110" height="110"/>
+        <image name="homeSelected" width="30" height="30"/>
+        <image name="logoColor" width="2000" height="2000"/>
+        <image name="settingDefault" width="30" height="30"/>
+        <image name="settingSelected" width="30" height="30"/>
+        <namedColor name="primary2">
+            <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */; };
 		2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */; };
-		2C9B1AE22757C2FF006FCCCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE12757C2FF006FCCCA /* ViewController.swift */; };
+		2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */; };
 		2C9B1AE52757C2FF006FCCCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE32757C2FF006FCCCA /* Main.storyboard */; };
 		2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE62757C300006FCCCA /* Assets.xcassets */; };
 		2C9B1AEA2757C300006FCCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE82757C300006FCCCA /* LaunchScreen.storyboard */; };
@@ -21,6 +21,18 @@
 		2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */; };
 		2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */; };
 		2CCFA392275A616000B97D2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA391275A616000B97D2A /* UIViewController.swift */; };
+		2CCFA39A275A73A200B97D2A /* CovidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA398275A73A200B97D2A /* CovidTableViewCell.swift */; };
+		2CCFA39B275A73A200B97D2A /* CovidTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA399275A73A200B97D2A /* CovidTableViewCell.xib */; };
+		2CCFA39E275A77CE00B97D2A /* DiseaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA39C275A77CE00B97D2A /* DiseaseTableViewCell.swift */; };
+		2CCFA39F275A77CE00B97D2A /* DiseaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA39D275A77CE00B97D2A /* DiseaseTableViewCell.xib */; };
+		2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A0275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift */; };
+		2CCFA3A3275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A1275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib */; };
+		2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A4275A80F600B97D2A /* HospitalTableViewCell.swift */; };
+		2CCFA3A7275A80F600B97D2A /* HospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A5275A80F600B97D2A /* HospitalTableViewCell.xib */; };
+		2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A8275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift */; };
+		2CCFA3AB275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A9275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib */; };
+		2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3AC275A882D00B97D2A /* WhiteLabelTableViewCell.swift */; };
+		2CCFA3AF275A882D00B97D2A /* WhiteLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3AD275A882D00B97D2A /* WhiteLabelTableViewCell.xib */; };
 		F9C20336193ACC9A5CA33374 /* Pods_AIDoctor_P_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E7E59E5EAA3108F4B0C55 /* Pods_AIDoctor_P_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +41,7 @@
 		2C9B1ADA2757C2FF006FCCCA /* AIDoctor-P Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIDoctor-P Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C9B1AE12757C2FF006FCCCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C9B1AE42757C2FF006FCCCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C9B1AE62757C300006FCCCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9B1AE92757C300006FCCCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +54,18 @@
 		2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDoctorLog.swift; sourceTree = "<group>"; };
 		2CCFA391275A616000B97D2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2CCFA398275A73A200B97D2A /* CovidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTableViewCell.swift; sourceTree = "<group>"; };
+		2CCFA399275A73A200B97D2A /* CovidTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidTableViewCell.xib; sourceTree = "<group>"; };
+		2CCFA39C275A77CE00B97D2A /* DiseaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseTableViewCell.swift; sourceTree = "<group>"; };
+		2CCFA39D275A77CE00B97D2A /* DiseaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiseaseTableViewCell.xib; sourceTree = "<group>"; };
+		2CCFA3A0275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2CCFA3A1275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiseaseDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2CCFA3A4275A80F600B97D2A /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		2CCFA3A5275A80F600B97D2A /* HospitalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalTableViewCell.xib; sourceTree = "<group>"; };
+		2CCFA3A8275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CCFA3A9275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		2CCFA3AC275A882D00B97D2A /* WhiteLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLabelTableViewCell.swift; sourceTree = "<group>"; };
+		2CCFA3AD275A882D00B97D2A /* WhiteLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhiteLabelTableViewCell.xib; sourceTree = "<group>"; };
 		55ECFB95D8D7D8498B2D495D /* Pods-AIDoctor-P Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDoctor-P Project.debug.xcconfig"; path = "Target Support Files/Pods-AIDoctor-P Project/Pods-AIDoctor-P Project.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3441897AE16A618214297D /* Pods-AIDoctor-P Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDoctor-P Project.release.xcconfig"; path = "Target Support Files/Pods-AIDoctor-P Project/Pods-AIDoctor-P Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,15 +103,10 @@
 		2C9B1ADC2757C2FF006FCCCA /* AIDoctor-P Project */ = {
 			isa = PBXGroup;
 			children = (
+				2CCFA393275A708C00B97D2A /* Extension */,
 				2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */,
-				2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */,
-				2CCFA391275A616000B97D2A /* UIViewController.swift */,
 				2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */,
-				2C9B1AE12757C2FF006FCCCA /* ViewController.swift */,
-				2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */,
-				2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */,
-				2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */,
-				2C9B1AF72757C679006FCCCA /* TestViewController.swift */,
+				2CCFA394275A709F00B97D2A /* View */,
 				2C9B1AF12757C3DD006FCCCA /* MainTabbarController.swift */,
 				2C9B1AE32757C2FF006FCCCA /* Main.storyboard */,
 				2CCFA38B275A492800B97D2A /* Login.storyboard */,
@@ -96,6 +115,63 @@
 				2C9B1AEB2757C300006FCCCA /* Info.plist */,
 			);
 			path = "AIDoctor-P Project";
+			sourceTree = "<group>";
+		};
+		2CCFA393275A708C00B97D2A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFA391275A616000B97D2A /* UIViewController.swift */,
+				2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2CCFA394275A709F00B97D2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFA395275A70AA00B97D2A /* Login */,
+				2CCFA396275A70B300B97D2A /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CCFA395275A70AA00B97D2A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2CCFA396275A70B300B97D2A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFA397275A738C00B97D2A /* Home */,
+				2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */,
+				2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */,
+				2C9B1AF72757C679006FCCCA /* TestViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2CCFA397275A738C00B97D2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */,
+				2CCFA398275A73A200B97D2A /* CovidTableViewCell.swift */,
+				2CCFA399275A73A200B97D2A /* CovidTableViewCell.xib */,
+				2CCFA39C275A77CE00B97D2A /* DiseaseTableViewCell.swift */,
+				2CCFA39D275A77CE00B97D2A /* DiseaseTableViewCell.xib */,
+				2CCFA3A0275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift */,
+				2CCFA3A1275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib */,
+				2CCFA3A4275A80F600B97D2A /* HospitalTableViewCell.swift */,
+				2CCFA3A5275A80F600B97D2A /* HospitalTableViewCell.xib */,
+				2CCFA3A8275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift */,
+				2CCFA3A9275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib */,
+				2CCFA3AC275A882D00B97D2A /* WhiteLabelTableViewCell.swift */,
+				2CCFA3AD275A882D00B97D2A /* WhiteLabelTableViewCell.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B8E06F78B9644E9921781F79 /* Frameworks */ = {
@@ -176,8 +252,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCFA38C275A492800B97D2A /* Login.storyboard in Resources */,
+				2CCFA3A7275A80F600B97D2A /* HospitalTableViewCell.xib in Resources */,
+				2CCFA39B275A73A200B97D2A /* CovidTableViewCell.xib in Resources */,
+				2CCFA3AB275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib in Resources */,
+				2CCFA39F275A77CE00B97D2A /* DiseaseTableViewCell.xib in Resources */,
 				2C9B1AEA2757C300006FCCCA /* LaunchScreen.storyboard in Resources */,
+				2CCFA3AF275A882D00B97D2A /* WhiteLabelTableViewCell.xib in Resources */,
 				2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */,
+				2CCFA3A3275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib in Resources */,
 				2C9B1AE52757C2FF006FCCCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,13 +314,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9B1AF82757C679006FCCCA /* TestViewController.swift in Sources */,
-				2C9B1AE22757C2FF006FCCCA /* ViewController.swift in Sources */,
+				2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */,
+				2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */,
 				2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */,
 				2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */,
+				2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */,
 				2CCFA392275A616000B97D2A /* UIViewController.swift in Sources */,
 				2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */,
+				2CCFA39E275A77CE00B97D2A /* DiseaseTableViewCell.swift in Sources */,
+				2CCFA39A275A73A200B97D2A /* CovidTableViewCell.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
 				2C9B1AF42757C63D006FCCCA /* SecondViewController.swift in Sources */,
+				2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */,
+				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
 				2C9B1AF62757C646006FCCCA /* ThirdViewController.swift in Sources */,
 				2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */,
 			);

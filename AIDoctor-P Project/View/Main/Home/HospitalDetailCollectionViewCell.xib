@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HospitalDetailCollectionViewCell" id="gTV-IL-0wX" customClass="HospitalDetailCollectionViewCell" customModule="AIDoctor_P_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="255" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-Lc-1eF">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="IKJ-Lc-1eF" secondAttribute="height" id="ARb-0I-fq3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="치과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-Ky-rSX">
+                        <rect key="frame" x="0.0" y="155" width="150" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" name="gray4"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="복정그린치과의원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4N-XD-k3f">
+                        <rect key="frame" x="0.0" y="174.5" width="150" height="16.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="7cw-94-NWQ">
+                        <rect key="frame" x="0.0" y="196" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="GCy-nz-TbY"/>
+                            <constraint firstAttribute="height" constant="24" id="hU4-22-kSA"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewX-Qc-0jw">
+                        <rect key="frame" x="117" y="202" width="33" height="12"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="더보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAF-iC-Lb7">
+                                <rect key="frame" x="0.0" y="0.0" width="21" height="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
+                                <color key="textColor" name="primary2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="tOZ-bu-L6h">
+                                <rect key="frame" x="21" y="0.0" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="751-49-AFe"/>
+                                    <constraint firstAttribute="height" constant="12" id="ZzJ-WB-EUg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="경기도 성남시 수정구 복정동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12q-Cd-ztg">
+                        <rect key="frame" x="24" y="202" width="88" height="12"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                        <color key="textColor" name="gray4"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="IKJ-Lc-1eF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0C6-80-hH0"/>
+                <constraint firstAttribute="trailing" secondItem="ewX-Qc-0jw" secondAttribute="trailing" id="1aU-nt-8Cn"/>
+                <constraint firstAttribute="trailing" secondItem="IKJ-Lc-1eF" secondAttribute="trailing" id="4oS-fx-cd1"/>
+                <constraint firstItem="12q-Cd-ztg" firstAttribute="leading" secondItem="7cw-94-NWQ" secondAttribute="trailing" id="7dQ-zZ-ozd"/>
+                <constraint firstAttribute="trailing" secondItem="o4N-XD-k3f" secondAttribute="trailing" id="KJz-7c-PNV"/>
+                <constraint firstItem="7cw-94-NWQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LeH-bs-arE"/>
+                <constraint firstItem="2m5-Ky-rSX" firstAttribute="top" secondItem="IKJ-Lc-1eF" secondAttribute="bottom" constant="5" id="Lqw-pI-k8F"/>
+                <constraint firstItem="o4N-XD-k3f" firstAttribute="top" secondItem="2m5-Ky-rSX" secondAttribute="bottom" constant="5" id="N79-Ym-S6U"/>
+                <constraint firstItem="12q-Cd-ztg" firstAttribute="centerY" secondItem="7cw-94-NWQ" secondAttribute="centerY" id="NAy-3g-yNe"/>
+                <constraint firstItem="IKJ-Lc-1eF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ah6-55-waQ"/>
+                <constraint firstItem="o4N-XD-k3f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eRJ-Qm-IRs"/>
+                <constraint firstItem="2m5-Ky-rSX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gTt-sS-HPx"/>
+                <constraint firstItem="ewX-Qc-0jw" firstAttribute="centerY" secondItem="7cw-94-NWQ" secondAttribute="centerY" id="oCa-Wx-yYh"/>
+                <constraint firstAttribute="bottom" secondItem="7cw-94-NWQ" secondAttribute="bottom" id="tHh-sC-3BN"/>
+                <constraint firstItem="ewX-Qc-0jw" firstAttribute="leading" secondItem="12q-Cd-ztg" secondAttribute="trailing" constant="5" id="tR9-Dj-RgH"/>
+                <constraint firstItem="7cw-94-NWQ" firstAttribute="top" secondItem="o4N-XD-k3f" secondAttribute="bottom" constant="5" id="uKe-cu-QyB"/>
+                <constraint firstAttribute="trailing" secondItem="2m5-Ky-rSX" secondAttribute="trailing" id="ztb-ek-hzG"/>
+            </constraints>
+            <size key="customSize" width="216" height="368"/>
+            <point key="canvasLocation" x="252.17391304347828" y="216.29464285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="location" width="24" height="24"/>
+        <image name="next" width="12" height="12"/>
+        <image name="test" width="300" height="300"/>
+        <namedColor name="gray4">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary2">
+            <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
