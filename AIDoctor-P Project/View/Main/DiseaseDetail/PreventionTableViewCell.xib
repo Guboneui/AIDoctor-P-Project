@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreventionTableViewCell" rowHeight="239" id="KGk-i7-Jjw" customClass="PreventionTableViewCell" customModule="AIDoctor_P_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="예방요령" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDM-yy-KkP">
+                        <rect key="frame" x="30" y="15" width="260" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="textColor" name="primary2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tc-C3-K7g">
+                        <rect key="frame" x="30" y="56" width="260" height="168"/>
+                        <string key="text">∙ 예방접종(매년 10~12월)을 맞도록 합시다.
+(70~90% 예방효과)
+∙ 개인 위생 수칙을 꼭 지킵시다.
+∙ 가급적 공공장소 방문 자제 (호흡기 증상자 · 마스크 착용)
+∙외출 후 손씻고 양치질 하기
+∙ 기침, 재채기시 손수건이나 휴지 등으로 입을 가리는 예절 준수
+∙ 충분한 휴식과 영양 섭취</string>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" name="gray4"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kDM-yy-KkP" secondAttribute="trailing" constant="30" id="15T-Uh-s2n"/>
+                    <constraint firstItem="kDM-yy-KkP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="QEN-bL-Bpd"/>
+                    <constraint firstItem="8Tc-C3-K7g" firstAttribute="top" secondItem="kDM-yy-KkP" secondAttribute="bottom" constant="20" id="UjA-YO-H8I"/>
+                    <constraint firstItem="kDM-yy-KkP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="kF3-qY-2dJ"/>
+                    <constraint firstAttribute="trailing" secondItem="8Tc-C3-K7g" secondAttribute="trailing" constant="30" id="ndz-Cr-e49"/>
+                    <constraint firstAttribute="bottom" secondItem="8Tc-C3-K7g" secondAttribute="bottom" constant="15" id="uRf-iq-l2e"/>
+                    <constraint firstItem="8Tc-C3-K7g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="znP-2s-Bto"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="131.8840579710145" y="175.11160714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="gray4">
+            <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary2">
+            <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

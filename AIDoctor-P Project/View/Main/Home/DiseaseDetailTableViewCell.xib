@@ -84,6 +84,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="mainBaseView" destination="sqH-TV-ARg" id="IBq-Nt-4Fl"/>
+                <outlet property="showMoreStackView" destination="sOf-rB-GhR" id="o59-7U-AYK"/>
                 <outlet property="topBaseView" destination="KT9-Ic-8lI" id="CVO-l5-M1i"/>
             </connections>
             <point key="canvasLocation" x="166.66666666666669" y="118.52678571428571"/>

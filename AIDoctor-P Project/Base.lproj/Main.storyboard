@@ -24,7 +24,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-Yy-h3x">
-                                <rect key="frame" x="0.0" y="173" width="414" height="640"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
@@ -36,7 +36,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osW-Nu-hI9" secondAttribute="trailing" constant="249" id="H3N-kV-YiY"/>
                             <constraint firstItem="DVf-Yy-h3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R6t-Sp-4hg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DVf-Yy-h3x" secondAttribute="trailing" id="inK-9a-eGl"/>
-                            <constraint firstItem="DVf-Yy-h3x" firstAttribute="top" secondItem="osW-Nu-hI9" secondAttribute="bottom" id="kL3-QN-M05"/>
+                            <constraint firstItem="DVf-Yy-h3x" firstAttribute="top" secondItem="osW-Nu-hI9" secondAttribute="bottom" constant="-25" id="kL3-QN-M05"/>
                             <constraint firstItem="osW-Nu-hI9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="mtC-bf-fH5"/>
                             <constraint firstItem="osW-Nu-hI9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="yQi-Pg-DMd"/>
                         </constraints>
@@ -49,6 +49,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="-281"/>
+        </scene>
+        <!--Disease View Controller-->
+        <scene sceneID="xtB-Ak-Qjw">
+            <objects>
+                <viewController restorationIdentifier="DiseaseViewController" storyboardIdentifier="DiseaseViewController" id="zkm-YC-OAY" customClass="DiseaseViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hZf-o2-CMb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WIT-rx-myN">
+                                <rect key="frame" x="0.0" y="49" width="414" height="847"/>
+                                <color key="backgroundColor" name="gray1"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cVD-ON-I9j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WIT-rx-myN" firstAttribute="leading" secondItem="cVD-ON-I9j" secondAttribute="leading" id="Gav-ha-CZ6"/>
+                            <constraint firstItem="cVD-ON-I9j" firstAttribute="trailing" secondItem="WIT-rx-myN" secondAttribute="trailing" id="dVm-yf-beL"/>
+                            <constraint firstItem="WIT-rx-myN" firstAttribute="top" secondItem="cVD-ON-I9j" secondAttribute="top" constant="5" id="vaY-wg-IfV"/>
+                            <constraint firstAttribute="bottom" secondItem="WIT-rx-myN" secondAttribute="bottom" id="zD2-Zk-xEH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="WIT-rx-myN" id="T1d-Hn-XV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6U-zT-bK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.6376811594205" y="-636.16071428571422"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="ZFB-Uq-kUO">
@@ -184,6 +215,9 @@
         <image name="logoColor" width="2000" height="2000"/>
         <image name="settingDefault" width="30" height="30"/>
         <image name="settingSelected" width="30" height="30"/>
+        <namedColor name="gray1">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary2">
             <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

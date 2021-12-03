@@ -13,7 +13,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNavigationBar()
         setTableView()
+    }
+    
+    func setNavigationBar() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
     func setTableView() {
@@ -44,6 +52,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseTableViewCell", for: indexPath) as! DiseaseTableViewCell
             cell.selectionStyle = .none
+            cell.delegate = self
             return cell
         } else if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalTableViewCell", for: indexPath) as! HospitalTableViewCell
@@ -58,3 +67,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension HomeViewController: DiseaseDetailViewSecondDelegate {
+    func goDiseaseView() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let diseaseDetailView = storyBoard.instantiateViewController(withIdentifier: "DiseaseViewController")
+        
+        self.navigationController?.pushViewController(diseaseDetailView, animated: true)
+    }
+    
+    
+}

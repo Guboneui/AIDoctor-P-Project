@@ -7,10 +7,18 @@
 
 import UIKit
 
+protocol DiseaseDetailViewFirstDelegate: AnyObject {
+    func goDiseaseView()
+}
+
+
 class DiseaseDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var topBaseView: UIView!
     @IBOutlet weak var mainBaseView: UIView!
+    @IBOutlet weak var showMoreStackView: UIStackView!
+    
+    weak var delegate: DiseaseDetailViewFirstDelegate?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -22,8 +30,15 @@ class DiseaseDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showMoreTapGesture))
+        showMoreStackView.addGestureRecognizer(tap)
     }
+    
+    @objc func showMoreTapGesture(_ sender: UITapGestureRecognizer) {
+
+        self.delegate?.goDiseaseView()
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
