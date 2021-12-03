@@ -44,6 +44,7 @@
 		2CCFA3C2275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C0275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib */; };
 		2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C3275A9DB600B97D2A /* PreventionTableViewCell.swift */; };
 		2CCFA3C6275A9DB600B97D2A /* PreventionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C4275A9DB600B97D2A /* PreventionTableViewCell.xib */; };
+		2CCFA3CA275AA39100B97D2A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C9275AA39100B97D2A /* SettingViewController.swift */; };
 		F9C20336193ACC9A5CA33374 /* Pods_AIDoctor_P_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E7E59E5EAA3108F4B0C55 /* Pods_AIDoctor_P_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		2CCFA3C0275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncubationPeriodTableViewCell.xib; sourceTree = "<group>"; };
 		2CCFA3C3275A9DB600B97D2A /* PreventionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTableViewCell.swift; sourceTree = "<group>"; };
 		2CCFA3C4275A9DB600B97D2A /* PreventionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreventionTableViewCell.xib; sourceTree = "<group>"; };
+		2CCFA3C9275AA39100B97D2A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		55ECFB95D8D7D8498B2D495D /* Pods-AIDoctor-P Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDoctor-P Project.debug.xcconfig"; path = "Target Support Files/Pods-AIDoctor-P Project/Pods-AIDoctor-P Project.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3441897AE16A618214297D /* Pods-AIDoctor-P Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDoctor-P Project.release.xcconfig"; path = "Target Support Files/Pods-AIDoctor-P Project/Pods-AIDoctor-P Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 			children = (
 				2CCFA395275A70AA00B97D2A /* Login */,
 				2CCFA396275A70B300B97D2A /* Main */,
+				2CCFA3C8275AA37400B97D2A /* Setting */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,10 +172,11 @@
 			isa = PBXGroup;
 			children = (
 				2CCFA397275A738C00B97D2A /* Home */,
-				2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */,
 				2CCFA3B0275A927A00B97D2A /* DiseaseDetail */,
-				2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */,
+				2CCFA3C7275AA36100B97D2A /* HospitalDetail */,
 				2C9B1AF72757C679006FCCCA /* TestViewController.swift */,
+				2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */,
+				2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -213,6 +217,21 @@
 				2CCFA3C4275A9DB600B97D2A /* PreventionTableViewCell.xib */,
 			);
 			path = DiseaseDetail;
+			sourceTree = "<group>";
+		};
+		2CCFA3C7275AA36100B97D2A /* HospitalDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HospitalDetail;
+			sourceTree = "<group>";
+		};
+		2CCFA3C8275AA37400B97D2A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFA3C9275AA39100B97D2A /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		B8E06F78B9644E9921781F79 /* Frameworks */ = {
@@ -377,6 +396,7 @@
 				2C9B1AF42757C63D006FCCCA /* SecondViewController.swift in Sources */,
 				2CCFA3C1275A9D9B00B97D2A /* IncubationPeriodTableViewCell.swift in Sources */,
 				2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */,
+				2CCFA3CA275AA39100B97D2A /* SettingViewController.swift in Sources */,
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
 				2C9B1AF62757C646006FCCCA /* ThirdViewController.swift in Sources */,
