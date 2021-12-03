@@ -30,7 +30,7 @@ class TestViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("viewdiddisappear")
-        
+        wwwww
         self.tabBarController?.selectedIndex = 0
     }
 

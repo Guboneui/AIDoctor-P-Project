@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <constraint firstItem="0o1-Pb-nyd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vjc-7p-IwJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="star" catalog="system" id="JC1-SI-392"/>
+                    <tabBarItem key="tabBarItem" title="" image="star" catalog="system" id="JC1-SI-392"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +86,10 @@
                             <constraint firstItem="8YZ-BC-cOU" firstAttribute="centerY" secondItem="l6Q-DM-qXd" secondAttribute="centerY" id="wlf-Bu-n8I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="moon" catalog="system" id="SYa-x7-yTj"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="moon" catalog="system" id="SYa-x7-yTj">
+                        <inset key="imageInsets" minX="0.0" minY="-30" maxX="0.0" maxY="0.0"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23C-2S-mxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,6 +145,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8sW-WU-0gQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ePY-hg-t7t">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
