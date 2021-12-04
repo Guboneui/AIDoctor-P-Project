@@ -15,7 +15,16 @@ class MainTabbarController: UITabBarController {
         selectedIndex = 1
         self.delegate = self
         self.addDotToTabBarItemWith(index: selectedIndex, size: 1.0, color: UIColor(named: "primary2")!)
+        setNavigationBar()
     }
+    
+    
+    func setNavigationBar() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    
     
     func addDotToTabBarItemWith(index: Int,size: CGFloat,color: UIColor, verticalOffset: CGFloat = 1.0) {
 
@@ -43,11 +52,11 @@ class MainTabbarController: UITabBarController {
 extension MainTabbarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("selected View Controller")
-//        if selectedIndex == 1 {
-//            let testVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
-//            testVC.delegate = self
-//            self.navigationController?.pushViewController(testVC, animated: true)
-//        }
+        if selectedIndex == 1 {
+            let testVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
+            testVC.delegate = self
+            self.navigationController?.pushViewController(testVC, animated: true)
+        }
     }
 }
 

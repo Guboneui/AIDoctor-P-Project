@@ -10,10 +10,21 @@ import UIKit
 class HospitalViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
+    
+    var navTitle: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
         
+    }
+    
+    func setNavigationBar() {
+        self.title = self.navTitle
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor(named: "primary2")!
+        ]
     }
     
     func setTableView() {
