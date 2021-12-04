@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        
+        print("test")
         idBaseView.layer.cornerRadius = 10
         idBaseView.layer.borderWidth = 2
         idBaseView.layer.borderColor = UIColor(named: "borderColor")?.cgColor
