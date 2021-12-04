@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol HospitalDetailViewFirstDelegate: AnyObject {
+    func goHospital()
+}
+
 class HospitalTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
+    
+    weak var delegate: HospitalDetailViewFirstDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +47,12 @@ extension HospitalTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.delegate?.goHospital()
+        
+    }
+    
     
 }
 
@@ -53,8 +65,6 @@ extension HospitalTableViewCell: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 150, height: 220)
         
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         

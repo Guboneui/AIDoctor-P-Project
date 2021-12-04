@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */; };
+		2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */; };
+		2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */; };
 		2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */; };
 		2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */; };
 		2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */; };
@@ -50,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		102E7E59E5EAA3108F4B0C55 /* Pods_AIDoctor_P_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIDoctor_P_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
+		2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalDetailTableViewCell.xib; sourceTree = "<group>"; };
 		2C9B1ADA2757C2FF006FCCCA /* AIDoctor-P Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIDoctor-P Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +228,9 @@
 		2CCFA3C7275AA36100B97D2A /* HospitalDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */,
+				2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */,
+				2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */,
 			);
 			path = HospitalDetail;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 				2CCFA3C2275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib in Resources */,
 				2C9B1AEA2757C300006FCCCA /* LaunchScreen.storyboard in Resources */,
 				2CCFA3AF275A882D00B97D2A /* WhiteLabelTableViewCell.xib in Resources */,
+				2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */,
 				2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */,
 				2CCFA3A3275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib in Resources */,
 				2CCFA3C6275A9DB600B97D2A /* PreventionTableViewCell.xib in Resources */,
@@ -380,6 +390,7 @@
 			files = (
 				2C9B1AF82757C679006FCCCA /* TestViewController.swift in Sources */,
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
+				2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */,
 				2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */,
 				2CCFA3B9275A9D6C00B97D2A /* SymptomTableViewCell.swift in Sources */,
 				2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */,
@@ -395,6 +406,7 @@
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
 				2C9B1AF42757C63D006FCCCA /* SecondViewController.swift in Sources */,
 				2CCFA3C1275A9D9B00B97D2A /* IncubationPeriodTableViewCell.swift in Sources */,
+				2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */,
 				2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */,
 				2CCFA3CA275AA39100B97D2A /* SettingViewController.swift in Sources */,
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,

@@ -79,7 +79,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6U-zT-bK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.6376811594205" y="-636.16071428571422"/>
+            <point key="canvasLocation" x="1328" y="-1190"/>
+        </scene>
+        <!--Hospital View Controller-->
+        <scene sceneID="ock-oN-vkR">
+            <objects>
+                <viewController restorationIdentifier="HospitalViewController" storyboardIdentifier="HospitalViewController" id="f5c-70-0Nr" customClass="HospitalViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hcN-0L-2Lp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W23-5i-giO">
+                                <rect key="frame" x="0.0" y="49" width="414" height="847"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pIK-rN-CeV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="W23-5i-giO" secondAttribute="bottom" id="KeW-pC-Wfd"/>
+                            <constraint firstItem="W23-5i-giO" firstAttribute="leading" secondItem="pIK-rN-CeV" secondAttribute="leading" id="iTv-oe-Ura"/>
+                            <constraint firstItem="W23-5i-giO" firstAttribute="top" secondItem="pIK-rN-CeV" secondAttribute="top" constant="5" id="lDw-WY-Ltw"/>
+                            <constraint firstItem="pIK-rN-CeV" firstAttribute="trailing" secondItem="W23-5i-giO" secondAttribute="trailing" id="xL0-uy-KAg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="W23-5i-giO" id="qqa-jE-a4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKg-r7-OM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011.594202898551" y="-1191.2946428571429"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="ZFB-Uq-kUO">
@@ -275,7 +305,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="homeDoctor" id="SYa-x7-yTj">
-                        <inset key="imageInsets" minX="0.0" minY="950" maxX="0.0" maxY="1000"/>
+                        <inset key="imageInsets" minX="0.0" minY="-15" maxX="0.0" maxY="0.0"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                 </viewController>

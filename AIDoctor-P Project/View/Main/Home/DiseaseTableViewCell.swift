@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol DiseaseDetailViewSecondDelegate: AnyObject {
+protocol DetailViewSecondDelegate: AnyObject {
     func goDiseaseView()
+    
 }
 
 
@@ -19,7 +20,7 @@ class DiseaseTableViewCell: UITableViewCell {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     let arr = ["a", "b", "c"]
     
-    weak var delegate: DiseaseDetailViewSecondDelegate?
+    weak var delegate: DetailViewSecondDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
