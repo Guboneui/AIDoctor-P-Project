@@ -19,8 +19,6 @@ class DiseaseViewController: UIViewController {
         mainTableView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
@@ -47,10 +45,6 @@ class DiseaseViewController: UIViewController {
         mainTableView.register(UINib(nibName: "RouteTableViewCell", bundle: nil), forCellReuseIdentifier: "RouteTableViewCell")
         mainTableView.register(UINib(nibName: "IncubationPeriodTableViewCell", bundle: nil), forCellReuseIdentifier: "IncubationPeriodTableViewCell")
         mainTableView.register(UINib(nibName: "PreventionTableViewCell", bundle: nil), forCellReuseIdentifier: "PreventionTableViewCell")
-        
-        
-        
-        
     }
 }
 
@@ -80,10 +74,7 @@ extension DiseaseViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
             
         }
-       
     }
-    
-    
 }
 
 

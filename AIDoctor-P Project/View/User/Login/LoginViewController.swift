@@ -9,7 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
     @IBOutlet weak var idBaseView: UIView!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordBaseView: UIView!
@@ -18,10 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
-
     override func loadView() {
         super.loadView()
-        print("test")
         idBaseView.layer.cornerRadius = 10
         idBaseView.layer.borderWidth = 2
         idBaseView.layer.borderColor = UIColor(named: "borderColor")?.cgColor
@@ -33,7 +30,6 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 10
         
         loginButton.layer.cornerRadius = 20
-        
     }
 
     override func viewDidLoad() {
@@ -51,7 +47,5 @@ class LoginViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Admin", bundle: nil)
         let adminNav = storyBoard.instantiateViewController(identifier: "AdminNav")
         self.changeRootViewController(adminNav)
-//
-        
     }
 }

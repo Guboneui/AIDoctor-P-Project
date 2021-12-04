@@ -15,8 +15,6 @@ class ChatBaseViewController: UIViewController {
         testVC.delegate = self
         self.navigationController?.pushViewController(testVC, animated: true)
     }
-    
-    
 }
 
 extension ChatBaseViewController: WhenViewDisappear {

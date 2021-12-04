@@ -18,35 +18,11 @@ class MainTabbarController: UITabBarController {
         setNavigationBar()
     }
     
-    
     func setNavigationBar() {
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
-    
-    
-    func addDotToTabBarItemWith(index: Int,size: CGFloat,color: UIColor, verticalOffset: CGFloat = 1.0) {
-
-            // set distance from tab bar icons
-             for tabItem in self.viewControllers! {
-                tabItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: verticalOffset)
-            }
-
-            // set default appearance for tabbar icon title
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: color,NSAttributedString.Key.font:UIFont(name: "American Typewriter", size: size)!], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: color,NSAttributedString.Key.font:UIFont(name: "American Typewriter", size: size)!], for: .selected)
-
-            // place the dot
-            guard let vc = self.viewControllers?[index] else {
-                //log.error("Couldn't find a TabBar Controller with index:\(index)")
-                return
-            }
-
-            vc.tabBarItem.title = "•"
-        }
-    
-    
 }
 
 extension MainTabbarController: UITabBarControllerDelegate {
@@ -59,10 +35,8 @@ extension MainTabbarController: UITabBarControllerDelegate {
     }
 }
 
-
 extension MainTabbarController: WhenViewDisappear {
     func firstTabbarItem() {
-        
         self.selectedIndex = 0
     }
 }

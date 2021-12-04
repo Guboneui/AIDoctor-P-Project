@@ -38,9 +38,6 @@ class AdminViewController: UIViewController {
         footerView.backgroundColor = .white
         self.mainTableView.tableFooterView = footerView
     }
-    
-
-
 }
 
 extension AdminViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,5 +56,4 @@ extension AdminViewController: UITableViewDelegate, UITableViewDataSource {
         let chatVC = storyBoard.instantiateViewController(withIdentifier: "AdminMainChatViewController")
         self.navigationController?.pushViewController(chatVC, animated: true)
     }
-    
 }

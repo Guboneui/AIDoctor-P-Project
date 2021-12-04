@@ -13,12 +13,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setNavigationBar()
         setTableView()
-        
-     
-        
     }
     
     func setNavigationBar() {
@@ -40,7 +36,6 @@ class HomeViewController: UIViewController {
         homeTableView.register(UINib(nibName: "CovidTableViewCell", bundle: nil), forCellReuseIdentifier: "CovidTableViewCell")
         homeTableView.register(UINib(nibName: "DiseaseTableViewCell", bundle: nil), forCellReuseIdentifier: "DiseaseTableViewCell")
         homeTableView.register(UINib(nibName: "HospitalTableViewCell", bundle: nil), forCellReuseIdentifier: "HospitalTableViewCell")
-        
     }
 }
 
@@ -65,7 +60,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             return cell
         }
-        
     }
 }
 
@@ -73,11 +67,8 @@ extension HomeViewController: DetailViewSecondDelegate {
     func goDiseaseView() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let diseaseDetailView = storyBoard.instantiateViewController(withIdentifier: "DiseaseViewController")
-        
         self.navigationController?.pushViewController(diseaseDetailView, animated: true)
     }
-    
-    
 }
 
 extension HomeViewController: HospitalDetailViewFirstDelegate {
@@ -86,8 +77,6 @@ extension HomeViewController: HospitalDetailViewFirstDelegate {
         let hospitalView = storyBoard.instantiateViewController(withIdentifier: "HospitalViewController")
         self.navigationController?.pushViewController(hospitalView, animated: true)
     }
-    
-    
 }
 
 

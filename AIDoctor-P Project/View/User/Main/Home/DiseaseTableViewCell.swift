@@ -12,11 +12,9 @@ protocol DetailViewSecondDelegate: AnyObject {
     
 }
 
-
 class DiseaseTableViewCell: UITableViewCell {
 
     @IBOutlet weak var diseaseTableView: UITableView!
-    
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     let arr = ["a", "b", "c"]
     
@@ -39,14 +37,10 @@ class DiseaseTableViewCell: UITableViewCell {
         
     }
     
-    
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
-    
 }
 
 extension DiseaseTableViewCell: UITableViewDelegate, UITableViewDataSource {
@@ -60,14 +54,10 @@ extension DiseaseTableViewCell: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         return cell
     }
-    
-    
 }
 
 extension DiseaseTableViewCell: DiseaseDetailViewFirstDelegate {
     func goDiseaseView() {
         self.delegate?.goDiseaseView()
     }
-    
-    
 }

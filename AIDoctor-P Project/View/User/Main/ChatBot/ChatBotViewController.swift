@@ -74,9 +74,6 @@ class ChatBotViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
-    
-    
     func setNavigationBar() {
         self.title = "AI Doctor"
         
@@ -115,7 +112,6 @@ class ChatBotViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    
     @objc func yesAlert() {
         self.presentAlert(title: "Yes")
     }
@@ -137,20 +133,15 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatBotTableViewCell", for: indexPath) as! ChatBotTableViewCell
             cell.selectionStyle = .none
-            
             cell.firstButton.addTarget(self, action: #selector(self.yesAlert), for: .touchUpInside)
             cell.secondButton.addTarget(self, action: #selector(self.noAlert), for: .touchUpInside)
-            
-            
             return cell
+            
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
             cell.selectionStyle = .none
             return cell
             
         }
-       
     }
-    
-    
 }

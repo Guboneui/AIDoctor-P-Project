@@ -11,7 +11,6 @@ protocol DiseaseDetailViewFirstDelegate: AnyObject {
     func goDiseaseView()
 }
 
-
 class DiseaseDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var topBaseView: UIView!
@@ -42,8 +41,6 @@ class DiseaseDetailTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

@@ -9,8 +9,6 @@ import UIKit
 
 class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
     
-    
-    
     @IBOutlet var locationLabel: UILabel!
     var mapPoint: MTMapPoint?
     var poiItem: MTMapPOIItem?
@@ -59,13 +57,8 @@ class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
         layoutIfNeeded()
     }
     
-    
-    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
-    
 }

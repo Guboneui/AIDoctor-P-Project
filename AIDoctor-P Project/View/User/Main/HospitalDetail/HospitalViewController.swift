@@ -46,6 +46,4 @@ extension HospitalViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
-    
-    
 }
