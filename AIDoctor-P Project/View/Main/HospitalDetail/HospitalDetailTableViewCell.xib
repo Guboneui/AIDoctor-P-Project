@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -63,29 +62,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdF-Cn-1or">
-                        <rect key="frame" x="80" y="500" width="200" height="64"/>
+                        <rect key="frame" x="80" y="500" width="200" height="33.5"/>
                         <string key="text">경기 성남시 수정구 복정로 77 2층 
 복정그린치과</string>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <color key="textColor" name="gray4"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adA-eo-ooH">
-                        <rect key="frame" x="30" y="584" width="330" height="150"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="adA-eo-ooH" secondAttribute="height" multiplier="330:150" id="0n8-rE-RUf"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qdT-bl-97P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="0ux-2o-Fga"/>
-                    <constraint firstAttribute="trailing" secondItem="adA-eo-ooH" secondAttribute="trailing" constant="30" id="6gh-SL-xhN"/>
                     <constraint firstAttribute="trailing" secondItem="qdF-Cn-1or" secondAttribute="trailing" constant="110" id="7Nf-iH-k21"/>
                     <constraint firstItem="ykv-Rm-1p4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="7ge-RY-phB"/>
                     <constraint firstItem="ykv-Rm-1p4" firstAttribute="top" secondItem="qdT-bl-97P" secondAttribute="bottom" constant="30" id="8bT-NS-dlH"/>
-                    <constraint firstItem="adA-eo-ooH" firstAttribute="top" secondItem="qdF-Cn-1or" secondAttribute="bottom" constant="20" id="Cbe-mv-plc"/>
-                    <constraint firstItem="adA-eo-ooH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="GT0-ga-yFR"/>
                     <constraint firstItem="yo7-GS-xm1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JMe-HV-HKH"/>
                     <constraint firstItem="OhO-CQ-13w" firstAttribute="centerY" secondItem="ykv-Rm-1p4" secondAttribute="centerY" id="LnD-vk-bGV"/>
                     <constraint firstItem="Apm-nE-LdH" firstAttribute="centerY" secondItem="fXL-PM-JfX" secondAttribute="centerY" id="Lnw-do-AyO"/>
@@ -95,7 +84,6 @@
                     <constraint firstItem="qdT-bl-97P" firstAttribute="top" secondItem="oBU-Yp-Gow" secondAttribute="bottom" constant="17" id="PqC-rN-Mxt"/>
                     <constraint firstAttribute="trailing" secondItem="qdT-bl-97P" secondAttribute="trailing" constant="30" id="R07-7T-XdC"/>
                     <constraint firstAttribute="trailing" secondItem="oBU-Yp-Gow" secondAttribute="trailing" constant="30" id="SUT-j6-GJg"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="adA-eo-ooH" secondAttribute="bottom" constant="75" id="Tjx-SD-imt"/>
                     <constraint firstItem="OhO-CQ-13w" firstAttribute="leading" secondItem="ykv-Rm-1p4" secondAttribute="trailing" constant="20" id="Upo-gr-IHu"/>
                     <constraint firstItem="fXL-PM-JfX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="bGb-MB-jfJ"/>
                     <constraint firstItem="qdF-Cn-1or" firstAttribute="top" secondItem="fXL-PM-JfX" secondAttribute="bottom" constant="5" id="e3W-rA-s9X"/>
@@ -107,6 +95,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="locationLabel" destination="qdF-Cn-1or" id="2Td-ow-o0L"/>
+            </connections>
             <point key="canvasLocation" x="-15.942028985507248" y="250.44642857142856"/>
         </tableViewCell>
     </objects>
@@ -120,8 +111,5 @@
         <namedColor name="primary2">
             <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
