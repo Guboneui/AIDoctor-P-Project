@@ -53,6 +53,9 @@
 		2C340236275C07AC009BA8C2 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340235275C07AC009BA8C2 /* AdminViewController.swift */; };
 		2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340237275C08E1009BA8C2 /* AdminChatTableViewCell.swift */; };
 		2C34023A275C08E1009BA8C2 /* AdminChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C340238275C08E1009BA8C2 /* AdminChatTableViewCell.xib */; };
+		2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */; };
+		2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */; };
+		2C340244275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */; };
 		2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */; };
 		2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */; };
 		2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */; };
@@ -148,6 +151,9 @@
 		2C340235275C07AC009BA8C2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		2C340237275C08E1009BA8C2 /* AdminChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChatTableViewCell.swift; sourceTree = "<group>"; };
 		2C340238275C08E1009BA8C2 /* AdminChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminChatTableViewCell.xib; sourceTree = "<group>"; };
+		2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatViewController.swift; sourceTree = "<group>"; };
+		2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatTableViewCell.swift; sourceTree = "<group>"; };
+		2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminMainChatTableViewCell.xib; sourceTree = "<group>"; };
 		2C9B1ADA2757C2FF006FCCCA /* AIDoctor-P Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIDoctor-P Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +312,9 @@
 				2C340235275C07AC009BA8C2 /* AdminViewController.swift */,
 				2C340237275C08E1009BA8C2 /* AdminChatTableViewCell.swift */,
 				2C340238275C08E1009BA8C2 /* AdminChatTableViewCell.xib */,
+				2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */,
+				2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */,
+				2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -556,6 +565,7 @@
 				2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */,
 				2C34021A275BF3ED009BA8C2 /* map_pin@3x.png in Resources */,
 				2C340219275BF3ED009BA8C2 /* daum_copyright.png in Resources */,
+				2C340244275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib in Resources */,
 				2C2F37DE275BA45800B694D2 /* ChatBotTableViewCell.xib in Resources */,
 				2C34021F275BF3ED009BA8C2 /* map_pinup_custom.png in Resources */,
 				2CCFA3A3275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib in Resources */,
@@ -643,9 +653,11 @@
 				2CCFA3C1275A9D9B00B97D2A /* IncubationPeriodTableViewCell.swift in Sources */,
 				2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */,
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,
+				2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
 				2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */,
+				2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */,
 				2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

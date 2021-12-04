@@ -19,8 +19,14 @@ class AdminViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNavigationBar()
         setTableView()
+    }
+    
+    func setNavigationBar() {
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
     func setTableView() {
@@ -48,5 +54,10 @@ extension AdminViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Admin", bundle: nil)
+        let chatVC = storyBoard.instantiateViewController(withIdentifier: "AdminMainChatViewController")
+        self.navigationController?.pushViewController(chatVC, animated: true)
+    }
     
 }
