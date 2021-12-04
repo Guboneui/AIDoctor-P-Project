@@ -11,11 +11,11 @@ class HospitalViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     
-    var navTitle: String = ""
+    var navTitle: String = "복정그린치과의원"
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
-        
+        setNavigationBar()
     }
     
     func setNavigationBar() {

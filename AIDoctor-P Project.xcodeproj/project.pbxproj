@@ -49,6 +49,10 @@
 		2C34022C275BF766009BA8C2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3401E6275BF376009BA8C2 /* libsqlite3.tbd */; };
 		2C34022D275BF768009BA8C2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3401E5275BF371009BA8C2 /* libxml2.tbd */; };
 		2C34022E275BF76C009BA8C2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3401E4275BF36B009BA8C2 /* libc++.tbd */; };
+		2C340234275C0457009BA8C2 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C340233275C0457009BA8C2 /* Admin.storyboard */; };
+		2C340236275C07AC009BA8C2 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340235275C07AC009BA8C2 /* AdminViewController.swift */; };
+		2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340237275C08E1009BA8C2 /* AdminChatTableViewCell.swift */; };
+		2C34023A275C08E1009BA8C2 /* AdminChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C340238275C08E1009BA8C2 /* AdminChatTableViewCell.xib */; };
 		2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */; };
 		2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */; };
 		2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */; };
@@ -73,8 +77,6 @@
 		2CCFA3A7275A80F600B97D2A /* HospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A5275A80F600B97D2A /* HospitalTableViewCell.xib */; };
 		2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A8275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift */; };
 		2CCFA3AB275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3A9275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib */; };
-		2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3AC275A882D00B97D2A /* WhiteLabelTableViewCell.swift */; };
-		2CCFA3AF275A882D00B97D2A /* WhiteLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3AD275A882D00B97D2A /* WhiteLabelTableViewCell.xib */; };
 		2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3B1275A93E800B97D2A /* DiseaseViewController.swift */; };
 		2CCFA3B5275A9D5200B97D2A /* DiscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3B3275A9D5200B97D2A /* DiscriptionTableViewCell.swift */; };
 		2CCFA3B6275A9D5200B97D2A /* DiscriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3B4275A9D5200B97D2A /* DiscriptionTableViewCell.xib */; };
@@ -142,6 +144,10 @@
 		2C34020C275BF3ED009BA8C2 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
 		2C34020D275BF3ED009BA8C2 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
 		2C34022B275BF41E009BA8C2 /* HeaderBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderBridge.h; sourceTree = "<group>"; };
+		2C340233275C0457009BA8C2 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		2C340235275C07AC009BA8C2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		2C340237275C08E1009BA8C2 /* AdminChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChatTableViewCell.swift; sourceTree = "<group>"; };
+		2C340238275C08E1009BA8C2 /* AdminChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminChatTableViewCell.xib; sourceTree = "<group>"; };
 		2C9B1ADA2757C2FF006FCCCA /* AIDoctor-P Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIDoctor-P Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,8 +174,6 @@
 		2CCFA3A5275A80F600B97D2A /* HospitalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalTableViewCell.xib; sourceTree = "<group>"; };
 		2CCFA3A8275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CCFA3A9275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalDetailCollectionViewCell.xib; sourceTree = "<group>"; };
-		2CCFA3AC275A882D00B97D2A /* WhiteLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLabelTableViewCell.swift; sourceTree = "<group>"; };
-		2CCFA3AD275A882D00B97D2A /* WhiteLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhiteLabelTableViewCell.xib; sourceTree = "<group>"; };
 		2CCFA3B1275A93E800B97D2A /* DiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseViewController.swift; sourceTree = "<group>"; };
 		2CCFA3B3275A9D5200B97D2A /* DiscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscriptionTableViewCell.swift; sourceTree = "<group>"; };
 		2CCFA3B4275A9D5200B97D2A /* DiscriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscriptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -285,6 +289,27 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		2C34022F275C03E9009BA8C2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFA395275A70AA00B97D2A /* Login */,
+				2CCFA396275A70B300B97D2A /* Main */,
+				2CCFA3C8275AA37400B97D2A /* Setting */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		2C340230275C0404009BA8C2 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2C340233275C0457009BA8C2 /* Admin.storyboard */,
+				2C340235275C07AC009BA8C2 /* AdminViewController.swift */,
+				2C340237275C08E1009BA8C2 /* AdminChatTableViewCell.swift */,
+				2C340238275C08E1009BA8C2 /* AdminChatTableViewCell.xib */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		2C9B1AD12757C2FF006FCCCA = {
 			isa = PBXGroup;
 			children = (
@@ -331,9 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				2C9B1AF12757C3DD006FCCCA /* MainTabbarController.swift */,
-				2CCFA395275A70AA00B97D2A /* Login */,
-				2CCFA396275A70B300B97D2A /* Main */,
-				2CCFA3C8275AA37400B97D2A /* Setting */,
+				2C34022F275C03E9009BA8C2 /* User */,
+				2C340230275C0404009BA8C2 /* Admin */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,8 +397,6 @@
 				2CCFA3A5275A80F600B97D2A /* HospitalTableViewCell.xib */,
 				2CCFA3A8275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift */,
 				2CCFA3A9275A82BC00B97D2A /* HospitalDetailCollectionViewCell.xib */,
-				2CCFA3AC275A882D00B97D2A /* WhiteLabelTableViewCell.swift */,
-				2CCFA3AD275A882D00B97D2A /* WhiteLabelTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -512,6 +534,7 @@
 				2C340217275BF3ED009BA8C2 /* th_line.png in Resources */,
 				2C340221275BF3ED009BA8C2 /* noimage256.png in Resources */,
 				2C340214275BF3ED009BA8C2 /* map_pinup@3x.png in Resources */,
+				2C340234275C0457009BA8C2 /* Admin.storyboard in Resources */,
 				2C340228275BF3ED009BA8C2 /* map_pin_shadow.png in Resources */,
 				2C340215275BF3ED009BA8C2 /* map_pin_shadow@3x.png in Resources */,
 				2CCFA39B275A73A200B97D2A /* CovidTableViewCell.xib in Resources */,
@@ -527,9 +550,9 @@
 				2C340216275BF3ED009BA8C2 /* copyright.png in Resources */,
 				2C340211275BF3ED009BA8C2 /* map_pinup.png in Resources */,
 				2C34021C275BF3ED009BA8C2 /* map_pin_red.png in Resources */,
-				2CCFA3AF275A882D00B97D2A /* WhiteLabelTableViewCell.xib in Resources */,
 				2C34021E275BF3ED009BA8C2 /* point_sprite.png in Resources */,
 				2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */,
+				2C34023A275C08E1009BA8C2 /* AdminChatTableViewCell.xib in Resources */,
 				2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */,
 				2C34021A275BF3ED009BA8C2 /* map_pin@3x.png in Resources */,
 				2C340219275BF3ED009BA8C2 /* daum_copyright.png in Resources */,
@@ -600,6 +623,7 @@
 				2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */,
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
 				2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */,
+				2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */,
 				2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */,
 				2CCFA3B9275A9D6C00B97D2A /* SymptomTableViewCell.swift in Sources */,
 				2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */,
@@ -615,9 +639,9 @@
 				2CCFA3B5275A9D5200B97D2A /* DiscriptionTableViewCell.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
 				2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */,
+				2C340236275C07AC009BA8C2 /* AdminViewController.swift in Sources */,
 				2CCFA3C1275A9D9B00B97D2A /* IncubationPeriodTableViewCell.swift in Sources */,
 				2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */,
-				2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */,
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,

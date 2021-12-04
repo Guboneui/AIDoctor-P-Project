@@ -43,8 +43,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonAction(_ sender: Any) {
         AIDoctorLog.debug("로그인")
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let mainNav = storyBoard.instantiateViewController(identifier: "MainNav")
-        self.changeRootViewController(mainNav)
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainNav = storyBoard.instantiateViewController(identifier: "MainNav")
+//        self.changeRootViewController(mainNav)
+
+//
+        let storyBoard = UIStoryboard(name: "Admin", bundle: nil)
+        let adminNav = storyBoard.instantiateViewController(identifier: "AdminNav")
+        self.changeRootViewController(adminNav)
+//
+        
     }
 }

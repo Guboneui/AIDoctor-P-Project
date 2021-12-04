@@ -1,13 +1,13 @@
 //
-//  WhiteLabelTableViewCell.swift
+//  AdminChatTableViewCell.swift
 //  AIDoctor-P Project
 //
-//  Created by 구본의 on 2021/12/04.
+//  Created by 구본의 on 2021/12/05.
 //
 
 import UIKit
 
-class WhiteLabelTableViewCell: UITableViewCell {
+class AdminChatTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
