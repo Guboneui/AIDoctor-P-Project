@@ -10,6 +10,10 @@
 		2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */; };
 		2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */; };
 		2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */; };
+		2C2F37DD275BA45800B694D2 /* ChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37DB275BA45800B694D2 /* ChatBotTableViewCell.swift */; };
+		2C2F37DE275BA45800B694D2 /* ChatBotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2F37DC275BA45800B694D2 /* ChatBotTableViewCell.xib */; };
+		2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37DF275BA87E00B694D2 /* UserChatTableViewCell.swift */; };
+		2C2F37E2275BA87E00B694D2 /* UserChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2F37E0275BA87E00B694D2 /* UserChatTableViewCell.xib */; };
 		2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */; };
 		2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */; };
 		2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */; };
@@ -17,9 +21,9 @@
 		2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE62757C300006FCCCA /* Assets.xcassets */; };
 		2C9B1AEA2757C300006FCCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B1AE82757C300006FCCCA /* LaunchScreen.storyboard */; };
 		2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF12757C3DD006FCCCA /* MainTabbarController.swift */; };
-		2C9B1AF42757C63D006FCCCA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */; };
-		2C9B1AF62757C646006FCCCA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */; };
-		2C9B1AF82757C679006FCCCA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF72757C679006FCCCA /* TestViewController.swift */; };
+		2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF32757C63D006FCCCA /* ChatBaseViewController.swift */; };
+		2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF52757C646006FCCCA /* SettingViewController.swift */; };
+		2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF72757C679006FCCCA /* ChatBotViewController.swift */; };
 		2CCFA38C275A492800B97D2A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA38B275A492800B97D2A /* Login.storyboard */; };
 		2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */; };
 		2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */; };
@@ -47,7 +51,6 @@
 		2CCFA3C2275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C0275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib */; };
 		2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C3275A9DB600B97D2A /* PreventionTableViewCell.swift */; };
 		2CCFA3C6275A9DB600B97D2A /* PreventionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C4275A9DB600B97D2A /* PreventionTableViewCell.xib */; };
-		2CCFA3CA275AA39100B97D2A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA3C9275AA39100B97D2A /* SettingViewController.swift */; };
 		F9C20336193ACC9A5CA33374 /* Pods_AIDoctor_P_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E7E59E5EAA3108F4B0C55 /* Pods_AIDoctor_P_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,10 @@
 		2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailTableViewCell.swift; sourceTree = "<group>"; };
 		2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2C2F37DB275BA45800B694D2 /* ChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTableViewCell.swift; sourceTree = "<group>"; };
+		2C2F37DC275BA45800B694D2 /* ChatBotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatBotTableViewCell.xib; sourceTree = "<group>"; };
+		2C2F37DF275BA87E00B694D2 /* UserChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatTableViewCell.swift; sourceTree = "<group>"; };
+		2C2F37E0275BA87E00B694D2 /* UserChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatTableViewCell.xib; sourceTree = "<group>"; };
 		2C9B1ADA2757C2FF006FCCCA /* AIDoctor-P Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIDoctor-P Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,9 +72,9 @@
 		2C9B1AE92757C300006FCCCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9B1AEB2757C300006FCCCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9B1AF12757C3DD006FCCCA /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
-		2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		2C9B1AF72757C679006FCCCA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		2C9B1AF32757C63D006FCCCA /* ChatBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBaseViewController.swift; sourceTree = "<group>"; };
+		2C9B1AF52757C646006FCCCA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2C9B1AF72757C679006FCCCA /* ChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
 		2CCFA38B275A492800B97D2A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDoctorLog.swift; sourceTree = "<group>"; };
@@ -95,7 +102,6 @@
 		2CCFA3C0275A9D9B00B97D2A /* IncubationPeriodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncubationPeriodTableViewCell.xib; sourceTree = "<group>"; };
 		2CCFA3C3275A9DB600B97D2A /* PreventionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTableViewCell.swift; sourceTree = "<group>"; };
 		2CCFA3C4275A9DB600B97D2A /* PreventionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreventionTableViewCell.xib; sourceTree = "<group>"; };
-		2CCFA3C9275AA39100B97D2A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		55ECFB95D8D7D8498B2D495D /* Pods-AIDoctor-P Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDoctor-P Project.debug.xcconfig"; path = "Target Support Files/Pods-AIDoctor-P Project/Pods-AIDoctor-P Project.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3441897AE16A618214297D /* Pods-AIDoctor-P Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDoctor-P Project.release.xcconfig"; path = "Target Support Files/Pods-AIDoctor-P Project/Pods-AIDoctor-P Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +118,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2F37DA275BA43E00B694D2 /* ChatBot */ = {
+			isa = PBXGroup;
+			children = (
+				2C9B1AF32757C63D006FCCCA /* ChatBaseViewController.swift */,
+				2C9B1AF72757C679006FCCCA /* ChatBotViewController.swift */,
+				2C2F37DB275BA45800B694D2 /* ChatBotTableViewCell.swift */,
+				2C2F37DC275BA45800B694D2 /* ChatBotTableViewCell.xib */,
+				2C2F37DF275BA87E00B694D2 /* UserChatTableViewCell.swift */,
+				2C2F37E0275BA87E00B694D2 /* UserChatTableViewCell.xib */,
+			);
+			path = ChatBot;
+			sourceTree = "<group>";
+		};
 		2C9B1AD12757C2FF006FCCCA = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +156,6 @@
 				2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */,
 				2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */,
 				2CCFA394275A709F00B97D2A /* View */,
-				2C9B1AF12757C3DD006FCCCA /* MainTabbarController.swift */,
-				2C9B1AE32757C2FF006FCCCA /* Main.storyboard */,
-				2CCFA38B275A492800B97D2A /* Login.storyboard */,
 				2C9B1AE62757C300006FCCCA /* Assets.xcassets */,
 				2C9B1AE82757C300006FCCCA /* LaunchScreen.storyboard */,
 				2C9B1AEB2757C300006FCCCA /* Info.plist */,
@@ -159,6 +175,7 @@
 		2CCFA394275A709F00B97D2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C9B1AF12757C3DD006FCCCA /* MainTabbarController.swift */,
 				2CCFA395275A70AA00B97D2A /* Login */,
 				2CCFA396275A70B300B97D2A /* Main */,
 				2CCFA3C8275AA37400B97D2A /* Setting */,
@@ -169,6 +186,7 @@
 		2CCFA395275A70AA00B97D2A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2CCFA38B275A492800B97D2A /* Login.storyboard */,
 				2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -177,12 +195,11 @@
 		2CCFA396275A70B300B97D2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2C9B1AE32757C2FF006FCCCA /* Main.storyboard */,
 				2CCFA397275A738C00B97D2A /* Home */,
 				2CCFA3B0275A927A00B97D2A /* DiseaseDetail */,
 				2CCFA3C7275AA36100B97D2A /* HospitalDetail */,
-				2C9B1AF72757C679006FCCCA /* TestViewController.swift */,
-				2C9B1AF52757C646006FCCCA /* ThirdViewController.swift */,
-				2C9B1AF32757C63D006FCCCA /* SecondViewController.swift */,
+				2C2F37DA275BA43E00B694D2 /* ChatBot */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -238,7 +255,7 @@
 		2CCFA3C8275AA37400B97D2A /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				2CCFA3C9275AA39100B97D2A /* SettingViewController.swift */,
+				2C9B1AF52757C646006FCCCA /* SettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -331,10 +348,12 @@
 				2CCFA3AF275A882D00B97D2A /* WhiteLabelTableViewCell.xib in Resources */,
 				2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */,
 				2C9B1AE72757C300006FCCCA /* Assets.xcassets in Resources */,
+				2C2F37DE275BA45800B694D2 /* ChatBotTableViewCell.xib in Resources */,
 				2CCFA3A3275A7B3E00B97D2A /* DiseaseDetailTableViewCell.xib in Resources */,
 				2CCFA3C6275A9DB600B97D2A /* PreventionTableViewCell.xib in Resources */,
 				2C9B1AE52757C2FF006FCCCA /* Main.storyboard in Resources */,
 				2CCFA3BE275A9D7F00B97D2A /* RouteTableViewCell.xib in Resources */,
+				2C2F37E2275BA87E00B694D2 /* UserChatTableViewCell.xib in Resources */,
 				2CCFA3B6275A9D5200B97D2A /* DiscriptionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,13 +407,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9B1AF82757C679006FCCCA /* TestViewController.swift in Sources */,
+				2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */,
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
 				2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */,
 				2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */,
 				2CCFA3B9275A9D6C00B97D2A /* SymptomTableViewCell.swift in Sources */,
 				2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */,
 				2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */,
+				2C2F37DD275BA45800B694D2 /* ChatBotTableViewCell.swift in Sources */,
 				2CCFA3BD275A9D7F00B97D2A /* RouteTableViewCell.swift in Sources */,
 				2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */,
 				2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */,
@@ -404,14 +424,14 @@
 				2CCFA39A275A73A200B97D2A /* CovidTableViewCell.swift in Sources */,
 				2CCFA3B5275A9D5200B97D2A /* DiscriptionTableViewCell.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
-				2C9B1AF42757C63D006FCCCA /* SecondViewController.swift in Sources */,
+				2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */,
 				2CCFA3C1275A9D9B00B97D2A /* IncubationPeriodTableViewCell.swift in Sources */,
 				2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */,
 				2CCFA3AE275A882D00B97D2A /* WhiteLabelTableViewCell.swift in Sources */,
-				2CCFA3CA275AA39100B97D2A /* SettingViewController.swift in Sources */,
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,
+				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
-				2C9B1AF62757C646006FCCCA /* ThirdViewController.swift in Sources */,
+				2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */,
 				2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

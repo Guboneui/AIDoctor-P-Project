@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,6 +16,9 @@ class HomeViewController: UIViewController {
         
         setNavigationBar()
         setTableView()
+        
+     
+        
     }
     
     func setNavigationBar() {
@@ -88,3 +91,5 @@ extension HomeViewController: HospitalDetailViewFirstDelegate {
     
     
 }
+
+

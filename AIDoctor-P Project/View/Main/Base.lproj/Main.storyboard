@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="2011.594202898551" y="-1191.2946428571429"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="ZFB-Uq-kUO">
             <objects>
-                <viewController id="Owc-PV-RJX" customClass="ThirdViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SettingViewController" storyboardIdentifier="SettingViewController" id="Owc-PV-RJX" customClass="SettingViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U7D-1m-65l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,27 +282,15 @@
             </objects>
             <point key="canvasLocation" x="769.56521739130437" y="618.75"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Chat Base View Controller-->
         <scene sceneID="Mri-xf-LDY">
             <objects>
-                <viewController restorationIdentifier="SecondViewController" storyboardIdentifier="SecondViewController" id="HZu-93-pGg" customClass="SecondViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ChatBaseViewController" storyboardIdentifier="ChatBaseViewController" id="HZu-93-pGg" customClass="ChatBaseViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6Q-DM-qXd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YZ-BC-cOU">
-                                <rect key="frame" x="178" y="437.5" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hn9-YO-3iy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="8YZ-BC-cOU" firstAttribute="centerX" secondItem="l6Q-DM-qXd" secondAttribute="centerX" id="CzL-KJ-5fh"/>
-                            <constraint firstItem="8YZ-BC-cOU" firstAttribute="centerY" secondItem="l6Q-DM-qXd" secondAttribute="centerY" id="wlf-Bu-n8I"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="homeDoctor" id="SYa-x7-yTj">
                         <inset key="imageInsets" minX="0.0" minY="-15" maxX="0.0" maxY="0.0"/>
@@ -313,32 +301,97 @@
             </objects>
             <point key="canvasLocation" x="1626" y="127"/>
         </scene>
-        <!--Test View Controller-->
+        <!--Chat Bot View Controller-->
         <scene sceneID="FZ7-Lk-EXi">
             <objects>
-                <viewController restorationIdentifier="TestViewController" storyboardIdentifier="TestViewController" id="ozQ-8b-gkz" customClass="TestViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ChatBotViewController" storyboardIdentifier="ChatBotViewController" id="ozQ-8b-gkz" customClass="ChatBotViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4JW-nc-E8q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챗봇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-5Q-hf8">
-                                <rect key="frame" x="185.5" y="433" width="43.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QqX-aM-qwN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="782"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-Rr-qVN">
+                                <rect key="frame" x="0.0" y="826" width="414" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gm4-tO-4cx">
+                                        <rect key="frame" x="69" y="10" width="330" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="메시지를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOZ-Tl-oO8">
+                                                <rect key="frame" x="10" y="9.5" width="266" height="21"/>
+                                                <color key="tintColor" name="primary2"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STs-WW-rcn">
+                                                <rect key="frame" x="296" y="8" width="24" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="gPC-fM-5pg"/>
+                                                    <constraint firstAttribute="height" constant="24" id="yOO-5w-io5"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="sendImage"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="borderColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mOZ-Tl-oO8" firstAttribute="centerY" secondItem="Gm4-tO-4cx" secondAttribute="centerY" id="7bL-sz-eut"/>
+                                            <constraint firstAttribute="trailing" secondItem="STs-WW-rcn" secondAttribute="trailing" constant="10" id="7xI-9B-Xxc"/>
+                                            <constraint firstItem="STs-WW-rcn" firstAttribute="centerY" secondItem="Gm4-tO-4cx" secondAttribute="centerY" id="ARr-rv-e8m"/>
+                                            <constraint firstItem="mOZ-Tl-oO8" firstAttribute="leading" secondItem="Gm4-tO-4cx" secondAttribute="leading" constant="10" id="far-l2-pWc"/>
+                                            <constraint firstItem="STs-WW-rcn" firstAttribute="leading" secondItem="mOZ-Tl-oO8" secondAttribute="trailing" constant="20" id="xzS-L6-VUM"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffs-9d-TuV">
+                                        <rect key="frame" x="14" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="FCC-DG-68x"/>
+                                            <constraint firstAttribute="height" constant="40" id="p9T-9V-u7Q"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ambulance"/>
+                                        <connections>
+                                            <action selector="emergencyButtonAction:" destination="ozQ-8b-gkz" eventType="touchUpInside" id="cOQ-YZ-rtp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="gray1"/>
+                                <constraints>
+                                    <constraint firstItem="Ffs-9d-TuV" firstAttribute="leading" secondItem="SOD-Rr-qVN" secondAttribute="leading" constant="14" id="2Wb-67-dpY"/>
+                                    <constraint firstAttribute="height" constant="70" id="8H1-tN-Hfi"/>
+                                    <constraint firstItem="Ffs-9d-TuV" firstAttribute="top" secondItem="SOD-Rr-qVN" secondAttribute="top" constant="10" id="AMO-AB-520"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gm4-tO-4cx" secondAttribute="bottom" constant="20" id="Ef9-Rh-OLH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gm4-tO-4cx" secondAttribute="trailing" constant="15" id="XPu-8y-tMX"/>
+                                    <constraint firstItem="Gm4-tO-4cx" firstAttribute="top" secondItem="SOD-Rr-qVN" secondAttribute="top" constant="10" id="smv-3z-apg"/>
+                                    <constraint firstItem="Gm4-tO-4cx" firstAttribute="leading" secondItem="Ffs-9d-TuV" secondAttribute="trailing" constant="15" id="uid-gV-j8z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3aE-Z1-6Xk"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="h5a-5Q-hf8" firstAttribute="centerX" secondItem="4JW-nc-E8q" secondAttribute="centerX" id="6Ss-ho-k7N"/>
-                            <constraint firstItem="h5a-5Q-hf8" firstAttribute="centerY" secondItem="4JW-nc-E8q" secondAttribute="centerY" id="RDB-K3-BqN"/>
+                            <constraint firstItem="QqX-aM-qwN" firstAttribute="leading" secondItem="3aE-Z1-6Xk" secondAttribute="leading" id="MV4-On-qmf"/>
+                            <constraint firstItem="QqX-aM-qwN" firstAttribute="top" secondItem="3aE-Z1-6Xk" secondAttribute="top" id="MhP-tD-doA"/>
+                            <constraint firstItem="3aE-Z1-6Xk" firstAttribute="trailing" secondItem="SOD-Rr-qVN" secondAttribute="trailing" id="dyF-tQ-etL"/>
+                            <constraint firstItem="3aE-Z1-6Xk" firstAttribute="trailing" secondItem="QqX-aM-qwN" secondAttribute="trailing" id="fQf-Zm-U8b"/>
+                            <constraint firstItem="SOD-Rr-qVN" firstAttribute="leading" secondItem="3aE-Z1-6Xk" secondAttribute="leading" id="fRD-DB-yeN"/>
+                            <constraint firstItem="SOD-Rr-qVN" firstAttribute="top" secondItem="QqX-aM-qwN" secondAttribute="bottom" id="fXt-pQ-JAn"/>
+                            <constraint firstAttribute="bottom" secondItem="SOD-Rr-qVN" secondAttribute="bottom" id="lM2-qf-MY9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomViewBottomConstraint" destination="lM2-qf-MY9" id="ov0-gj-UBH"/>
+                        <outlet property="chatBaseView" destination="Gm4-tO-4cx" id="kGL-p9-Xnt"/>
+                        <outlet property="chatTableView" destination="QqX-aM-qwN" id="j8A-qA-AdB"/>
+                        <outlet property="emergencyButton" destination="Ffs-9d-TuV" id="63Z-k2-VX1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NZ-cG-pKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="127"/>
+            <point key="canvasLocation" x="2624.6376811594205" y="126.5625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2aT-6E-DK0">
@@ -382,13 +435,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ambulance" width="40" height="40"/>
         <image name="homeDefault" width="30" height="30"/>
         <image name="homeDoctor" width="110" height="110"/>
-        <image name="homeSelected" width="30" height="30"/>
+        <image name="homeSelected" width="50" height="50"/>
         <image name="logoColor" width="2000" height="2000"/>
         <image name="profile" width="100" height="100"/>
+        <image name="sendImage" width="24" height="24"/>
         <image name="settingDefault" width="30" height="30"/>
-        <image name="settingSelected" width="30" height="30"/>
+        <image name="settingSelected" width="50" height="50"/>
+        <namedColor name="borderColor">
+            <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="gray1">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -400,9 +458,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

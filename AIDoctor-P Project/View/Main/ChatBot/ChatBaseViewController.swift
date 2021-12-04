@@ -7,11 +7,11 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ChatBaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let testVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
+        let testVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChatBotViewController") as! ChatBotViewController
         testVC.delegate = self
         self.navigationController?.pushViewController(testVC, animated: true)
     }
@@ -19,9 +19,9 @@ class SecondViewController: UIViewController {
     
 }
 
-extension SecondViewController: WhenViewDisappear {
+extension ChatBaseViewController: WhenViewDisappear {
     func firstTabbarItem() {
-        print("delegate called")
+        
         self.tabBarController?.selectedIndex = 0
     }
 }

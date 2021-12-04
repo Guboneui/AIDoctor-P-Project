@@ -51,9 +51,8 @@ class MainTabbarController: UITabBarController {
 
 extension MainTabbarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("selected View Controller")
         if selectedIndex == 1 {
-            let testVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
+            let testVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChatBotViewController") as! ChatBotViewController
             testVC.delegate = self
             self.navigationController?.pushViewController(testVC, animated: true)
         }
@@ -63,7 +62,7 @@ extension MainTabbarController: UITabBarControllerDelegate {
 
 extension MainTabbarController: WhenViewDisappear {
     func firstTabbarItem() {
-        print("delegate called")
+        
         self.selectedIndex = 0
     }
 }
