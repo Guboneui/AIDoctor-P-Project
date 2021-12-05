@@ -36,6 +36,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.idTextField.delegate = self
+        self.passwordTextField.delegate = self
         self.viewModel.loginView = self
         self.viewModel.delegate = self
     }
@@ -49,6 +51,17 @@ class LoginViewController: UIViewController {
         self.viewModel.postLogin(param)
         //        let admin = self.idTextField.text
         
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == idTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
 }
 

@@ -43,7 +43,7 @@ class DiseaseViewController: UIViewController {
         mainTableView.separatorStyle = .none
         mainTableView.estimatedRowHeight = 50
         mainTableView.rowHeight = UITableView.automaticDimension
-        mainTableView.register(UINib(nibName: "DiscriptionTableViewCell", bundle: nil), forCellReuseIdentifier: "DiscriptionTableViewCell")
+        mainTableView.register(UINib(nibName: "DescriptionTableViewCell", bundle: nil), forCellReuseIdentifier: "DescriptionTableViewCell")
         mainTableView.register(UINib(nibName: "SymptomTableViewCell", bundle: nil), forCellReuseIdentifier: "SymptomTableViewCell")
         mainTableView.register(UINib(nibName: "RouteTableViewCell", bundle: nil), forCellReuseIdentifier: "RouteTableViewCell")
         mainTableView.register(UINib(nibName: "IncubationPeriodTableViewCell", bundle: nil), forCellReuseIdentifier: "IncubationPeriodTableViewCell")
@@ -58,7 +58,7 @@ extension DiseaseViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DiscriptionTableViewCell", for: indexPath) as! DiscriptionTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             cell.descriptionLabel.text = self.diseaseInfo?.DIS_SUMMARY
             return cell
         } else if indexPath.row == 1{

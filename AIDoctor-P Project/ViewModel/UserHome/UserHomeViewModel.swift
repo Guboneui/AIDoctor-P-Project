@@ -31,7 +31,6 @@ class UserHomeViewModel {
             if response.isSuccess == true {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
                 self.diseaseInfo = response.results!
-                print(self.diseaseInfo)
             } else {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
             }
