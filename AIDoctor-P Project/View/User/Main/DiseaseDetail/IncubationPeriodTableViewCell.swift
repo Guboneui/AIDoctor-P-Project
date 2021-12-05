@@ -9,6 +9,7 @@ import UIKit
 
 class IncubationPeriodTableViewCell: UITableViewCell {
 
+    @IBOutlet var incubLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

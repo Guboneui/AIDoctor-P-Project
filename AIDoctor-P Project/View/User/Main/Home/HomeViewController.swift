@@ -58,8 +58,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseTableViewCell", for: indexPath) as! DiseaseTableViewCell
             cell.selectionStyle = .none
-            cell.delegate = self
             cell.diseaseInfo = self.viewModel.diseaseInfo
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalTableViewCell", for: indexPath) as! HospitalTableViewCell
@@ -70,10 +70,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension HomeViewController: DetailViewSecondDelegate {
-    func goDiseaseView() {
+extension HomeViewController: DiseaseInfoDelegate {
+    func diseaseInfo(diseaseInfo: DiseaseInfo) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let diseaseDetailView = storyBoard.instantiateViewController(withIdentifier: "DiseaseViewController")
+        let diseaseDetailView = storyBoard.instantiateViewController(withIdentifier: "DiseaseViewController") as! DiseaseViewController
+        diseaseDetailView.diseaseInfo = diseaseInfo
         self.navigationController?.pushViewController(diseaseDetailView, animated: true)
     }
 }

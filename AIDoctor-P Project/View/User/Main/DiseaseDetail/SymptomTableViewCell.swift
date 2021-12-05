@@ -9,6 +9,7 @@ import UIKit
 
 class SymptomTableViewCell: UITableViewCell {
 
+    @IBOutlet var symptomLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

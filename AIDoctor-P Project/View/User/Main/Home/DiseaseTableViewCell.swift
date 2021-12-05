@@ -7,9 +7,8 @@
 
 import UIKit
 
-protocol DetailViewSecondDelegate: AnyObject {
-    func goDiseaseView()
-    
+protocol DiseaseInfoDelegate: AnyObject {
+    func diseaseInfo(diseaseInfo: DiseaseInfo)
 }
 
 class DiseaseTableViewCell: UITableViewCell {
@@ -24,7 +23,7 @@ class DiseaseTableViewCell: UITableViewCell {
         }
     }
     
-    weak var delegate: DetailViewSecondDelegate?
+    weak var delegate: DiseaseInfoDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,7 +55,6 @@ extension DiseaseTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseDetailTableViewCell", for: indexPath) as! DiseaseDetailTableViewCell
         cell.selectionStyle = .none
-        cell.delegate = self
         
         let data = self.diseaseInfo[indexPath.row]
         cell.diseaseTitleLabel.text = data.DIS_NAME
@@ -66,12 +64,9 @@ extension DiseaseTableViewCell: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)")
+        let data = self.diseaseInfo[indexPath.row]
+        self.delegate?.diseaseInfo(diseaseInfo: data)
     }
-}
-
-extension DiseaseTableViewCell: DiseaseDetailViewFirstDelegate {
-    func goDiseaseView() {
-        self.delegate?.goDiseaseView()
-    }
+    
+   
 }

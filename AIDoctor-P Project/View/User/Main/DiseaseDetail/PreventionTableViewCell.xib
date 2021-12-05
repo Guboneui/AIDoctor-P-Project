@@ -50,6 +50,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="preventionLabel" destination="8Tc-C3-K7g" id="9XL-i1-8wt"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="175.11160714285714"/>
         </tableViewCell>
     </objects>

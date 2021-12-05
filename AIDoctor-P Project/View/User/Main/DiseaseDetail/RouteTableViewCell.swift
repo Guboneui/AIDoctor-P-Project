@@ -9,6 +9,7 @@ import UIKit
 
 class RouteTableViewCell: UITableViewCell {
 
+    @IBOutlet var routeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

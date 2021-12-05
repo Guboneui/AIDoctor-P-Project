@@ -19,6 +19,7 @@ struct DiseaseInfo: Decodable {
     var DIS_NAME: String
     var DIS_SUMMARY: String
     var DIS_SYMPTOM: String
+    var DIS_ROUTE: String
     var DIS_INCUB: String
     var DIS_PREVENT: String
     var DIS_SOLUTION: String

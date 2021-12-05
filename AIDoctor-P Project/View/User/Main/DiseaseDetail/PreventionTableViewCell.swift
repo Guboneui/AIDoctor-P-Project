@@ -9,6 +9,7 @@ import UIKit
 
 class PreventionTableViewCell: UITableViewCell {
 
+    @IBOutlet var preventionLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

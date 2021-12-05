@@ -43,6 +43,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="incubLabel" destination="vi4-99-hF0" id="bu0-da-LUv"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="167.41071428571428"/>
         </tableViewCell>
     </objects>

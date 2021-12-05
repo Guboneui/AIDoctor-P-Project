@@ -11,9 +11,9 @@ class DiseaseViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     
-    var navTitle: String = "인플루엔자"
+   
     
-    var diseaseInfo: [DiseaseInfo] = []
+    var diseaseInfo: DiseaseInfo?
     
     override func loadView() {
         super.loadView()
@@ -25,10 +25,11 @@ class DiseaseViewController: UIViewController {
         super.viewDidLoad()
         setNavigationBar()
         setTableView()
+        
     }
     
     func setNavigationBar() {
-        self.title = self.navTitle
+        self.title = self.diseaseInfo?.DIS_NAME
         
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
@@ -58,21 +59,26 @@ extension DiseaseViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DiscriptionTableViewCell", for: indexPath) as! DiscriptionTableViewCell
+            cell.descriptionLabel.text = self.diseaseInfo?.DIS_SUMMARY
             return cell
         } else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "SymptomTableViewCell", for: indexPath) as! SymptomTableViewCell
+            cell.symptomLabel.text = self.diseaseInfo?.DIS_SYMPTOM
             return cell
             
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RouteTableViewCell", for: indexPath) as! RouteTableViewCell
+            cell.routeLabel.text = self.diseaseInfo?.DIS_ROUTE
             return cell
             
         } else if indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncubationPeriodTableViewCell", for: indexPath) as! IncubationPeriodTableViewCell
+            cell.incubLabel.text = self.diseaseInfo?.DIS_INCUB
             return cell
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PreventionTableViewCell", for: indexPath) as! PreventionTableViewCell
+            cell.preventionLabel.text = self.diseaseInfo?.DIS_PREVENT
             return cell
             
         }
