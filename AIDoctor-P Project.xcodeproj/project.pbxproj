@@ -73,6 +73,9 @@
 		2CBA1BA0275D2DAC000C436C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1B9F275D2DAC000C436C /* LoginService.swift */; };
 		2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA2275D2EB6000C436C /* LoginViewModel.swift */; };
 		2CBA1BA5275D37DE000C436C /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA4275D37DE000C436C /* LogoutResponse.swift */; };
+		2CBA1BA7275D3834000C436C /* LogoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA6275D3834000C436C /* LogoutRepository.swift */; };
+		2CBA1BA9275D38B9000C436C /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA8275D38B9000C436C /* LogoutService.swift */; };
+		2CBA1BAB275D390E000C436C /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BAA275D390E000C436C /* LogoutViewModel.swift */; };
 		2CCFA38C275A492800B97D2A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA38B275A492800B97D2A /* Login.storyboard */; };
 		2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */; };
 		2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */; };
@@ -180,6 +183,9 @@
 		2CBA1B9F275D2DAC000C436C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		2CBA1BA2275D2EB6000C436C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2CBA1BA4275D37DE000C436C /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
+		2CBA1BA6275D3834000C436C /* LogoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRepository.swift; sourceTree = "<group>"; };
+		2CBA1BA8275D38B9000C436C /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
+		2CBA1BAA275D390E000C436C /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
 		2CCFA38B275A492800B97D2A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDoctorLog.swift; sourceTree = "<group>"; };
@@ -390,7 +396,7 @@
 		2CBA1B91275D2B3E000C436C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2CBA1BA1275D2EAC000C436C /* Login */,
+				2CBA1BA1275D2EAC000C436C /* Login Logout */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -398,7 +404,7 @@
 		2CBA1B92275D2B44000C436C /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				2CBA1B9E275D2DA4000C436C /* Login */,
+				2CBA1B9E275D2DA4000C436C /* Login Logout */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -406,7 +412,7 @@
 		2CBA1B93275D2B48000C436C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				2CBA1B99275D2C16000C436C /* Login */,
+				2CBA1B99275D2C16000C436C /* Login Logout */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -421,28 +427,31 @@
 			path = "Login Logout";
 			sourceTree = "<group>";
 		};
-		2CBA1B99275D2C16000C436C /* Login */ = {
+		2CBA1B99275D2C16000C436C /* Login Logout */ = {
 			isa = PBXGroup;
 			children = (
 				2CBA1B9A275D2C21000C436C /* LoginRepository.swift */,
+				2CBA1BA6275D3834000C436C /* LogoutRepository.swift */,
 			);
-			path = Login;
+			path = "Login Logout";
 			sourceTree = "<group>";
 		};
-		2CBA1B9E275D2DA4000C436C /* Login */ = {
+		2CBA1B9E275D2DA4000C436C /* Login Logout */ = {
 			isa = PBXGroup;
 			children = (
 				2CBA1B9F275D2DAC000C436C /* LoginService.swift */,
+				2CBA1BA8275D38B9000C436C /* LogoutService.swift */,
 			);
-			path = Login;
+			path = "Login Logout";
 			sourceTree = "<group>";
 		};
-		2CBA1BA1275D2EAC000C436C /* Login */ = {
+		2CBA1BA1275D2EAC000C436C /* Login Logout */ = {
 			isa = PBXGroup;
 			children = (
 				2CBA1BA2275D2EB6000C436C /* LoginViewModel.swift */,
+				2CBA1BAA275D390E000C436C /* LogoutViewModel.swift */,
 			);
-			path = Login;
+			path = "Login Logout";
 			sourceTree = "<group>";
 		};
 		2CCFA393275A708C00B97D2A /* Extension */ = {
@@ -726,6 +735,7 @@
 				2CBA1BA5275D37DE000C436C /* LogoutResponse.swift in Sources */,
 				2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */,
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
+				2CBA1BAB275D390E000C436C /* LogoutViewModel.swift in Sources */,
 				2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */,
 				2CBA1B96275D2BC9000C436C /* LoginRequest.swift in Sources */,
 				2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */,
@@ -751,6 +761,8 @@
 				2CCFA3C1275A9D9B00B97D2A /* IncubationPeriodTableViewCell.swift in Sources */,
 				2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */,
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,
+				2CBA1BA7275D3834000C436C /* LogoutRepository.swift in Sources */,
+				2CBA1BA9275D38B9000C436C /* LogoutService.swift in Sources */,
 				2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
 				2CBA1B9D275D2C96000C436C /* ConstantURL.swift in Sources */,

@@ -204,6 +204,9 @@
                                                 <state key="normal" title="로그아웃">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="logoutButtonAction:" destination="Owc-PV-RJX" eventType="touchUpInside" id="Jvu-4y-vXz"/>
+                                                </connections>
                                             </button>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MN6-Xs-CvZ">
                                                 <rect key="frame" x="335" y="216" width="51" height="31"/>
