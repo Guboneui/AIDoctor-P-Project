@@ -66,6 +66,13 @@
 		2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF32757C63D006FCCCA /* ChatBaseViewController.swift */; };
 		2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF52757C646006FCCCA /* SettingViewController.swift */; };
 		2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B1AF72757C679006FCCCA /* ChatBotViewController.swift */; };
+		2CBA1B96275D2BC9000C436C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1B95275D2BC9000C436C /* LoginRequest.swift */; };
+		2CBA1B98275D2BDC000C436C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1B97275D2BDC000C436C /* LoginResponse.swift */; };
+		2CBA1B9B275D2C21000C436C /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1B9A275D2C21000C436C /* LoginRepository.swift */; };
+		2CBA1B9D275D2C96000C436C /* ConstantURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1B9C275D2C96000C436C /* ConstantURL.swift */; };
+		2CBA1BA0275D2DAC000C436C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1B9F275D2DAC000C436C /* LoginService.swift */; };
+		2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA2275D2EB6000C436C /* LoginViewModel.swift */; };
+		2CBA1BA5275D37DE000C436C /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA4275D37DE000C436C /* LogoutResponse.swift */; };
 		2CCFA38C275A492800B97D2A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA38B275A492800B97D2A /* Login.storyboard */; };
 		2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */; };
 		2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */; };
@@ -166,6 +173,13 @@
 		2C9B1AF32757C63D006FCCCA /* ChatBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBaseViewController.swift; sourceTree = "<group>"; };
 		2C9B1AF52757C646006FCCCA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2C9B1AF72757C679006FCCCA /* ChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
+		2CBA1B95275D2BC9000C436C /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		2CBA1B97275D2BDC000C436C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		2CBA1B9A275D2C21000C436C /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		2CBA1B9C275D2C96000C436C /* ConstantURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantURL.swift; sourceTree = "<group>"; };
+		2CBA1B9F275D2DAC000C436C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		2CBA1BA2275D2EB6000C436C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2CBA1BA4275D37DE000C436C /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 		2CCFA38B275A492800B97D2A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDoctorLog.swift; sourceTree = "<group>"; };
@@ -340,16 +354,95 @@
 		2C9B1ADC2757C2FF006FCCCA /* AIDoctor-P Project */ = {
 			isa = PBXGroup;
 			children = (
+				2CBA1B8F275D2B29000C436C /* DefaultFile */,
 				2C34022A275BF40E009BA8C2 /* Header */,
 				2CCFA393275A708C00B97D2A /* Extension */,
-				2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */,
-				2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */,
+				2CBA1B90275D2B36000C436C /* Model */,
+				2CBA1B93275D2B48000C436C /* Repository */,
+				2CBA1B92275D2B44000C436C /* Service */,
+				2CBA1B91275D2B3E000C436C /* ViewModel */,
 				2CCFA394275A709F00B97D2A /* View */,
 				2C9B1AE62757C300006FCCCA /* Assets.xcassets */,
 				2C9B1AE82757C300006FCCCA /* LaunchScreen.storyboard */,
 				2C9B1AEB2757C300006FCCCA /* Info.plist */,
 			);
 			path = "AIDoctor-P Project";
+			sourceTree = "<group>";
+		};
+		2CBA1B8F275D2B29000C436C /* DefaultFile */ = {
+			isa = PBXGroup;
+			children = (
+				2C9B1ADD2757C2FF006FCCCA /* AppDelegate.swift */,
+				2C9B1ADF2757C2FF006FCCCA /* SceneDelegate.swift */,
+			);
+			path = DefaultFile;
+			sourceTree = "<group>";
+		};
+		2CBA1B90275D2B36000C436C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1B9C275D2C96000C436C /* ConstantURL.swift */,
+				2CBA1B94275D2BA9000C436C /* Login Logout */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CBA1B91275D2B3E000C436C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1BA1275D2EAC000C436C /* Login */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2CBA1B92275D2B44000C436C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1B9E275D2DA4000C436C /* Login */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2CBA1B93275D2B48000C436C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1B99275D2C16000C436C /* Login */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2CBA1B94275D2BA9000C436C /* Login Logout */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1B95275D2BC9000C436C /* LoginRequest.swift */,
+				2CBA1B97275D2BDC000C436C /* LoginResponse.swift */,
+				2CBA1BA4275D37DE000C436C /* LogoutResponse.swift */,
+			);
+			path = "Login Logout";
+			sourceTree = "<group>";
+		};
+		2CBA1B99275D2C16000C436C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1B9A275D2C21000C436C /* LoginRepository.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2CBA1B9E275D2DA4000C436C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1B9F275D2DAC000C436C /* LoginService.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2CBA1BA1275D2EAC000C436C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1BA2275D2EB6000C436C /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		2CCFA393275A708C00B97D2A /* Extension */ = {
@@ -630,21 +723,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CBA1BA5275D37DE000C436C /* LogoutResponse.swift in Sources */,
 				2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */,
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
 				2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */,
+				2CBA1B96275D2BC9000C436C /* LoginRequest.swift in Sources */,
 				2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */,
 				2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */,
 				2CCFA3B9275A9D6C00B97D2A /* SymptomTableViewCell.swift in Sources */,
 				2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */,
 				2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */,
+				2CBA1B9B275D2C21000C436C /* LoginRepository.swift in Sources */,
 				2C2F37DD275BA45800B694D2 /* ChatBotTableViewCell.swift in Sources */,
 				2CCFA3BD275A9D7F00B97D2A /* RouteTableViewCell.swift in Sources */,
 				2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */,
+				2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */,
 				2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */,
 				2CCFA392275A616000B97D2A /* UIViewController.swift in Sources */,
 				2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */,
 				2CCFA39E275A77CE00B97D2A /* DiseaseTableViewCell.swift in Sources */,
+				2CBA1BA0275D2DAC000C436C /* LoginService.swift in Sources */,
 				2CCFA39A275A73A200B97D2A /* CovidTableViewCell.swift in Sources */,
 				2CCFA3B5275A9D5200B97D2A /* DiscriptionTableViewCell.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
@@ -655,6 +753,8 @@
 				2CCFA3B2275A93E800B97D2A /* DiseaseViewController.swift in Sources */,
 				2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
+				2CBA1B9D275D2C96000C436C /* ConstantURL.swift in Sources */,
+				2CBA1B98275D2BDC000C436C /* LoginResponse.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
 				2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */,
 				2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */,

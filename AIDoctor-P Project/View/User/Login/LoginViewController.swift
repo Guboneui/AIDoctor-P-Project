@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var idBaseView: UIView!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordBaseView: UIView!
@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordResetButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    
+    lazy var viewModel: LoginViewModel = LoginViewModel()
     
     override func loadView() {
         super.loadView()
@@ -31,24 +33,35 @@ class LoginViewController: UIViewController {
         
         loginButton.layer.cornerRadius = 20
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.viewModel.loginView = self
+        self.viewModel.delegate = self
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {
         AIDoctorLog.debug("로그인")
         
-        let admin = self.idTextField.text
-        if admin == "admin" {
-            let storyBoard = UIStoryboard(name: "Admin", bundle: nil)
-            let adminNav = storyBoard.instantiateViewController(identifier: "AdminNav")
-            self.changeRootViewController(adminNav)
-        } else {
+        let id = self.idTextField.text ?? ""
+        let password = self.passwordTextField.text ?? ""
+        let param = LoginRequest(userName: id, password: password)
+        self.viewModel.postLogin(param)
+        //        let admin = self.idTextField.text
+        
+    }
+}
+
+extension LoginViewController: LoginViewModelDelegate {
+    func goMainView(isAdmin: Int) {
+        if isAdmin == 0 {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let mainNav = storyBoard.instantiateViewController(identifier: "MainNav")
             self.changeRootViewController(mainNav)
+        } else {
+            let storyBoard = UIStoryboard(name: "Admin", bundle: nil)
+            let adminNav = storyBoard.instantiateViewController(identifier: "AdminNav")
+            self.changeRootViewController(adminNav)
         }
     }
 }
