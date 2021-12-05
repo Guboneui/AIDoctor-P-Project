@@ -76,6 +76,10 @@
 		2CBA1BA7275D3834000C436C /* LogoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA6275D3834000C436C /* LogoutRepository.swift */; };
 		2CBA1BA9275D38B9000C436C /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BA8275D38B9000C436C /* LogoutService.swift */; };
 		2CBA1BAB275D390E000C436C /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BAA275D390E000C436C /* LogoutViewModel.swift */; };
+		2CBA1BAE275D3B16000C436C /* DiseaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BAD275D3B16000C436C /* DiseaseResponse.swift */; };
+		2CBA1BB1275D3BF6000C436C /* UserHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BB0275D3BF6000C436C /* UserHomeRepository.swift */; };
+		2CBA1BB4275D3C5E000C436C /* UserHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BB3275D3C5E000C436C /* UserHomeService.swift */; };
+		2CBA1BB7275D3D80000C436C /* UserHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBA1BB6275D3D80000C436C /* UserHomeViewModel.swift */; };
 		2CCFA38C275A492800B97D2A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA38B275A492800B97D2A /* Login.storyboard */; };
 		2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */; };
 		2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */; };
@@ -186,6 +190,10 @@
 		2CBA1BA6275D3834000C436C /* LogoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRepository.swift; sourceTree = "<group>"; };
 		2CBA1BA8275D38B9000C436C /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		2CBA1BAA275D390E000C436C /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
+		2CBA1BAD275D3B16000C436C /* DiseaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseResponse.swift; sourceTree = "<group>"; };
+		2CBA1BB0275D3BF6000C436C /* UserHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeRepository.swift; sourceTree = "<group>"; };
+		2CBA1BB3275D3C5E000C436C /* UserHomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeService.swift; sourceTree = "<group>"; };
+		2CBA1BB6275D3D80000C436C /* UserHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewModel.swift; sourceTree = "<group>"; };
 		2CCFA38B275A492800B97D2A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDoctorLog.swift; sourceTree = "<group>"; };
@@ -389,6 +397,7 @@
 			children = (
 				2CBA1B9C275D2C96000C436C /* ConstantURL.swift */,
 				2CBA1B94275D2BA9000C436C /* Login Logout */,
+				2CBA1BAC275D3AEF000C436C /* UserHome */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				2CBA1BA1275D2EAC000C436C /* Login Logout */,
+				2CBA1BB5275D3D6C000C436C /* UserHome */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -405,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				2CBA1B9E275D2DA4000C436C /* Login Logout */,
+				2CBA1BB2275D3C4B000C436C /* UserHome */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -413,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				2CBA1B99275D2C16000C436C /* Login Logout */,
+				2CBA1BAF275D3BE2000C436C /* UserHome */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -452,6 +464,38 @@
 				2CBA1BAA275D390E000C436C /* LogoutViewModel.swift */,
 			);
 			path = "Login Logout";
+			sourceTree = "<group>";
+		};
+		2CBA1BAC275D3AEF000C436C /* UserHome */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1BAD275D3B16000C436C /* DiseaseResponse.swift */,
+			);
+			path = UserHome;
+			sourceTree = "<group>";
+		};
+		2CBA1BAF275D3BE2000C436C /* UserHome */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1BB0275D3BF6000C436C /* UserHomeRepository.swift */,
+			);
+			path = UserHome;
+			sourceTree = "<group>";
+		};
+		2CBA1BB2275D3C4B000C436C /* UserHome */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1BB3275D3C5E000C436C /* UserHomeService.swift */,
+			);
+			path = UserHome;
+			sourceTree = "<group>";
+		};
+		2CBA1BB5275D3D6C000C436C /* UserHome */ = {
+			isa = PBXGroup;
+			children = (
+				2CBA1BB6275D3D80000C436C /* UserHomeViewModel.swift */,
+			);
+			path = UserHome;
 			sourceTree = "<group>";
 		};
 		2CCFA393275A708C00B97D2A /* Extension */ = {
@@ -754,6 +798,8 @@
 				2CCFA39E275A77CE00B97D2A /* DiseaseTableViewCell.swift in Sources */,
 				2CBA1BA0275D2DAC000C436C /* LoginService.swift in Sources */,
 				2CCFA39A275A73A200B97D2A /* CovidTableViewCell.swift in Sources */,
+				2CBA1BB1275D3BF6000C436C /* UserHomeRepository.swift in Sources */,
+				2CBA1BB7275D3D80000C436C /* UserHomeViewModel.swift in Sources */,
 				2CCFA3B5275A9D5200B97D2A /* DiscriptionTableViewCell.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
 				2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */,
@@ -764,11 +810,13 @@
 				2CBA1BA7275D3834000C436C /* LogoutRepository.swift in Sources */,
 				2CBA1BA9275D38B9000C436C /* LogoutService.swift in Sources */,
 				2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */,
+				2CBA1BB4275D3C5E000C436C /* UserHomeService.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
 				2CBA1B9D275D2C96000C436C /* ConstantURL.swift in Sources */,
 				2CBA1B98275D2BDC000C436C /* LoginResponse.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
 				2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */,
+				2CBA1BAE275D3B16000C436C /* DiseaseResponse.swift in Sources */,
 				2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */,
 				2C9B1AE02757C2FF006FCCCA /* SceneDelegate.swift in Sources */,
 			);

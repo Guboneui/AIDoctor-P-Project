@@ -17,6 +17,7 @@ class LogoutViewModel {
     weak var delegate: LogoutViewModelDelegate?
     func getLogout() {
         logoutService.getLogout(onCompleted: { [weak self] response in
+            AIDoctorLog.debug("LogoutViewModel - getLogout")
             guard let self = self else {return}
             let message = response.message
             let code = response.code
@@ -29,6 +30,7 @@ class LogoutViewModel {
             }
         }, onError: {error in
             AIDoctorLog.debug("LogoutViewModel - getLogout Error: \(error)")
+            AIDoctorLog.debug("LogoutViewModel - getLogout")
         })
     }
 }

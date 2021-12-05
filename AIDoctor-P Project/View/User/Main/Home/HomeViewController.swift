@@ -11,10 +11,16 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
     
+    lazy var viewModel: UserHomeViewModel = UserHomeViewModel()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
         setTableView()
+        self.viewModel.homeView = self
+        self.viewModel.getDiseaseInfo()
     }
     
     func setNavigationBar() {
@@ -53,6 +59,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseTableViewCell", for: indexPath) as! DiseaseTableViewCell
             cell.selectionStyle = .none
             cell.delegate = self
+            cell.diseaseInfo = self.viewModel.diseaseInfo
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalTableViewCell", for: indexPath) as! HospitalTableViewCell

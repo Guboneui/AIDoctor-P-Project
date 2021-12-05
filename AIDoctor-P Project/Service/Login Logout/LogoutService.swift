@@ -14,9 +14,10 @@ class LogoutService {
         repository.getLogout(onCompleted: { response in
             let responseData = LogoutResponse(isSuccess: response.isSuccess, code: response.code, message: response.message)
             onCompleted(responseData)
-            
+            AIDoctorLog.debug("LogoutService - getLogout")
         }, onError: { error in
             onError("LogoutService - postLogout Error: \(error)")
+            AIDoctorLog.debug("LogoutService - getLogout")
         })
     }
 }

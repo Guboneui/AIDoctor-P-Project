@@ -13,6 +13,8 @@ class DiseaseViewController: UIViewController {
     
     var navTitle: String = "인플루엔자"
     
+    var diseaseInfo: [DiseaseInfo] = []
+    
     override func loadView() {
         super.loadView()
         self.mainTableView.layer.cornerRadius = 50

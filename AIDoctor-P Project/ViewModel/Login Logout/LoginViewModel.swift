@@ -17,6 +17,7 @@ class LoginViewModel {
     weak var delegate: LoginViewModelDelegate?
     func postLogin(_ parameters: LoginRequest) {
         loginSerivce.postLogin(parameters, onCompleted: { [weak self] response in
+            AIDoctorLog.debug("LoginViewModel - postLogin")
             guard let self = self else {return}
             let message = response.message
             let code = response.code
@@ -31,6 +32,7 @@ class LoginViewModel {
             }
         }, onError: {error in
             AIDoctorLog.debug("LoginViewModel - postLogin Error: \(error)")
+            AIDoctorLog.debug("LoginViewModel - postLogin")
         })
     }
 }

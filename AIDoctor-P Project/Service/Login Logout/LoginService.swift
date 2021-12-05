@@ -14,9 +14,10 @@ class LoginService {
         repository.postLogin(parameters, onCompleted: { response in
             let responseData = LoginResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, user: response.user)
             onCompleted(responseData)
-            
+            AIDoctorLog.debug("LoginService - postLogin")
         }, onError: { error in
             onError("LoginService - postLogin Error: \(error)")
+            AIDoctorLog.debug("LoginService - postLogin")
         })
     }
 }
