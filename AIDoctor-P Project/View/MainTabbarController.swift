@@ -14,7 +14,7 @@ class MainTabbarController: UITabBarController {
         super.viewDidLoad()
         selectedIndex = 1
         self.delegate = self
-        self.addDotToTabBarItemWith(index: selectedIndex, size: 1.0, color: UIColor(named: "primary2")!)
+        //self.addDotToTabBarItemWith(index: selectedIndex, size: 1.0, color: UIColor(named: "primary2")!)
         setNavigationBar()
     }
     

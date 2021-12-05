@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 class AdminMainChatViewController: UIViewController {
 
@@ -24,6 +25,12 @@ class AdminMainChatViewController: UIViewController {
         setTableView()
         setNavigationBar()
         setKeyboardNotification()
+        IQKeyboardManager.shared().isEnabled = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        IQKeyboardManager.shared().isEnabled = true
     }
     
     

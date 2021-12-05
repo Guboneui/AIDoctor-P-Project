@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
@@ -33,7 +34,11 @@ class ChatBotViewController: UIViewController {
         setTableView()
         setKeyboardNotification()
         
+        IQKeyboardManager.shared().isEnabled = false
+        
     }
+    
+  
     
     func setKeyboardNotification() {
         
@@ -98,6 +103,7 @@ class ChatBotViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.tabBarController?.selectedIndex = 0
+        IQKeyboardManager.shared().isEnabled = true
     }
     
     

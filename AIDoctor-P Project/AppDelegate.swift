@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back")
         UINavigationBar.appearance().tintColor = UIColor(named: "primary2")
+        
+        IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared().accessibilityScroll(.up)
         
         return true
     }
