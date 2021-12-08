@@ -9,6 +9,10 @@ import UIKit
 
 class HospitalDetailCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

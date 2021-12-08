@@ -11,15 +11,18 @@ class HospitalViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     
-    var navTitle: String = "복정그린치과의원"
+    var hospitalInfo: HospitalInfo?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
         setNavigationBar()
+
     }
     
     func setNavigationBar() {
-        self.title = self.navTitle
+        self.title = self.hospitalInfo?.name
         
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
@@ -44,6 +47,13 @@ extension HospitalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalDetailTableViewCell", for: indexPath) as! HospitalDetailTableViewCell
         cell.selectionStyle = .none
+        cell.nameLabel.text = self.hospitalInfo?.name
+        cell.linkLabel.text = "홈페이지: \(self.hospitalInfo?.hospUrl ?? "정보 없음")"
+        cell.phoneNumberLabel.text = self.hospitalInfo?.phone
+        cell.locationLabel.text = self.hospitalInfo?.addr
+        cell.xPos = self.hospitalInfo!.xPos
+        
+        cell.yPos = self.hospitalInfo!.yPos
         return cell
     }
 }

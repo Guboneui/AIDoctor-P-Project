@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
@@ -21,6 +22,9 @@ class HomeViewController: UIViewController {
         setTableView()
         self.viewModel.homeView = self
         self.viewModel.getDiseaseInfo()
+        
+        let param = HospitalRequest(xPos: 127.1297, yPos: 37.4504, sbjCode: 5)
+        self.viewModel.postHospitalInfo(param)
     }
     
     func setNavigationBar() {
@@ -64,6 +68,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalTableViewCell", for: indexPath) as! HospitalTableViewCell
             cell.selectionStyle = .none
+            cell.hospitalInfo = self.viewModel.hospitalInfo
             cell.delegate = self
             return cell
         }
@@ -79,12 +84,15 @@ extension HomeViewController: DiseaseInfoDelegate {
     }
 }
 
-extension HomeViewController: HospitalDetailViewFirstDelegate {
-    func goHospital() {
+extension HomeViewController: HospitalInfoDelegate {
+    func hospitalInfo(hospitalInfo: HospitalInfo) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let hospitalView = storyBoard.instantiateViewController(withIdentifier: "HospitalViewController")
+        let hospitalView = storyBoard.instantiateViewController(withIdentifier: "HospitalViewController") as! HospitalViewController
+        hospitalView.hospitalInfo = hospitalInfo
         self.navigationController?.pushViewController(hospitalView, animated: true)
     }
+    
+   
 }
 
 

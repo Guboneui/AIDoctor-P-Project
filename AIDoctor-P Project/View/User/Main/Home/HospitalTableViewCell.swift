@@ -7,16 +7,26 @@
 
 import UIKit
 
-protocol HospitalDetailViewFirstDelegate: AnyObject {
-    func goHospital()
+
+
+protocol HospitalInfoDelegate: AnyObject {
+    func hospitalInfo(hospitalInfo: HospitalInfo)
 }
+
 
 class HospitalTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
-    weak var delegate: HospitalDetailViewFirstDelegate?
+    var hospitalInfo: [HospitalInfo] = [] {
+        didSet {
+            self.mainCollectionView.reloadData()
+            AIDoctorLog.debug("HospitalTableViewCell - mainCollectionView - Reload")
+        }
+    }
+    
+    weak var delegate: HospitalInfoDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,16 +46,21 @@ class HospitalTableViewCell: UITableViewCell {
 
 extension HospitalTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.hospitalInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HospitalDetailCollectionViewCell", for: indexPath) as! HospitalDetailCollectionViewCell
+        let data = self.hospitalInfo[indexPath.item]
+        cell.categoryLabel.text = data.className
+        cell.nameLabel.text = data.name
+        cell.locationLabel.text = data.addr
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.goHospital()
+        let data = self.hospitalInfo[indexPath.item]
+        self.delegate?.hospitalInfo(hospitalInfo: data)
     }
 }
 

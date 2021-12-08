@@ -11,8 +11,6 @@ class DiseaseViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     
-   
-    
     var diseaseInfo: DiseaseInfo?
     
     override func loadView() {

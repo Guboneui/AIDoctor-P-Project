@@ -11,7 +11,7 @@ struct HospitalResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var results: [HospitalInfo]
+    var results: [HospitalInfo]?
     var radius: Int
     var cnt: Int
 }
@@ -23,7 +23,7 @@ struct HospitalInfo: Decodable {
     var xPos: Float
     var yPos: Float
     var distance: Int
-    var hoopUrl: String
-    var className: STClass
+    var hospUrl: String?
+    var className: String
     var classCode: Int
 }

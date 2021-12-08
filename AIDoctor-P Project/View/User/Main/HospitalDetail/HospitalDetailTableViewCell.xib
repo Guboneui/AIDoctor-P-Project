@@ -96,7 +96,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="linkLabel" destination="qdT-bl-97P" id="AYl-Us-78h"/>
                 <outlet property="locationLabel" destination="qdF-Cn-1or" id="2Td-ow-o0L"/>
+                <outlet property="nameLabel" destination="oBU-Yp-Gow" id="8LX-n2-Vg3"/>
+                <outlet property="phoneNumberLabel" destination="OhO-CQ-13w" id="13n-k4-RgY"/>
             </connections>
             <point key="canvasLocation" x="-15.942028985507248" y="250.44642857142856"/>
         </tableViewCell>

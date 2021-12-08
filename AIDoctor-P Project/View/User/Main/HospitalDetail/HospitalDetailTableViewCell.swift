@@ -9,7 +9,30 @@ import UIKit
 
 class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
     
+    
+    
+    @IBOutlet var nameLabel: UILabel!
+    
+    @IBOutlet var linkLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
+    var xPos: Float = 0.0 
+    var yPos: Float = 0.0 {
+        didSet {
+            mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(self.yPos), longitude: Double(self.xPos))), zoomLevel: 1, animated: true)
+            self.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(self.yPos), longitude: Double(self.xPos)))
+            poiItem = MTMapPOIItem()
+            poiItem?.markerType = MTMapPOIItemMarkerType.customImage
+            poiItem?.customImage = UIImage(named: "location")
+            //mapView.isUserInteractionEnabled = false
+            poiItem?.mapPoint = mapPoint
+            poiItem?.itemName = self.nameLabel.text
+            mapView.add(poiItem)
+        }
+    }
+    
+    
+   
     var mapPoint: MTMapPoint?
     var poiItem: MTMapPOIItem?
     let mapView: MTMapView = {
@@ -32,17 +55,31 @@ class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
             mapView.heightAnchor.constraint(equalTo: self.mapView.widthAnchor, multiplier: 0.5)
         ])
         
+//        mapView.delegate = self
+//        mapView.baseMapType = .standard
+//        mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4476, longitude: 127.1270)), zoomLevel: 1, animated: true)
+//        self.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4476, longitude: 127.1270))
+//        poiItem = MTMapPOIItem()
+//        poiItem?.markerType = MTMapPOIItemMarkerType.customImage
+//        poiItem?.customImage = UIImage(named: "location")
+//        //mapView.isUserInteractionEnabled = false
+//        poiItem?.mapPoint = mapPoint
+//        poiItem?.itemName = self.nameLabel.text
+//        mapView.add(poiItem)
+        
         mapView.delegate = self
         mapView.baseMapType = .standard
-        mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4476, longitude: 127.1270)), zoomLevel: 1, animated: true)
-        self.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4476, longitude: 127.1270))
-        poiItem = MTMapPOIItem()
-        poiItem?.markerType = MTMapPOIItemMarkerType.customImage
-        poiItem?.customImage = UIImage(named: "location")
-        //mapView.isUserInteractionEnabled = false
-        poiItem?.mapPoint = mapPoint
-        poiItem?.itemName = "복정그린치과의원"
-        mapView.add(poiItem)
+//        mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(self.yPos), longitude: Double(self.xPos))), zoomLevel: 1, animated: true)
+//        self.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(self.yPos), longitude: Double(self.xPos)))
+//        poiItem = MTMapPOIItem()
+//        poiItem?.markerType = MTMapPOIItemMarkerType.customImage
+//        poiItem?.customImage = UIImage(named: "location")
+//        //mapView.isUserInteractionEnabled = false
+//        poiItem?.mapPoint = mapPoint
+//        poiItem?.itemName = self.nameLabel.text
+//        mapView.add(poiItem)
+        
+ 
     }
     
     override func layoutSubviews() {
