@@ -49,6 +49,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="covidNumLabel" destination="aFk-dP-9N0" id="pPV-LK-gbe"/>
+            </connections>
             <point key="canvasLocation" x="294.92753623188406" y="109.82142857142857"/>
         </tableViewCell>
     </objects>

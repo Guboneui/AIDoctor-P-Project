@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */; };
 		2C2B828D2760C89300E9ADE5 /* HospitalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */; };
+		2C2B829027611F8800E9ADE5 /* CovidResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828F27611F8800E9ADE5 /* CovidResponse.swift */; };
 		2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */; };
 		2C2F37D8275B5C0300B694D2 /* HospitalDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */; };
 		2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */; };
@@ -114,6 +115,7 @@
 		102E7E59E5EAA3108F4B0C55 /* Pods_AIDoctor_P_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIDoctor_P_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRequest.swift; sourceTree = "<group>"; };
 		2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalResponse.swift; sourceTree = "<group>"; };
+		2C2B828F27611F8800E9ADE5 /* CovidResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidResponse.swift; sourceTree = "<group>"; };
 		2C2F37D4275B5BA300B694D2 /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		2C2F37D6275B5C0300B694D2 /* HospitalDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailTableViewCell.swift; sourceTree = "<group>"; };
 		2C2F37D7275B5C0300B694D2 /* HospitalDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				2CBA1BAD275D3B16000C436C /* DiseaseResponse.swift */,
 				2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */,
 				2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */,
+				2C2B828F27611F8800E9ADE5 /* CovidResponse.swift */,
 			);
 			path = UserHome;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				2C2F37DD275BA45800B694D2 /* ChatBotTableViewCell.swift in Sources */,
 				2CCFA3BD275A9D7F00B97D2A /* RouteTableViewCell.swift in Sources */,
 				2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */,
+				2C2B829027611F8800E9ADE5 /* CovidResponse.swift in Sources */,
 				2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */,
 				2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */,
 				2CCFA392275A616000B97D2A /* UIViewController.swift in Sources */,

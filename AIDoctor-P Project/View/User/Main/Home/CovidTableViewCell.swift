@@ -9,6 +9,7 @@ import UIKit
 
 class CovidTableViewCell: UITableViewCell {
 
+    @IBOutlet var covidNumLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

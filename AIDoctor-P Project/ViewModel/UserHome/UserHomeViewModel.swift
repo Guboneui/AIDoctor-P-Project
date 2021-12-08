@@ -29,6 +29,13 @@ class UserHomeViewModel {
         }
     }
     
+    var covidInfo: Int? {
+        didSet {
+            self.homeView?.homeTableView.reloadData()
+            AIDoctorLog.debug("HomeViewController - homeTableView - reload")
+        }
+    }
+    
     func getDiseaseInfo() {
         userHomeService.getDiseaseInfo(onCompleted: { [weak self] response in
             AIDoctorLog.debug("UserHomeViewModel - getDiseaseInfo")
@@ -64,9 +71,26 @@ class UserHomeViewModel {
         } onError: { error in
             AIDoctorLog.debug("UserHomeViewModel - postHospitalInfo Error: \(error)")
         }
-
-
     }
     
+    func getCovidInfo() {
+        userHomeService.getCovidInfo(onCompleted: { [weak self] response in
+            AIDoctorLog.debug("UserHomeViewModel - getCovidInfo")
+            guard let self = self else {return}
+            let message = response.nessage
+            let code = response.code
+            
+            if response.isSuccess == true {
+                AIDoctorLog.debug("code: \(code), message: \(message)")
+                self.covidInfo = response.results
+            } else {
+                AIDoctorLog.debug("code: \(code), message: \(message)")
+            }
+        }, onError: {error in
+            AIDoctorLog.debug("UserHomeViewModel - getCovidInfo Error: \(error)")
+            
+        })
+    }
+   
     
 }

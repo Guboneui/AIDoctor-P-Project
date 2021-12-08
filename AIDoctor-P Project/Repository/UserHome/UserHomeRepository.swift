@@ -36,4 +36,19 @@ class UserHomeRepository {
                 }
             }
     }
+    
+    func getCovidInfo(onCompleted: @escaping(CovidResponse) -> Void, onError: (String) -> Void) {
+        AF.request("\(ConstantURL.BASE_URL)/api/covid", method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: CovidResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    AIDoctorLog.debug("UserHomeRepository - getCovidInfo")
+                    onCompleted(response)
+                case .failure(let error):
+                    AIDoctorLog.debug("UserHomeRepository - getCovidInfo Error: \(error)")
+                }
+            }
+    }
+    
 }

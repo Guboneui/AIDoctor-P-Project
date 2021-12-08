@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
         
         let param = HospitalRequest(xPos: 127.1297, yPos: 37.4504, sbjCode: 5)
         self.viewModel.postHospitalInfo(param)
+        
+        self.viewModel.getCovidInfo()
     }
     
     func setNavigationBar() {
@@ -58,6 +60,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CovidTableViewCell", for: indexPath) as! CovidTableViewCell
             cell.selectionStyle = .none
+            cell.covidNumLabel.text = "\(self.viewModel.covidInfo ?? 0)명"
             return cell
         } else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "DiseaseTableViewCell", for: indexPath) as! DiseaseTableViewCell
