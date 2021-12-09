@@ -12,6 +12,9 @@ protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
 }
 
+
+
+
 class ChatBotViewController: UIViewController {
 
     weak var delegate: WhenViewDisappear?
@@ -45,9 +48,6 @@ class ChatBotViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShowNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHideNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        chatTableView.addGestureRecognizer(tap)
-        
     }
     
     @objc func handleKeyboardShowNotification(_ sender: Notification) {
@@ -75,9 +75,7 @@ class ChatBotViewController: UIViewController {
         }
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
+   
     
     func setNavigationBar() {
         self.title = "AI Doctor"
@@ -95,8 +93,17 @@ class ChatBotViewController: UIViewController {
         chatTableView.estimatedRowHeight = 100
         chatTableView.rowHeight = UITableView.automaticDimension
         
-        chatTableView.register(UINib(nibName: "ChatBotTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatBotTableViewCell")
+        
+        chatTableView.register(UINib(nibName: "ImageChatBotTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageChatBotTableViewCell")
+        chatTableView.register(UINib(nibName: "NoneImageChatBotTableViewCell", bundle: nil), forCellReuseIdentifier: "NoneImageChatBotTableViewCell")
         chatTableView.register(UINib(nibName: "UserChatTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatTableViewCell")
+        
+        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: {(completed) in
+            let indexPath = IndexPath(row: 2, section: 0)
+            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        })
         
     }
     
@@ -130,19 +137,27 @@ class ChatBotViewController: UIViewController {
 
 extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatBotTableViewCell", for: indexPath) as! ChatBotTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageChatBotTableViewCell", for: indexPath) as! ImageChatBotTableViewCell
             cell.selectionStyle = .none
-            cell.firstButton.addTarget(self, action: #selector(self.yesAlert), for: .touchUpInside)
-            cell.secondButton.addTarget(self, action: #selector(self.noAlert), for: .touchUpInside)
+            cell.delegate = self
+            cell.buttonTableViewHeight.constant = 40 * 5
             return cell
             
+            
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
+            cell.selectionStyle = .none
+            cell.delegate = self
+            cell.buttonTableViewHeight.constant = 40 * 3
+            return cell
+          
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
             cell.selectionStyle = .none
@@ -151,3 +166,15 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
+    func chatBotButtonDidSelected() {
+        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: {(completed) in
+            let indexPath = IndexPath(row: 2, section: 0)
+            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        })
+    }
+}
+
