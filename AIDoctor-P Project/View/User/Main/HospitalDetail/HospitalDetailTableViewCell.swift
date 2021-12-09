@@ -23,7 +23,7 @@ class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
             self.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(self.yPos), longitude: Double(self.xPos)))
             poiItem = MTMapPOIItem()
             poiItem?.markerType = MTMapPOIItemMarkerType.customImage
-            poiItem?.customImage = UIImage(named: "location")
+            poiItem?.customImage = UIImage(named: "mapPin")
             //mapView.isUserInteractionEnabled = false
             poiItem?.mapPoint = mapPoint
             poiItem?.itemName = self.nameLabel.text

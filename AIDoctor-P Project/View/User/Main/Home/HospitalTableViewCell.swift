@@ -17,6 +17,7 @@ protocol HospitalInfoDelegate: AnyObject {
 class HospitalTableViewCell: UITableViewCell {
 
     
+    @IBOutlet var refreshLocationStackView: UIStackView!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
     var hospitalInfo: [HospitalInfo] = [] {
