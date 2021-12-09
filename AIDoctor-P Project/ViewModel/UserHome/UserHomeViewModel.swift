@@ -77,7 +77,7 @@ class UserHomeViewModel {
         userHomeService.getCovidInfo(onCompleted: { [weak self] response in
             AIDoctorLog.debug("UserHomeViewModel - getCovidInfo")
             guard let self = self else {return}
-            let message = response.nessage
+            let message = response.message
             let code = response.code
             
             if response.isSuccess == true {

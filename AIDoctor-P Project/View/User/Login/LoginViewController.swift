@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var idBaseView: UIView!
     @IBOutlet weak var idTextField: UITextField!
@@ -18,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     
     lazy var viewModel: LoginViewModel = LoginViewModel()
+    var locationManager = CLLocationManager()
     
     override func loadView() {
         super.loadView()
@@ -40,6 +42,10 @@ class LoginViewController: UIViewController {
         self.passwordTextField.delegate = self
         self.viewModel.loginView = self
         self.viewModel.delegate = self
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {

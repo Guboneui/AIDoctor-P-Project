@@ -10,7 +10,7 @@ import Foundation
 struct CovidResponse: Decodable {
     var isSuccess: Bool
     var code: Int
-    var nessage: String
+    var message: String
     var results: Int?
 }
 

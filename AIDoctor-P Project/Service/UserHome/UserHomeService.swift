@@ -34,7 +34,7 @@ class UserHomeService {
     
     func getCovidInfo(onCompleted: @escaping (CovidResponse) -> Void, onError: @escaping (String) -> Void) {
         repository.getCovidInfo(onCompleted: { response in
-            let responseData = CovidResponse(isSuccess: response.isSuccess, code: response.code, nessage: response.nessage, results: response.results)
+            let responseData = CovidResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, results: response.results)
             onCompleted(responseData)
             AIDoctorLog.debug("UserHomeService - getCovidInfo")
         }, onError: { error in

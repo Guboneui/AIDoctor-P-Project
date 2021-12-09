@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import CoreLocation
 
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var homeTableView: UITableView!
     
     lazy var viewModel: UserHomeViewModel = UserHomeViewModel()
     
     
+    var locationManager = CLLocationManager()
+    
+    var xPos: Double?
+    var yPos: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +27,22 @@ class HomeViewController: UIViewController {
         setTableView()
         self.viewModel.homeView = self
         self.viewModel.getDiseaseInfo()
-        
-        let param = HospitalRequest(xPos: 127.1297, yPos: 37.4504, sbjCode: 5)
-        self.viewModel.postHospitalInfo(param)
-        
         self.viewModel.getCovidInfo()
+        
+        
+        if CLLocationManager.locationServicesEnabled() {
+            AIDoctorLog.debug("현재 사용자의 위치정보를 불러왔습니다.")
+            locationManager.startUpdatingLocation() //위치 정보 받아오기 시작
+            self.yPos = locationManager.location?.coordinate.latitude
+            self.xPos = locationManager.location?.coordinate.longitude
+            let param = HospitalRequest(xPos: 127.1297, yPos: 37.4504, sbjCode: 5)
+            AIDoctorLog.debug("xPos: \(String(describing: self.xPos)), yPos: \(String(describing: self.yPos))")
+            self.viewModel.postHospitalInfo(param)
+        } else {
+            AIDoctorLog.debug("현재 사용자의 위치정보 서비스가 거부되어있습니다.")
+        }
+        
+        
     }
     
     func setNavigationBar() {
@@ -95,7 +111,7 @@ extension HomeViewController: HospitalInfoDelegate {
         self.navigationController?.pushViewController(hospitalView, animated: true)
     }
     
-   
+    
 }
 
 
