@@ -12,9 +12,9 @@ class CovidTableViewCell: UITableViewCell {
     @IBOutlet var covidNumLabel: UILabel!
     @IBOutlet var refreshCovid: UIButton!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

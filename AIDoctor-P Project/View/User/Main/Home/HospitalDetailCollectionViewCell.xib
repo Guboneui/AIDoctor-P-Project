@@ -23,8 +23,8 @@
                             <constraint firstAttribute="width" secondItem="IKJ-Lc-1eF" secondAttribute="height" id="ARb-0I-fq3"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="치과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-Ky-rSX">
-                        <rect key="frame" x="0.0" y="155" width="150" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="치과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-Ky-rSX">
+                        <rect key="frame" x="0.0" y="155" width="21" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                         <color key="textColor" name="gray4"/>
                         <nil key="highlightedColor"/>
@@ -66,6 +66,12 @@
                         <color key="textColor" name="gray4"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2m-1D-K9B">
+                        <rect key="frame" x="26" y="157.5" width="124" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <color key="textColor" name="primary1"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -80,17 +86,20 @@
                 <constraint firstItem="o4N-XD-k3f" firstAttribute="top" secondItem="2m5-Ky-rSX" secondAttribute="bottom" constant="5" id="N79-Ym-S6U"/>
                 <constraint firstItem="12q-Cd-ztg" firstAttribute="centerY" secondItem="7cw-94-NWQ" secondAttribute="centerY" id="NAy-3g-yNe"/>
                 <constraint firstItem="IKJ-Lc-1eF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ah6-55-waQ"/>
+                <constraint firstItem="E2m-1D-K9B" firstAttribute="leading" secondItem="2m5-Ky-rSX" secondAttribute="trailing" constant="5" id="apR-wz-2bm"/>
                 <constraint firstItem="o4N-XD-k3f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eRJ-Qm-IRs"/>
                 <constraint firstItem="2m5-Ky-rSX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gTt-sS-HPx"/>
                 <constraint firstItem="ewX-Qc-0jw" firstAttribute="centerY" secondItem="7cw-94-NWQ" secondAttribute="centerY" id="oCa-Wx-yYh"/>
+                <constraint firstAttribute="trailing" secondItem="E2m-1D-K9B" secondAttribute="trailing" id="rvt-jb-ga7"/>
                 <constraint firstAttribute="bottom" secondItem="7cw-94-NWQ" secondAttribute="bottom" id="tHh-sC-3BN"/>
                 <constraint firstItem="ewX-Qc-0jw" firstAttribute="leading" secondItem="12q-Cd-ztg" secondAttribute="trailing" constant="5" id="tR9-Dj-RgH"/>
                 <constraint firstItem="7cw-94-NWQ" firstAttribute="top" secondItem="o4N-XD-k3f" secondAttribute="bottom" constant="5" id="uKe-cu-QyB"/>
-                <constraint firstAttribute="trailing" secondItem="2m5-Ky-rSX" secondAttribute="trailing" id="ztb-ek-hzG"/>
+                <constraint firstItem="E2m-1D-K9B" firstAttribute="centerY" secondItem="2m5-Ky-rSX" secondAttribute="centerY" id="zvy-4f-aIL"/>
             </constraints>
             <size key="customSize" width="216" height="368"/>
             <connections>
                 <outlet property="categoryLabel" destination="2m5-Ky-rSX" id="k1N-fU-4mE"/>
+                <outlet property="distanceLabel" destination="E2m-1D-K9B" id="K2g-8g-K8k"/>
                 <outlet property="locationLabel" destination="12q-Cd-ztg" id="qhf-0r-kvB"/>
                 <outlet property="nameLabel" destination="o4N-XD-k3f" id="xdf-nd-PK8"/>
             </connections>
@@ -103,6 +112,9 @@
         <image name="test" width="300" height="300"/>
         <namedColor name="gray4">
             <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary1">
+            <color red="0.37647058823529411" green="0.53333333333333333" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary2">
             <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,8 +14,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var homeTableView: UITableView!
     
     lazy var viewModel: UserHomeViewModel = UserHomeViewModel()
-    
-    
     var locationManager = CLLocationManager()
     
     var xPos: Double?

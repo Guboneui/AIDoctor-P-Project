@@ -56,6 +56,7 @@ extension HospitalTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         cell.categoryLabel.text = data.className
         cell.nameLabel.text = data.name
         cell.locationLabel.text = data.addr
+        cell.distanceLabel.text = "\(data.distance)m"
         return cell
     }
     

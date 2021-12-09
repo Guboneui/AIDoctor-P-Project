@@ -12,6 +12,7 @@ class HospitalDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
