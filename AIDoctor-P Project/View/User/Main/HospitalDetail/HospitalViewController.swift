@@ -48,7 +48,7 @@ extension HospitalViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalDetailTableViewCell", for: indexPath) as! HospitalDetailTableViewCell
         cell.selectionStyle = .none
         cell.nameLabel.text = self.hospitalInfo?.name
-        cell.linkLabel.text = "홈페이지: \(self.hospitalInfo?.hospUrl ?? "정보 없음")"
+        cell.linkLabel.text = "\(self.hospitalInfo?.hospUrl ?? "정보 없음")"
         cell.phoneNumberLabel.text = self.hospitalInfo?.phone
         cell.locationLabel.text = self.hospitalInfo?.addr
         cell.xPos = self.hospitalInfo!.xPos

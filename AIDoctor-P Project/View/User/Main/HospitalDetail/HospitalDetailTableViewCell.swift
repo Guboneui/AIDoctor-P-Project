@@ -82,6 +82,10 @@ class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
         let callingTapGesture = UITapGestureRecognizer(target: self, action: #selector(callingTapGesture))
         self.phoneNumberLabel.isUserInteractionEnabled = true
         self.phoneNumberLabel.addGestureRecognizer(callingTapGesture)
+        
+        let linkTapGesture = UITapGestureRecognizer(target: self, action: #selector(linkTapGesture))
+        self.linkLabel.isUserInteractionEnabled = true
+        self.linkLabel.addGestureRecognizer(linkTapGesture)
  
     }
     
@@ -92,6 +96,14 @@ class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
 //            UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
 //        }
         
+    }
+    
+    @objc func linkTapGesture(_ sender: UITapGestureRecognizer) {
+        print("link: \(self.linkLabel.text ?? "")")
+        
+        if let url = URL(string: self.linkLabel.text ?? "") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     override func layoutSubviews() {

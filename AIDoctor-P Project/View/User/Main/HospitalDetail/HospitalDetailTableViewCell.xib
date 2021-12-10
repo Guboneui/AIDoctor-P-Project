@@ -30,8 +30,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="#치과 #복정동 #치과의원 #임플란트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdT-bl-97P">
-                        <rect key="frame" x="30" y="368" width="330" height="17"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <rect key="frame" x="86.5" y="368" width="273.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.42745098039215684" green="0.63529411764705879" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -69,12 +69,19 @@
                         <color key="textColor" name="gray4"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="홈페이지:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kq-2x-biR">
+                        <rect key="frame" x="30" y="368" width="53.5" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" name="primary1"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="qdT-bl-97P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="0ux-2o-Fga"/>
+                    <constraint firstItem="0kq-2x-biR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="41q-aT-Tja"/>
                     <constraint firstAttribute="trailing" secondItem="qdF-Cn-1or" secondAttribute="trailing" constant="110" id="7Nf-iH-k21"/>
                     <constraint firstItem="ykv-Rm-1p4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="7ge-RY-phB"/>
                     <constraint firstItem="ykv-Rm-1p4" firstAttribute="top" secondItem="qdT-bl-97P" secondAttribute="bottom" constant="30" id="8bT-NS-dlH"/>
+                    <constraint firstItem="qdT-bl-97P" firstAttribute="leading" secondItem="0kq-2x-biR" secondAttribute="trailing" constant="3" id="DUT-Eh-V7p"/>
                     <constraint firstItem="yo7-GS-xm1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JMe-HV-HKH"/>
                     <constraint firstItem="OhO-CQ-13w" firstAttribute="centerY" secondItem="ykv-Rm-1p4" secondAttribute="centerY" id="LnD-vk-bGV"/>
                     <constraint firstItem="Apm-nE-LdH" firstAttribute="centerY" secondItem="fXL-PM-JfX" secondAttribute="centerY" id="Lnw-do-AyO"/>
@@ -85,6 +92,8 @@
                     <constraint firstAttribute="trailing" secondItem="qdT-bl-97P" secondAttribute="trailing" constant="30" id="R07-7T-XdC"/>
                     <constraint firstAttribute="trailing" secondItem="oBU-Yp-Gow" secondAttribute="trailing" constant="30" id="SUT-j6-GJg"/>
                     <constraint firstItem="OhO-CQ-13w" firstAttribute="leading" secondItem="ykv-Rm-1p4" secondAttribute="trailing" constant="20" id="Upo-gr-IHu"/>
+                    <constraint firstItem="0kq-2x-biR" firstAttribute="top" secondItem="oBU-Yp-Gow" secondAttribute="bottom" constant="17" id="UvI-b3-XXf"/>
+                    <constraint firstItem="ykv-Rm-1p4" firstAttribute="top" secondItem="0kq-2x-biR" secondAttribute="bottom" constant="30" id="ZLV-rg-2Tr"/>
                     <constraint firstItem="fXL-PM-JfX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="bGb-MB-jfJ"/>
                     <constraint firstItem="qdF-Cn-1or" firstAttribute="top" secondItem="fXL-PM-JfX" secondAttribute="bottom" constant="5" id="e3W-rA-s9X"/>
                     <constraint firstAttribute="trailing" secondItem="OhO-CQ-13w" secondAttribute="trailing" constant="30" id="h5L-tr-3cF"/>
@@ -110,6 +119,9 @@
         <image name="test" width="300" height="300"/>
         <namedColor name="gray4">
             <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary1">
+            <color red="0.37647058823529411" green="0.53333333333333333" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary2">
             <color red="0.23137254901960785" green="0.35294117647058826" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
