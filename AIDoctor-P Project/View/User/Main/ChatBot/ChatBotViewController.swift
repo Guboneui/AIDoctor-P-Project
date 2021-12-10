@@ -16,7 +16,7 @@ protocol WhenViewDisappear: AnyObject{
 
 
 class ChatBotViewController: UIViewController {
-
+    
     weak var delegate: WhenViewDisappear?
     
     @IBOutlet weak var chatTableView: UITableView!
@@ -41,7 +41,7 @@ class ChatBotViewController: UIViewController {
         
     }
     
-  
+    
     
     func setKeyboardNotification() {
         
@@ -75,7 +75,7 @@ class ChatBotViewController: UIViewController {
         }
     }
     
-   
+    
     
     func setNavigationBar() {
         self.title = "AI Doctor"
@@ -118,7 +118,11 @@ class ChatBotViewController: UIViewController {
         let alert = UIAlertController(title: "", message: "응급상황이 맞으신가요?\n아닐 경우 사용에 제제가 가해질 수도 있습니다", preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         cancelButton.setValue(UIColor(named: "primary2"), forKey: "titleTextColor")
-        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let okButton = UIAlertAction(title: "확인", style: .default, handler: {_ in
+//            if let numberURL = NSURL(string: "tel://" + "119"), UIApplication.shared.canOpenURL(numberURL as URL) {
+//                UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
+//            }
+        })
         okButton.setValue(UIColor(named: "primary2"), forKey: "titleTextColor")
         alert.addAction(cancelButton)
         alert.addAction(okButton)
@@ -157,7 +161,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             cell.buttonTableViewHeight.constant = 40 * 3
             return cell
-          
+            
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
             cell.selectionStyle = .none
