@@ -79,7 +79,19 @@ class HospitalDetailTableViewCell: UITableViewCell, MTMapViewDelegate{
 //        poiItem?.itemName = self.nameLabel.text
 //        mapView.add(poiItem)
         
+        let callingTapGesture = UITapGestureRecognizer(target: self, action: #selector(callingTapGesture))
+        self.phoneNumberLabel.isUserInteractionEnabled = true
+        self.phoneNumberLabel.addGestureRecognizer(callingTapGesture)
  
+    }
+    
+    @objc func callingTapGesture(_ sender: UITapGestureRecognizer) {
+        print("calling: \(self.phoneNumberLabel.text ?? "")")
+        
+//        if let numberURL = NSURL(string: "tel://" + self.phoneNumberLabel.text!), UIApplication.shared.canOpenURL(numberURL as URL) {
+//            UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
+//        }
+        
     }
     
     override func layoutSubviews() {

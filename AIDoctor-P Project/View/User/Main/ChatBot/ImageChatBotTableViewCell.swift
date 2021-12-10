@@ -9,6 +9,7 @@ import UIKit
 
 class ImageChatBotTableViewCell: UITableViewCell {
     
+    var k = ["a", "b", "c", "d", "e"]
     
     @IBOutlet var baseView: UIView!
     @IBOutlet var chatBotImage: UIImageView!
@@ -53,11 +54,13 @@ extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatBotButtonTableViewCell", for: indexPath) as! ChatBotButtonTableViewCell
         cell.selectionStyle = .none
+        cell.buttonTitleLabel.text = self.k[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.chatBotButtonDidSelected()
+        print(self.k[indexPath.row])
         print("ImageChatBot - didSelectedIndex: \(indexPath.row)")
     }
     
