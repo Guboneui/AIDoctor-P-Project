@@ -17,6 +17,12 @@ class ImageChatBotTableViewCell: UITableViewCell {
     @IBOutlet var buttonTableView: UITableView!
     @IBOutlet var buttonTableViewHeight: NSLayoutConstraint!
     
+    var buttonList: [ListItem] = [] {
+        didSet {
+            self.buttonTableView.reloadData()
+        }
+    }
+    
     weak var delegate: ChatBotButtonDidSelectedDelegate?
     
     override func awakeFromNib() {
@@ -48,13 +54,14 @@ class ImageChatBotTableViewCell: UITableViewCell {
 
 extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.buttonList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatBotButtonTableViewCell", for: indexPath) as! ChatBotButtonTableViewCell
         cell.selectionStyle = .none
-        cell.buttonTitleLabel.text = self.k[indexPath.row]
+        let data = self.buttonList[indexPath.row]
+        cell.buttonTitleLabel.text = data.value
         return cell
     }
     

@@ -7,12 +7,11 @@
 
 import UIKit
 import IQKeyboardManager
+import Kingfisher
 
 protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
 }
-
-
 
 
 class ChatBotViewController: UIViewController {
@@ -29,6 +28,8 @@ class ChatBotViewController: UIViewController {
         chatBaseView.layer.cornerRadius = 20
     }
     
+    lazy var viewModel: ChatBotViewModel = ChatBotViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
@@ -39,8 +40,12 @@ class ChatBotViewController: UIViewController {
         
         IQKeyboardManager.shared().isEnabled = false
         
+        
+        self.viewModel.chatView = self
+        self.viewModel.getChatStart()
+        
+        
     }
-    
     
     
     func setKeyboardNotification() {
@@ -151,7 +156,15 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageChatBotTableViewCell", for: indexPath) as! ImageChatBotTableViewCell
             cell.selectionStyle = .none
             cell.delegate = self
-            cell.buttonTableViewHeight.constant = 40 * 5
+            let url = URL(string: self.viewModel.startBotMessage?.thumbnail ?? "")
+            cell.chatBotImage.kf.setImage(with: url)
+            let font = UIFont.systemFont(ofSize: 16)
+            cell.contentsLabel.attributedText = self.viewModel.startBotMessage?.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
+            
+            cell.buttonTableViewHeight.constant = CGFloat((viewModel.startBotMessage?.listItem?.count ?? 0) * 40)
+            cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
+            
+            
             return cell
             
             
@@ -160,6 +173,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             cell.delegate = self
             cell.buttonTableViewHeight.constant = 40 * 3
+            
             return cell
             
         } else {
