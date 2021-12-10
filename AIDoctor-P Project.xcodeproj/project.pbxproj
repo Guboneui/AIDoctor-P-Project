@@ -92,6 +92,8 @@
 		2CCBA7CD2763AC7A002B18A7 /* ChatBotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBA7CC2763AC7A002B18A7 /* ChatBotService.swift */; };
 		2CCBA7D02763B187002B18A7 /* ChatBotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBA7CF2763B187002B18A7 /* ChatBotViewModel.swift */; };
 		2CCBA7D22763BE7B002B18A7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBA7D12763BE7B002B18A7 /* String.swift */; };
+		2CCBA7D42763C2F4002B18A7 /* SendChatBotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBA7D32763C2F4002B18A7 /* SendChatBotRequest.swift */; };
+		2CCBA7D62763C30C002B18A7 /* SendChatBotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBA7D52763C30C002B18A7 /* SendChatBotResponse.swift */; };
 		2CCFA38C275A492800B97D2A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCFA38B275A492800B97D2A /* Login.storyboard */; };
 		2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */; };
 		2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */; };
@@ -219,6 +221,8 @@
 		2CCBA7CC2763AC7A002B18A7 /* ChatBotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotService.swift; sourceTree = "<group>"; };
 		2CCBA7CF2763B187002B18A7 /* ChatBotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewModel.swift; sourceTree = "<group>"; };
 		2CCBA7D12763BE7B002B18A7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2CCBA7D32763C2F4002B18A7 /* SendChatBotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatBotRequest.swift; sourceTree = "<group>"; };
+		2CCBA7D52763C30C002B18A7 /* SendChatBotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatBotResponse.swift; sourceTree = "<group>"; };
 		2CCFA38B275A492800B97D2A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2CCFA38D275A54AC00B97D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2CCFA38F275A60A000B97D2A /* AIDoctorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDoctorLog.swift; sourceTree = "<group>"; };
@@ -539,6 +543,8 @@
 			isa = PBXGroup;
 			children = (
 				2CCBA7C62763AACF002B18A7 /* StartChatBotResponse.swift */,
+				2CCBA7D32763C2F4002B18A7 /* SendChatBotRequest.swift */,
+				2CCBA7D52763C30C002B18A7 /* SendChatBotResponse.swift */,
 			);
 			path = ChatBot;
 			sourceTree = "<group>";
@@ -867,8 +873,10 @@
 				2CCFA3BD275A9D7F00B97D2A /* RouteTableViewCell.swift in Sources */,
 				2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */,
 				2C2B829027611F8800E9ADE5 /* CovidResponse.swift in Sources */,
+				2CCBA7D62763C30C002B18A7 /* SendChatBotResponse.swift in Sources */,
 				2CCBA7D02763B187002B18A7 /* ChatBotViewModel.swift in Sources */,
 				2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */,
+				2CCBA7D42763C2F4002B18A7 /* SendChatBotRequest.swift in Sources */,
 				2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */,
 				2CCFA392275A616000B97D2A /* UIViewController.swift in Sources */,
 				2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */,

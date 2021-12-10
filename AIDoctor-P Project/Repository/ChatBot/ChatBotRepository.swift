@@ -23,6 +23,17 @@ class ChatBotRepository {
             }
     }
     
-    
-
+    func postChatSend(_ parameters: SendChatBotRequest, onCompleted: @escaping (SendChatBotResponse) -> Void, onError: (String) -> Void) {
+        AF.request("\(ConstantURL.BASE_URL)/api/chatSend", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+            .validate()
+            .responseDecodable(of: SendChatBotResponse.self) {response in
+                switch response.result {
+                case .success(let response):
+                    AIDoctorLog.debug("ChatBotRepository - postChatSend")
+                    onCompleted(response)
+                case .failure(let error):
+                    AIDoctorLog.debug("ChatBotRepository - postChatSend Error: \(error)")
+                }
+            }
+    }
 }

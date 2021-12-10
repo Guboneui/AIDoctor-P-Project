@@ -22,6 +22,16 @@ class ChatBotService {
     }
     
     
+    func postChatSend(_ parameters: SendChatBotRequest, onCompleted: @escaping (SendChatBotResponse) -> Void, onError: @escaping (String) -> Void) {
+        repository.postChatSend(parameters, onCompleted: { response in
+            let responseData = SendChatBotResponse(isSuccess: response.isSuccess, code: response.code, message: response.message, results: response.results)
+            onCompleted(responseData)
+            AIDoctorLog.debug("ChatBotService - postChatSend")
+        }, onError: { error in
+            onError("ChatBotService - postChatSend Error: \(error)")
+            AIDoctorLog.debug("ChatBotService - postChatSend Error")
+        })
+    }
     
 
 }

@@ -54,7 +54,7 @@ extension NoneImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.chatBotButtonDidSelected()
+        self.delegate?.chatBotButtonDidSelected(index: indexPath.row)
         print("NoneImageChatBot - didSelectedIndex: \(indexPath.row)")
     }
     

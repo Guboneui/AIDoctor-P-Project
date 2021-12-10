@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ChatBotButtonDidSelectedDelegate: AnyObject {
-    func chatBotButtonDidSelected()
+    func chatBotButtonDidSelected(index: Int)
 }
 
 class ChatBotButtonTableViewCell: UITableViewCell {

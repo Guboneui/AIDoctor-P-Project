@@ -18,6 +18,7 @@ class ChatBotViewController: UIViewController {
     
     weak var delegate: WhenViewDisappear?
     
+    @IBOutlet var messageTextField: UITextField!
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var chatBaseView: UIView!
     @IBOutlet weak var emergencyButton: UIButton!
@@ -107,7 +108,7 @@ class ChatBotViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
             let indexPath = IndexPath(row: 2, section: 0)
-            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
         
     }
@@ -141,12 +142,22 @@ class ChatBotViewController: UIViewController {
     @objc func noAlert() {
         self.presentAlert(title: "No")
     }
+    
+    @IBAction func sendMessageButtonAction(_ sender: Any) {
+        let param = SendChatBotRequest(message: "기침")
+        let message = SendChatMessage(title: "기침", listItem: nil)
+        let userMessage = ChatResponse(sender: "user", type: "Text", message: message)
+        self.viewModel.chatBot.append(userMessage)
+        self.viewModel.postChatSend(param)
+    }
+    
+    
 }
 
 
 extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.viewModel.chatBot.count + 1
         
     }
     
@@ -168,31 +179,77 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
             
             
-        } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
-            cell.selectionStyle = .none
-            cell.delegate = self
-            cell.buttonTableViewHeight.constant = 40 * 3
-            
-            return cell
-            
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
-            cell.selectionStyle = .none
-            return cell
+            
+            let data = self.viewModel.chatBot[indexPath.row - 1]
+            
+            if data.sender == "user" {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
+                cell.userChatLabel.text = data.message.title
+                cell.selectionStyle = .none
+                return cell
+            } else {
+                
+                
+                if data.message.title.contains("<img") || data.message.title.contains("jpg") {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "ImageChatBotTableViewCell", for: indexPath) as! ImageChatBotTableViewCell
+                    let startIndex: String.Index = data.message.title.index(data.message.title.startIndex, offsetBy: 10)
+                    let endIndex: String.Index = data.message.title.index(data.message.title.endIndex, offsetBy: -2)
+                    let imageString = data.message.title[startIndex..<endIndex]
+                    print(imageString)
+                    let url = URL(string: String(imageString))
+                    cell.chatBotImage.kf.setImage(with: url)
+                    cell.contentsLabel.text = ""
+                    //let font = UIFont.systemFont(ofSize: 16)
+                    //cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
+                    
+                    cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
+                    //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
+                    
+                    return cell
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
+                    let font = UIFont.systemFont(ofSize: 16)
+                    cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
+                    
+                    cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
+                    //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
+                    cell.selectionStyle = .none
+                    return cell
+                }
+                
+                
+                
+               
+                
+                
+                
+             
+            }
+            
+            
+            
+            
+            
             
         }
     }
 }
 
 extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
-    func chatBotButtonDidSelected() {
+    func chatBotButtonDidSelected(index: Int) {
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: {(completed) in
-            let indexPath = IndexPath(row: 2, section: 0)
+            let indexPath = IndexPath(row: self.viewModel.chatBot.count, section: 0)
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
+        
+        let param = SendChatBotRequest(message: (self.viewModel.startBotMessage?.listItem![index].value)!)
+        let message = SendChatMessage(title: (self.viewModel.startBotMessage?.listItem![index].value)!, listItem: nil)
+        let userMessage = ChatResponse(sender: "user", type: "Text", message: message)
+        self.viewModel.chatBot.append(userMessage)
+        self.viewModel.postChatSend(param)
     }
 }
 

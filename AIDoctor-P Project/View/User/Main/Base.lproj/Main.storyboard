@@ -338,6 +338,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="sendImage"/>
+                                                <connections>
+                                                    <action selector="sendMessageButtonAction:" destination="ozQ-8b-gkz" eventType="touchUpInside" id="PPb-px-0pQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="borderColor"/>
@@ -391,6 +394,7 @@
                         <outlet property="chatBaseView" destination="Gm4-tO-4cx" id="kGL-p9-Xnt"/>
                         <outlet property="chatTableView" destination="QqX-aM-qwN" id="j8A-qA-AdB"/>
                         <outlet property="emergencyButton" destination="Ffs-9d-TuV" id="63Z-k2-VX1"/>
+                        <outlet property="messageTextField" destination="mOZ-Tl-oO8" id="OY4-gS-yR4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NZ-cG-pKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
