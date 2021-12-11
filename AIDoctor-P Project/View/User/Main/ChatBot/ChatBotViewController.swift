@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManager
 import Kingfisher
+import CoreMIDI
 
 protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
@@ -15,6 +16,8 @@ protocol WhenViewDisappear: AnyObject{
 
 
 class ChatBotViewController: UIViewController {
+    
+    var isStart: Bool = false
     
     weak var delegate: WhenViewDisappear?
     
@@ -180,6 +183,8 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             let font = UIFont.systemFont(ofSize: 16)
             cell.contentsLabel.attributedText = self.viewModel.startBotMessage?.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
             
+       
+            
             cell.buttonTableViewHeight.constant = CGFloat((viewModel.startBotMessage?.listItem?.count ?? 0) * 40)
             cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
             
@@ -195,6 +200,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
                 cell.userChatLabel.text = data.message.title
                 cell.selectionStyle = .none
+                
                 
                 return cell
             } else {
@@ -212,9 +218,9 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     //cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
                     
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
-                    //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
+                    cell.buttonList = data.message.listItem ?? []
                     
-                    cell.sendButtonList = data.message.listItem ?? []
+                    cell.delegate = self
                     
                     return cell
                 }
@@ -235,8 +241,10 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                     //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
-                    
-                    cell.sendButtonList = data.message.listItem ?? []
+                    //cell.buttonList = self.viewModel.buttonList?.message.listItem ?? []
+                    //cell.sendButtonList = data.message.listItem ?? []
+                    cell.buttonList = data.message.listItem ?? []
+                    cell.delegate = self
                     
                     return cell
                 }
@@ -250,7 +258,8 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                     cell.buttonList = data.message.listItem ?? []
-                    
+                    //cell.buttonList = self.viewModel.buttonList?.message.listItem ?? []
+                    cell.delegate = self
                     cell.selectionStyle = .none
                     return cell
                 }
@@ -282,8 +291,11 @@ extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
             self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         })
         
-        let param = SendChatBotRequest(message: (self.viewModel.startBotMessage?.listItem![index].value)!)
-        let message = SendChatMessage(title: (self.viewModel.startBotMessage?.listItem![index].value)!, listItem: nil)
+        //let param = SendChatBotRequest(message: (self.viewModel.startBotMessage?.listItem![index].value)!)
+        
+        let param = SendChatBotRequest(message: (self.viewModel.buttonList?.message.listItem![index].value)!)
+        print("param: \(param)")
+        let message = SendChatMessage(title: (self.viewModel.buttonList?.message.listItem![index].value)!, listItem: nil)
         let userMessage = ChatResponse(sender: "user", type: "Text", message: message)
         self.viewModel.chatBot.append(userMessage)
         self.viewModel.postChatSend(param)

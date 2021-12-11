@@ -23,6 +23,14 @@ class ChatBotViewModel {
         }
     }
     
+    var buttonList: SendChatResults? {
+        didSet {
+            print("viewModel - button List set")
+            print(buttonList)
+            chatView?.chatTableView.reloadData()
+        }
+    }
+    
     var sendBotMessage: [SendChatResults] = [] {
         didSet {
             //print(sendBotMessage)
@@ -53,7 +61,15 @@ class ChatBotViewModel {
             
             if response.isSuccess == true {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
+                //self.startBotMessage = response.results
+                let type = "Start"
+                let title = "start"
+                let listItem = response.results?.listItem
+                
+                self.buttonList = SendChatResults(type: type, message: SendChatMessage(title: title, listItem: listItem))
+                
                 self.startBotMessage = response.results
+                //self.buttonList = response.results?.listItem
             } else {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
             }
@@ -84,7 +100,25 @@ class ChatBotViewModel {
                 print(self.chatBot)
                 
                 
-                //let data = test(sender: "chatBot", type: response.results, message: <#T##SendChatMessage?#>)
+                let size = response.results?.count
+                
+                print("🤬🤬🤬🤬🤬🤬🤬🤬")
+                
+                guard let test = response.results else {
+                    return
+                }
+                
+                self.buttonList = test[test.count - 1]
+                
+                
+//                print(type(of: self.buttonList))
+//                print(type(of: test[test.count - 1]))
+//                print(test[test.count - 1])
+                
+                
+                
+                
+                
                 self.sendBotMessage = response.results!
             } else {
                 AIDoctorLog.debug("code: \(code), message: \(message)")

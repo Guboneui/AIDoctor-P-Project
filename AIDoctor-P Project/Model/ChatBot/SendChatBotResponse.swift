@@ -21,12 +21,7 @@ struct SendChatResults: Decodable {
 
 struct SendChatMessage: Decodable {
     var title: String
-    var listItem: [SendListItem]?
+    var listItem: [ListItem]?
 }
 
 
-struct SendListItem: Decodable {
-    var label: String
-    var value: String
-    var required: String
-}

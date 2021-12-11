@@ -16,7 +16,7 @@ class NoneImageChatBotTableViewCell: UITableViewCell {
     
     weak var delegate: ChatBotButtonDidSelectedDelegate?
     
-    var buttonList: [SendListItem] = [] {
+    var buttonList: [ListItem] = [] {
         didSet {
             self.buttonTableView.reloadData()
         }
@@ -57,6 +57,8 @@ extension NoneImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatBotButtonTableViewCell", for: indexPath) as! ChatBotButtonTableViewCell
         cell.selectionStyle = .none
+        let data = self.buttonList[indexPath.row]
+        cell.buttonTitleLabel.text = data.value
         
         
         return cell

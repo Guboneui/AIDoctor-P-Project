@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="255" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-Lc-1eF">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="255" image="hospitalHome" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-Lc-1eF">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="IKJ-Lc-1eF" secondAttribute="height" id="ARb-0I-fq3"/>
@@ -107,9 +107,9 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="hospitalHome" width="130" height="120"/>
         <image name="location" width="24" height="24"/>
         <image name="next" width="12" height="12"/>
-        <image name="test" width="300" height="300"/>
         <namedColor name="gray4">
             <color red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

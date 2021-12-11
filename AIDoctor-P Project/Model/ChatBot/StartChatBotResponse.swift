@@ -17,10 +17,10 @@ struct StartChatBotResponse: Decodable {
 struct StartChatResult: Decodable {
     var thumbnail: String
     var title: String
-    var listItem: [StartListItem]?
+    var listItem: [ListItem]?
 }
 
-struct StartListItem: Decodable {
+struct ListItem: Decodable {
     var label: String
     var value: String
     var required: Bool

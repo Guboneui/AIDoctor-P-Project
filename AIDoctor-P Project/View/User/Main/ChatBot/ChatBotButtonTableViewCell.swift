@@ -9,6 +9,7 @@ import UIKit
 
 protocol ChatBotButtonDidSelectedDelegate: AnyObject {
     func chatBotButtonDidSelected(index: Int)
+    
 }
 
 class ChatBotButtonTableViewCell: UITableViewCell {

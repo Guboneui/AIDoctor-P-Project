@@ -17,17 +17,13 @@ class ImageChatBotTableViewCell: UITableViewCell {
     @IBOutlet var buttonTableView: UITableView!
     @IBOutlet var buttonTableViewHeight: NSLayoutConstraint!
     
-    var buttonList: [StartListItem] = [] {
+    var buttonList: [ListItem] = [] {
         didSet {
             self.buttonTableView.reloadData()
         }
     }
     
-    var sendButtonList: [SendListItem] = [] {
-        didSet {
-            self.buttonTableView.reloadData()
-        }
-    }
+    
     
     weak var delegate: ChatBotButtonDidSelectedDelegate?
     
@@ -60,7 +56,7 @@ class ImageChatBotTableViewCell: UITableViewCell {
 
 extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.buttonList.count + self.sendButtonList.count
+        return self.buttonList.count 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,8 +69,8 @@ extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.chatBotButtonDidSelected(index: indexPath.row)
-        //print(self.k[indexPath.row])
         print("ImageChatBot - didSelectedIndex: \(indexPath.row)")
+        
     }
     
  
