@@ -68,7 +68,5 @@ extension NoneImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSou
         self.delegate?.chatBotButtonDidSelected(index: indexPath.row)
         print("NoneImageChatBot - didSelectedIndex: \(indexPath.row)")
     }
-    
-
- 
+   
 }

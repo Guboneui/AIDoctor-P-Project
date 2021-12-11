@@ -51,6 +51,7 @@ class ImageChatBotTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+  
 }
 
 
@@ -69,7 +70,7 @@ extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.chatBotButtonDidSelected(index: indexPath.row)
-        print("ImageChatBot - didSelectedIndex: \(indexPath.row)")
+        AIDoctorLog.debug("ImageChatBot - didSelectedIndex: \(indexPath.row)")
         
     }
     

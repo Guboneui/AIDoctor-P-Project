@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 struct ChatResponse {
     var sender: String
     var type: String
@@ -25,9 +27,7 @@ class ChatBotViewModel {
     
     var buttonList: SendChatResults? {
         didSet {
-            print("viewModel - button List set")
-            print(buttonList)
-            chatView?.chatTableView.reloadData()
+       //     chatView?.chatTableView.reloadData()
         }
     }
     
@@ -40,6 +40,11 @@ class ChatBotViewModel {
     
     var chatBot: [ChatResponse] = [] {
         didSet {
+            print("--------------------------------------------------------")
+            chatBot.forEach { item in
+                AIDoctorLog.debug(item)
+            }
+            print("--------------------------------------------------------")
             self.chatView?.chatTableView.reloadData()
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
                 self.chatView?.view.layoutIfNeeded()
@@ -49,7 +54,7 @@ class ChatBotViewModel {
             })
         }
     }
-    
+
     
     
     func getChatStart() {
@@ -93,32 +98,17 @@ class ChatBotViewModel {
                     let data = response.results![i]
                     let chatData = ChatResponse(sender: "chatBot", type: data.type, message: data.message)
                     //print("chatData: \(chatData)")
+                    //self.chatBot.append(chatData)
                     self.chatBot.append(chatData)
                     
                 }
                 
-                print(self.chatBot)
                 
-                
-                let size = response.results?.count
-                
-                print("🤬🤬🤬🤬🤬🤬🤬🤬")
-                
-                guard let test = response.results else {
+                guard let result = response.results else {
                     return
                 }
                 
-                self.buttonList = test[test.count - 1]
-                
-                
-//                print(type(of: self.buttonList))
-//                print(type(of: test[test.count - 1]))
-//                print(test[test.count - 1])
-                
-                
-                
-                
-                
+                self.buttonList = result[result.count - 1]
                 self.sendBotMessage = response.results!
             } else {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
