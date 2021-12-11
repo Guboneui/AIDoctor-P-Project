@@ -144,11 +144,19 @@ class ChatBotViewController: UIViewController {
     }
     
     @IBAction func sendMessageButtonAction(_ sender: Any) {
-        let param = SendChatBotRequest(message: "기침")
-        let message = SendChatMessage(title: "기침", listItem: nil)
+        
+        guard let question = self.messageTextField.text?.trim, question.isExists else {
+            print("메세지창이 비어있습니다.")
+            return
+        }
+        
+        let param = SendChatBotRequest(message: question)
+        let message = SendChatMessage(title: question, listItem: nil)
         let userMessage = ChatResponse(sender: "user", type: "Text", message: message)
         self.viewModel.chatBot.append(userMessage)
         self.viewModel.postChatSend(param)
+        
+        self.messageTextField.text = nil
     }
     
     
@@ -187,16 +195,16 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
                 cell.userChatLabel.text = data.message.title
                 cell.selectionStyle = .none
+                
                 return cell
             } else {
                 
-                
-                if data.message.title.contains("<img") || data.message.title.contains("jpg") {
+                if data.message.title.contains("png") {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "ImageChatBotTableViewCell", for: indexPath) as! ImageChatBotTableViewCell
                     let startIndex: String.Index = data.message.title.index(data.message.title.startIndex, offsetBy: 10)
                     let endIndex: String.Index = data.message.title.index(data.message.title.endIndex, offsetBy: -2)
                     let imageString = data.message.title[startIndex..<endIndex]
-                    print(imageString)
+                    print("🤯imageString: \(imageString)")
                     let url = URL(string: String(imageString))
                     cell.chatBotImage.kf.setImage(with: url)
                     cell.contentsLabel.text = ""
@@ -206,14 +214,43 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                     //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
                     
+                    cell.sendButtonList = data.message.listItem ?? []
+                    
                     return cell
-                } else {
+                }
+                
+                
+                
+                else if data.message.title.contains("<img") || data.message.title.contains("jpg") {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "ImageChatBotTableViewCell", for: indexPath) as! ImageChatBotTableViewCell
+                    let startIndex: String.Index = data.message.title.index(data.message.title.startIndex, offsetBy: 10)
+                    let endIndex: String.Index = data.message.title.index(data.message.title.endIndex, offsetBy: -2)
+                    let imageString = data.message.title[startIndex..<endIndex]
+                    print("🤯imageString: \(imageString)")
+                    let url = URL(string: String(imageString))
+                    cell.chatBotImage.kf.setImage(with: url)
+                    cell.contentsLabel.text = ""
+                    //let font = UIFont.systemFont(ofSize: 16)
+                    //cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
+                    
+                    cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
+                    //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
+                    
+                    cell.sendButtonList = data.message.listItem ?? []
+                    
+                    return cell
+                }
+                
+                
+                
+                else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
                     let font = UIFont.systemFont(ofSize: 16)
                     cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
                     
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
-                    //cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
+                    cell.buttonList = data.message.listItem ?? []
+                    
                     cell.selectionStyle = .none
                     return cell
                 }

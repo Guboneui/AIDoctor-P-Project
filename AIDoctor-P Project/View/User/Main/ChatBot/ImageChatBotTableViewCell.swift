@@ -23,6 +23,12 @@ class ImageChatBotTableViewCell: UITableViewCell {
         }
     }
     
+    var sendButtonList: [SendListItem] = [] {
+        didSet {
+            self.buttonTableView.reloadData()
+        }
+    }
+    
     weak var delegate: ChatBotButtonDidSelectedDelegate?
     
     override func awakeFromNib() {
@@ -54,7 +60,7 @@ class ImageChatBotTableViewCell: UITableViewCell {
 
 extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.buttonList.count
+        return self.buttonList.count + self.sendButtonList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

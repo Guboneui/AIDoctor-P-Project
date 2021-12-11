@@ -16,6 +16,13 @@ class NoneImageChatBotTableViewCell: UITableViewCell {
     
     weak var delegate: ChatBotButtonDidSelectedDelegate?
     
+    var buttonList: [SendListItem] = [] {
+        didSet {
+            self.buttonTableView.reloadData()
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -44,12 +51,14 @@ class NoneImageChatBotTableViewCell: UITableViewCell {
 
 extension NoneImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.buttonList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatBotButtonTableViewCell", for: indexPath) as! ChatBotButtonTableViewCell
         cell.selectionStyle = .none
+        
+        
         return cell
     }
     
