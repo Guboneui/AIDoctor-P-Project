@@ -40,11 +40,7 @@ class ChatBotViewModel {
     
     var chatBot: [ChatResponse] = [] {
         didSet {
-            print("--------------------------------------------------------")
-            chatBot.forEach { item in
-                AIDoctorLog.debug(item)
-            }
-            print("--------------------------------------------------------")
+
             self.chatView?.chatTableView.reloadData()
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
                 self.chatView?.view.layoutIfNeeded()

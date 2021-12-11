@@ -27,12 +27,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwD-IH-E8M">
                         <rect key="frame" x="65" y="22.5" width="195" height="388.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t03-3Z-M2V">
-                                <rect key="frame" x="10" y="12" width="175" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l71-HB-pVo">
                                 <rect key="frame" x="10" y="41.5" width="175" height="337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,16 +35,22 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb6-t2-6ZW">
+                                <rect key="frame" x="10" y="12" width="175" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="gray1"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="l71-HB-pVo" secondAttribute="trailing" constant="10" id="0QH-W7-MjP"/>
+                            <constraint firstItem="wb6-t2-6ZW" firstAttribute="leading" secondItem="mwD-IH-E8M" secondAttribute="leading" constant="10" id="OXr-YZ-TNK"/>
+                            <constraint firstItem="wb6-t2-6ZW" firstAttribute="top" secondItem="mwD-IH-E8M" secondAttribute="top" constant="12" id="Thi-Kn-14t"/>
                             <constraint firstItem="l71-HB-pVo" firstAttribute="leading" secondItem="mwD-IH-E8M" secondAttribute="leading" constant="10" id="YlK-d8-H8V"/>
-                            <constraint firstAttribute="trailing" secondItem="t03-3Z-M2V" secondAttribute="trailing" constant="10" id="eoi-kG-vMj"/>
+                            <constraint firstItem="l71-HB-pVo" firstAttribute="top" secondItem="wb6-t2-6ZW" secondAttribute="bottom" constant="10" id="c96-EB-XC0"/>
                             <constraint firstAttribute="bottom" secondItem="l71-HB-pVo" secondAttribute="bottom" constant="10" id="fAK-9m-uk7"/>
-                            <constraint firstItem="t03-3Z-M2V" firstAttribute="top" secondItem="mwD-IH-E8M" secondAttribute="top" constant="12" id="wSl-JZ-YJ0"/>
-                            <constraint firstItem="t03-3Z-M2V" firstAttribute="leading" secondItem="mwD-IH-E8M" secondAttribute="leading" constant="10" id="whA-7r-Jsx"/>
-                            <constraint firstItem="l71-HB-pVo" firstAttribute="top" secondItem="t03-3Z-M2V" secondAttribute="bottom" constant="10" id="wpQ-q4-Z0G"/>
+                            <constraint firstAttribute="trailing" secondItem="wb6-t2-6ZW" secondAttribute="trailing" constant="10" id="tfr-nK-4f8"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -68,7 +68,7 @@
                 <outlet property="baseView" destination="mwD-IH-E8M" id="Rye-VS-aB7"/>
                 <outlet property="buttonTableView" destination="l71-HB-pVo" id="btw-o0-qm5"/>
                 <outlet property="buttonTableViewHeight" destination="gJB-CK-UPL" id="Nwz-Ad-Ew1"/>
-                <outlet property="contentsLabel" destination="t03-3Z-M2V" id="COA-SG-kC2"/>
+                <outlet property="contentsLabel" destination="wb6-t2-6ZW" id="SpY-4s-lb3"/>
             </connections>
             <point key="canvasLocation" x="73.913043478260875" y="133.59375"/>
         </tableViewCell>

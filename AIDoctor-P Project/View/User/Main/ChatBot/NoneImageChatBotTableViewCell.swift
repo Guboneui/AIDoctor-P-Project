@@ -14,6 +14,8 @@ class NoneImageChatBotTableViewCell: UITableViewCell {
     @IBOutlet var buttonTableView: UITableView!
     @IBOutlet var buttonTableViewHeight: NSLayoutConstraint!
     
+    
+    
     weak var delegate: ChatBotButtonDidSelectedDelegate?
     
     var buttonList: [ListItem] = [] {
@@ -39,6 +41,11 @@ class NoneImageChatBotTableViewCell: UITableViewCell {
         baseView.layer.cornerRadius = 15
         baseView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner)
         
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.contentsLabel.attributedText = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
