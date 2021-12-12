@@ -113,13 +113,7 @@ class ChatBotViewController: UIViewController {
         chatTableView.register(UINib(nibName: "NoneImageChatBotTableViewCell", bundle: nil), forCellReuseIdentifier: "NoneImageChatBotTableViewCell")
         chatTableView.register(UINib(nibName: "UserChatTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatTableViewCell")
         
-        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: {(completed) in
-            let indexPath = IndexPath(row: 2, section: 0)
-            //self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        })
-        
+     
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -186,9 +180,8 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             let url = URL(string: self.viewModel.startBotMessage?.thumbnail ?? "")
             cell.chatBotImage.kf.setImage(with: url)
-            let font = UIFont.systemFont(ofSize: 16)
-            cell.contentsLabel.attributedText = self.viewModel.startBotMessage?.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
             
+            cell.contentsLabel.attributedText = self.viewModel.startBotMessage?.title.htmlToAttributedStringMethod(font: UIFont.systemFont(ofSize: 16), color: UIColor.black, lineHeight: 1.5)
             
             
             cell.buttonTableViewHeight.constant = CGFloat((viewModel.startBotMessage?.listItem?.count ?? 0) * 40)
@@ -223,17 +216,11 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
-                        let font = UIFont.systemFont(ofSize: 16)
-                        //cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
-                        //cell.contentsLabel.text = data.message.title
-                        //cell.contentsLabel.text = data.message.title
+                       
                         
                         
-                        if let attributedData = data.message.title.htmlAttributedString {
-                            cell.contentsLabel.attributedText = attributedData
-                            cell.contentsLabel.sizeToFit()
-                        }
-                        
+                        cell.contentsLabel.attributedText = data.message.title.htmlToAttributedStringMethod(font: UIFont.systemFont(ofSize: 16), color: UIColor.black, lineHeight: 1.5)
+
                         
                         cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                         cell.buttonList = data.message.listItem ?? []
@@ -244,17 +231,10 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                 } else if data.type == "SMART_CARD"{
                     let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
-                    let font = UIFont.systemFont(ofSize: 16)
-                    //cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
-                    //cell.contentsLabel.text = data.message.title
-                    
-                    if let attributedData = data.message.title.htmlAttributedString {
-                        cell.contentsLabel.attributedText = attributedData
-                        cell.contentsLabel.sizeToFit()
-                    }
+                    cell.contentsLabel.attributedText = data.message.title.htmlToAttributedStringMethod(font: UIFont.systemFont(ofSize: 16), color: UIColor.black, lineHeight: 1.5)
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                     cell.buttonList = data.message.listItem ?? []
-                    //cell.buttonList = self.viewModel.buttonList?.message.listItem ?? []
+                    
                     cell.delegate = self
                     cell.selectionStyle = .none
                     return cell
