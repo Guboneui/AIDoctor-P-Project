@@ -28,6 +28,7 @@ class ChatBotViewController: UIViewController {
     @IBOutlet weak var chatBaseView: UIView!
     @IBOutlet weak var emergencyButton: UIButton!
     @IBOutlet weak var bottomViewBottomConstraint: NSLayoutConstraint!
+    var resetButton: UIBarButtonItem!
     
     override func loadView() {
         super.loadView()
@@ -38,6 +39,7 @@ class ChatBotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setNavigationBar()
         delegate?.firstTabbarItem()
         
@@ -98,6 +100,22 @@ class ChatBotViewController: UIViewController {
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
             NSAttributedString.Key.foregroundColor: UIColor(named: "primary2")!
         ]
+        
+        resetButton = UIBarButtonItem(title: "초기화", style: .done, target: self, action: #selector(resetChatBot))
+        resetButton.tintColor = UIColor(named: "primary2")!
+        self.navigationItem.rightBarButtonItem = resetButton
+        
+    }
+    
+    @objc func resetChatBot() {
+        AIDoctorLog.debug("초기화")
+        
+        let reset: String = "초기화"
+        let param = SendChatBotRequest(message: reset)
+        let message = SendChatMessage(title: reset, listItem: nil)
+        let userMessage = ChatResponse(sender: "user", type: "User", message: message)
+        self.viewModel.chatBot.append(userMessage)
+        self.viewModel.postChatSend(param)
     }
     
     func setTableView() {
