@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Combine
 
 
 struct ChatResponse {
@@ -27,7 +27,7 @@ class ChatBotViewModel {
     
     var buttonList: SendChatResults? {
         didSet {
-       //     chatView?.chatTableView.reloadData()
+            //     chatView?.chatTableView.reloadData()
         }
     }
     
@@ -38,19 +38,21 @@ class ChatBotViewModel {
     }
     
     
-    var chatBot: [ChatResponse] = [] {
+    @Published var chatBot: [ChatResponse] = [] {
         didSet {
-
+            AIDoctorLog.debug("😍 ChatBotViewModel - ChatBot DidSet")
             self.chatView?.chatTableView.reloadData()
-            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-                self.chatView?.view.layoutIfNeeded()
-            }, completion: {(completed) in
-                let indexPath = IndexPath(row: self.chatBot.count, section: 0)
-                self.chatView?.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-            })
+            let indexPath = IndexPath(row: self.chatBot.count, section: 0)
+            self.chatView?.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+            //                //self.chatView?.view.layoutIfNeeded()
+            //            }, completion: {(completed) in
+            //                let indexPath = IndexPath(row: self.chatBot.count, section: 0)
+            //                self.chatView?.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+            //            })
         }
     }
-
+    
     
     
     func getChatStart() {
@@ -113,5 +115,5 @@ class ChatBotViewModel {
             AIDoctorLog.debug("ChatBotViewModel - postChatSend Error: \(error)")
         }
     }
-
+    
 }

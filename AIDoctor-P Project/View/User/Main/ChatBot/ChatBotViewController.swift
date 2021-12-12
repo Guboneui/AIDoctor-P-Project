@@ -9,6 +9,7 @@ import UIKit
 import IQKeyboardManager
 import Kingfisher
 import CoreMIDI
+import Combine
 
 protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
@@ -19,6 +20,8 @@ class ChatBotViewController: UIViewController {
     var isStart: Bool = false
     
     weak var delegate: WhenViewDisappear?
+    
+    var subscriptions = Set<AnyCancellable>()
     
     @IBOutlet var messageTextField: UITextField!
     @IBOutlet weak var chatTableView: UITableView!
@@ -46,6 +49,9 @@ class ChatBotViewController: UIViewController {
         
         self.viewModel.chatView = self
         self.viewModel.getChatStart()
+        
+        // 뷰모델 채팅 메세지 목록 값 연결
+        self.setChatMessagesBinding()
         
         
     }
@@ -265,18 +271,17 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
     func chatBotButtonDidSelected(index: Int) {
-        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: {(completed) in
-            //self.view.layoutIfNeeded()
-            let indexPath = IndexPath(row: self.viewModel.chatBot.count, section: 0)
-            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        })
+//        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+//            self.view.layoutIfNeeded()
+//        }, completion: {(completed) in
+//            //self.view.layoutIfNeeded()
+//            let indexPath = IndexPath(row: self.viewModel.chatBot.count, section: 0)
+//            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+//        })
         
-        //let param = SendChatBotRequest(message: (self.viewModel.startBotMessage?.listItem![index].value)!)
         
         let param = SendChatBotRequest(message: (self.viewModel.buttonList?.message.listItem![index].value)!)
-        print("param: \(param)")
+        AIDoctorLog.debug("😍 ChatBotViewController - ChatBotButtonDidSelectedDelegate - ChatBotButtonDidSelected")
         let message = SendChatMessage(title: (self.viewModel.buttonList?.message.listItem![index].value)!, listItem: nil)
         let userMessage = ChatResponse(sender: "user", type: "User", message: message)
         self.viewModel.chatBot.append(userMessage)
@@ -284,3 +289,26 @@ extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
     }
 }
 
+//MARK: - 콤바인 관련 - 채팅 메세지 목록
+extension ChatBotViewController {
+    
+    
+    /// 뷰모델 채팅 메세지목록 바인딩
+    fileprivate func setChatMessagesBinding(){
+        
+        AIDoctorLog.debug("😍 ChatBotViewController - setChatMessagesBinding()")
+        self.viewModel.$chatBot.sink{ updatedMessages in
+            AIDoctorLog.debug("들어온 데이터 updatedMessages.count: \(updatedMessages.count)")
+            
+//            if updatedMessages.count < 2 {
+//                return
+//            }
+//
+//            let indexPath = IndexPath(row: updatedMessages.count, section: 0)
+//
+//            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            
+        }.store(in: &subscriptions)
+    }
+    
+}
