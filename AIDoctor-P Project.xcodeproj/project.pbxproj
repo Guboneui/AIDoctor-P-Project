@@ -57,6 +57,7 @@
 		2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */; };
 		2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */; };
 		2C340244275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */; };
+		2C53D0DE276671E700951797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C53D0DD276671E700951797 /* GoogleService-Info.plist */; };
 		2C7FC11927628AC0003C1222 /* ImageChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FC11727628AC0003C1222 /* ImageChatBotTableViewCell.swift */; };
 		2C7FC11A27628AC0003C1222 /* ImageChatBotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7FC11827628AC0003C1222 /* ImageChatBotTableViewCell.xib */; };
 		2C7FC11D27628C71003C1222 /* NoneImageChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FC11B27628C71003C1222 /* NoneImageChatBotTableViewCell.swift */; };
@@ -185,6 +186,8 @@
 		2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatViewController.swift; sourceTree = "<group>"; };
 		2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatTableViewCell.swift; sourceTree = "<group>"; };
 		2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminMainChatTableViewCell.xib; sourceTree = "<group>"; };
+		2C53D0DC27666C1300951797 /* AIDoctor-P Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIDoctor-P Project.entitlements"; sourceTree = "<group>"; };
+		2C53D0DD276671E700951797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C7FC11727628AC0003C1222 /* ImageChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatBotTableViewCell.swift; sourceTree = "<group>"; };
 		2C7FC11827628AC0003C1222 /* ImageChatBotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageChatBotTableViewCell.xib; sourceTree = "<group>"; };
 		2C7FC11B27628C71003C1222 /* NoneImageChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneImageChatBotTableViewCell.swift; sourceTree = "<group>"; };
@@ -408,6 +411,7 @@
 		2C9B1ADC2757C2FF006FCCCA /* AIDoctor-P Project */ = {
 			isa = PBXGroup;
 			children = (
+				2C53D0DC27666C1300951797 /* AIDoctor-P Project.entitlements */,
 				2CBA1B8F275D2B29000C436C /* DefaultFile */,
 				2C34022A275BF40E009BA8C2 /* Header */,
 				2CCFA393275A708C00B97D2A /* Extension */,
@@ -419,6 +423,7 @@
 				2C9B1AE62757C300006FCCCA /* Assets.xcassets */,
 				2C9B1AE82757C300006FCCCA /* LaunchScreen.storyboard */,
 				2C9B1AEB2757C300006FCCCA /* Info.plist */,
+				2C53D0DD276671E700951797 /* GoogleService-Info.plist */,
 			);
 			path = "AIDoctor-P Project";
 			sourceTree = "<group>";
@@ -788,6 +793,7 @@
 				2C340218275BF3ED009BA8C2 /* map_pin_red@3x.png in Resources */,
 				2C340216275BF3ED009BA8C2 /* copyright.png in Resources */,
 				2C340211275BF3ED009BA8C2 /* map_pinup.png in Resources */,
+				2C53D0DE276671E700951797 /* GoogleService-Info.plist in Resources */,
 				2C34021C275BF3ED009BA8C2 /* map_pin_red.png in Resources */,
 				2C34021E275BF3ED009BA8C2 /* point_sprite.png in Resources */,
 				2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */,
@@ -1065,6 +1071,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "AIDoctor-P Project/AIDoctor-P Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VKGAQDGK5R;
@@ -1074,12 +1081,14 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AIDoctor-P Project/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치정보";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1101,6 +1110,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "AIDoctor-P Project/AIDoctor-P Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VKGAQDGK5R;
@@ -1110,12 +1120,14 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AIDoctor-P Project/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치정보";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

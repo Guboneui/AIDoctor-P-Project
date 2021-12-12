@@ -10,4 +10,6 @@ pod 'Alamofire'
 pod 'SnapKit'
 pod 'IQKeyboardManager'
 pod 'Kingfisher'
+pod 'Firebase'
+pod 'Firebase/Messaging'
 end
