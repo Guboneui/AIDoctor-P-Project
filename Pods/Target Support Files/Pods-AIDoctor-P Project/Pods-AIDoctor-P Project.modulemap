@@ -1,0 +1,6 @@
+framework module Pods_AIDoctor_P_Project {
+  umbrella header "Pods-AIDoctor-P Project-umbrella.h"
+
+  export *
+  module * { export * }
+}

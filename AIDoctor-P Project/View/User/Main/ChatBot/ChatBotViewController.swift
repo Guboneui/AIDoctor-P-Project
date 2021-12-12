@@ -14,7 +14,6 @@ protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
 }
 
-
 class ChatBotViewController: UIViewController {
     
     var isStart: Bool = false
@@ -129,9 +128,9 @@ class ChatBotViewController: UIViewController {
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         cancelButton.setValue(UIColor(named: "primary2"), forKey: "titleTextColor")
         let okButton = UIAlertAction(title: "확인", style: .default, handler: {_ in
-//            if let numberURL = NSURL(string: "tel://" + "119"), UIApplication.shared.canOpenURL(numberURL as URL) {
-//                UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
-//            }
+            //            if let numberURL = NSURL(string: "tel://" + "119"), UIApplication.shared.canOpenURL(numberURL as URL) {
+            //                UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
+            //            }
         })
         okButton.setValue(UIColor(named: "primary2"), forKey: "titleTextColor")
         alert.addAction(cancelButton)
@@ -159,7 +158,7 @@ class ChatBotViewController: UIViewController {
         let userMessage = ChatResponse(sender: "user", type: "User", message: message)
         self.viewModel.chatBot.append(userMessage)
         self.viewModel.postChatSend(param)
-
+        
         self.messageTextField.text = nil
     }
     
@@ -184,7 +183,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             let font = UIFont.systemFont(ofSize: 16)
             cell.contentsLabel.attributedText = self.viewModel.startBotMessage?.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
             
-       
+            
             
             cell.buttonTableViewHeight.constant = CGFloat((viewModel.startBotMessage?.listItem?.count ?? 0) * 40)
             cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
@@ -202,10 +201,10 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
                 cell.userChatLabel.text = data.message.title
                 cell.selectionStyle = .none
-            
+                
                 return cell
             } else {
-
+                
                 if data.type == "TEXT" {
                     if data.message.title.contains("<img") {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "OnlyImageTableViewCell", for: indexPath) as! OnlyImageTableViewCell
@@ -228,7 +227,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                             cell.contentsLabel.attributedText = attributedData
                             cell.contentsLabel.sizeToFit()
                         }
-
+                        
                         
                         cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                         cell.buttonList = data.message.listItem ?? []
@@ -243,19 +242,10 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     //cell.contentsLabel.attributedText = data.message.title.htmlEscaped(font: font, colorHex: "#000000", lineSpacing: 1.5)
                     //cell.contentsLabel.text = data.message.title
                     
-                    
-                    
-                    
-                    
                     if let attributedData = data.message.title.htmlAttributedString {
                         cell.contentsLabel.attributedText = attributedData
                         cell.contentsLabel.sizeToFit()
                     }
-
-//
-                    
-                    
-               
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                     cell.buttonList = data.message.listItem ?? []
                     //cell.buttonList = self.viewModel.buttonList?.message.listItem ?? []
