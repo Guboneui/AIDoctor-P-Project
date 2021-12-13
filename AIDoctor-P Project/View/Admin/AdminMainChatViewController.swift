@@ -10,9 +10,15 @@ import IQKeyboardManager
 
 class AdminMainChatViewController: UIViewController {
 
+    
+    
+    
+    @IBOutlet var messageTextField: UITextField!
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var messageBaseView: UIView!
     @IBOutlet var bottomViewBottomConstraint: NSLayoutConstraint!
+    
+    lazy var viewModel: SendAdminMessageViewModel = SendAdminMessageViewModel()
     
     override func loadView() {
         super.loadView()
@@ -26,6 +32,8 @@ class AdminMainChatViewController: UIViewController {
         setNavigationBar()
         setKeyboardNotification()
         IQKeyboardManager.shared().isEnabled = false
+        
+        self.viewModel.adminChatView = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -89,6 +97,16 @@ class AdminMainChatViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    @IBAction func sendButtonAction(_ sender: Any) {
+        guard let adminMessage = self.messageTextField.text?.trim, adminMessage.isExists else {
+            AIDoctorLog.debug("메세지 창이 비어있습니다.")
+            return
+        }
+        let param = AdminSendFCMRequest(userId: 1, message: adminMessage)
+        self.viewModel.postSendAdminMessage(param)
+    }
+    
 }
 
 

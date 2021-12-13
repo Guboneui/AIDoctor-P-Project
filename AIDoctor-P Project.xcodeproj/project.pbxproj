@@ -19,6 +19,11 @@
 		2C1370182767BEAB0030F520 /* EmergencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370172767BEAB0030F520 /* EmergencyResponse.swift */; };
 		2C13701A2767BF350030F520 /* EmergencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370192767BF350030F520 /* EmergencyRepository.swift */; };
 		2C13701C2767BF790030F520 /* EmergencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13701B2767BF790030F520 /* EmergencyService.swift */; };
+		2C1370212767C7280030F520 /* AdminSendFCMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370202767C7280030F520 /* AdminSendFCMRequest.swift */; };
+		2C1370232767C7300030F520 /* AdminSendFCMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370222767C7300030F520 /* AdminSendFCMResponse.swift */; };
+		2C1370262767C82C0030F520 /* SendAdminMessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370252767C82C0030F520 /* SendAdminMessageRepository.swift */; };
+		2C1370292767C89C0030F520 /* SendAdminMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370282767C89C0030F520 /* SendAdminMessageService.swift */; };
+		2C13702C2767C9280030F520 /* SendAdminMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13702B2767C9280030F520 /* SendAdminMessageViewModel.swift */; };
 		2C160E5427677A9D0015506B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C160E5327677A9D0015506B /* GoogleService-Info.plist */; };
 		2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */; };
 		2C2B828D2760C89300E9ADE5 /* HospitalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */; };
@@ -151,6 +156,11 @@
 		2C1370172767BEAB0030F520 /* EmergencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyResponse.swift; sourceTree = "<group>"; };
 		2C1370192767BF350030F520 /* EmergencyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyRepository.swift; sourceTree = "<group>"; };
 		2C13701B2767BF790030F520 /* EmergencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyService.swift; sourceTree = "<group>"; };
+		2C1370202767C7280030F520 /* AdminSendFCMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSendFCMRequest.swift; sourceTree = "<group>"; };
+		2C1370222767C7300030F520 /* AdminSendFCMResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSendFCMResponse.swift; sourceTree = "<group>"; };
+		2C1370252767C82C0030F520 /* SendAdminMessageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAdminMessageRepository.swift; sourceTree = "<group>"; };
+		2C1370282767C89C0030F520 /* SendAdminMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAdminMessageService.swift; sourceTree = "<group>"; };
+		2C13702B2767C9280030F520 /* SendAdminMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAdminMessageViewModel.swift; sourceTree = "<group>"; };
 		2C160E5327677A9D0015506B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRequest.swift; sourceTree = "<group>"; };
 		2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalResponse.swift; sourceTree = "<group>"; };
@@ -342,6 +352,39 @@
 			path = FCM;
 			sourceTree = "<group>";
 		};
+		2C13701F2767C7050030F520 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2C1370202767C7280030F520 /* AdminSendFCMRequest.swift */,
+				2C1370222767C7300030F520 /* AdminSendFCMResponse.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		2C1370242767C8090030F520 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2C1370252767C82C0030F520 /* SendAdminMessageRepository.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		2C1370272767C8850030F520 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2C1370282767C89C0030F520 /* SendAdminMessageService.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		2C13702A2767C9170030F520 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2C13702B2767C9280030F520 /* SendAdminMessageViewModel.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		2C2F37DA275BA43E00B694D2 /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +552,7 @@
 				2CBA1B94275D2BA9000C436C /* Login Logout */,
 				2CBA1BAC275D3AEF000C436C /* UserHome */,
 				2CCBA7C52763AAB8002B18A7 /* ChatBot */,
+				2C13701F2767C7050030F520 /* Admin */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -520,6 +564,7 @@
 				2CBA1BA1275D2EAC000C436C /* Login Logout */,
 				2CBA1BB5275D3D6C000C436C /* UserHome */,
 				2CCBA7CE2763B172002B18A7 /* ChatBot */,
+				2C13702A2767C9170030F520 /* Admin */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -531,6 +576,7 @@
 				2CBA1B9E275D2DA4000C436C /* Login Logout */,
 				2CBA1BB2275D3C4B000C436C /* UserHome */,
 				2CCBA7CB2763AC6D002B18A7 /* ChatBot */,
+				2C1370272767C8850030F520 /* Admin */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -542,6 +588,7 @@
 				2CBA1B99275D2C16000C436C /* Login Logout */,
 				2CBA1BAF275D3BE2000C436C /* UserHome */,
 				2CCBA7C82763AB70002B18A7 /* ChatBot */,
+				2C1370242767C8090030F520 /* Admin */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -940,8 +987,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBA1BA5275D37DE000C436C /* LogoutResponse.swift in Sources */,
+				2C13702C2767C9280030F520 /* SendAdminMessageViewModel.swift in Sources */,
+				2C1370292767C89C0030F520 /* SendAdminMessageService.swift in Sources */,
 				2C9B1AF82757C679006FCCCA /* ChatBotViewController.swift in Sources */,
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
+				2C1370262767C82C0030F520 /* SendAdminMessageRepository.swift in Sources */,
 				2CBA1BAB275D390E000C436C /* LogoutViewModel.swift in Sources */,
 				2C2B828D2760C89300E9ADE5 /* HospitalResponse.swift in Sources */,
 				2CCBA7CA2763AB94002B18A7 /* ChatBotRepository.swift in Sources */,
@@ -964,6 +1014,7 @@
 				2C13700A2767B48A0030F520 /* UserFCMRepository.swift in Sources */,
 				2CCBA7D62763C30C002B18A7 /* SendChatBotResponse.swift in Sources */,
 				2C1370142767BA3A0030F520 /* DeleteTokenResponse.swift in Sources */,
+				2C1370232767C7300030F520 /* AdminSendFCMResponse.swift in Sources */,
 				2CCBA7D02763B187002B18A7 /* ChatBotViewModel.swift in Sources */,
 				2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */,
 				2CCBA7D42763C2F4002B18A7 /* SendChatBotRequest.swift in Sources */,
@@ -979,6 +1030,7 @@
 				2CCBA7C72763AACF002B18A7 /* StartChatBotResponse.swift in Sources */,
 				2CCFA3B5275A9D5200B97D2A /* DescriptionTableViewCell.swift in Sources */,
 				2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */,
+				2C1370212767C7280030F520 /* AdminSendFCMRequest.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
 				2C13701C2767BF790030F520 /* EmergencyService.swift in Sources */,
 				2C1370022767B2390030F520 /* UserDefaultKey.swift in Sources */,

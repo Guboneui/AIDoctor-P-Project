@@ -138,6 +138,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="sendImage"/>
+                                                <connections>
+                                                    <action selector="sendButtonAction:" destination="fjO-QQ-9Gu" eventType="touchUpInside" id="DNR-Qj-TeH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="borderColor"/>
@@ -185,6 +188,7 @@
                         <outlet property="bottomViewBottomConstraint" destination="VnI-SV-L7g" id="6Tk-s2-0O4"/>
                         <outlet property="mainTableView" destination="exc-if-QOW" id="UhR-Ra-fXU"/>
                         <outlet property="messageBaseView" destination="PE6-RG-kI4" id="RJE-ij-o4P"/>
+                        <outlet property="messageTextField" destination="a3s-Jf-0Zb" id="xpn-4a-NuR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPp-RY-OXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
