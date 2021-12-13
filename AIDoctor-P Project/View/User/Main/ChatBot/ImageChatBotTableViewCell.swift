@@ -23,6 +23,7 @@ class ImageChatBotTableViewCell: UITableViewCell {
         }
     }
     
+    var cellIndex: Int?
     
     
     weak var delegate: ChatBotButtonDidSelectedDelegate?
@@ -69,7 +70,7 @@ extension ImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.chatBotButtonDidSelected(index: indexPath.row)
+        self.delegate?.chatBotButtonDidSelected(arrayIndex: self.cellIndex!, index: indexPath.row)
         AIDoctorLog.debug("ImageChatBot - didSelectedIndex: \(indexPath.row)")
         
     }

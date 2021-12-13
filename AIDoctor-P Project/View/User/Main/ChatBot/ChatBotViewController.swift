@@ -216,6 +216,8 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             cell.buttonList = self.viewModel.startBotMessage?.listItem ?? []
             
             
+            cell.cellIndex = indexPath.row
+            
             return cell
             
             
@@ -264,6 +266,8 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.buttonList = data.message.listItem ?? []
                     self.touchDelegate?.touch(index: indexPath.row)
                     
+                    cell.cellIndex = indexPath.row
+                    
             
                     cell.mainView = self
                     cell.delegate = self
@@ -283,27 +287,44 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
-    func chatBotButtonDidSelected(index: Int) {
-//        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-//            self.view.layoutIfNeeded()
-//        }, completion: {(completed) in
-//            //self.view.layoutIfNeeded()
-//            let indexPath = IndexPath(row: self.viewModel.chatBot.count, section: 0)
-//            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//        })
+    func chatBotButtonDidSelected(arrayIndex: Int, index: Int) {
+
         
-        
-        let param = SendChatBotRequest(message: (self.viewModel.buttonList?.message.listItem![index].value)!)
-        AIDoctorLog.debug("😍 ChatBotViewController - ChatBotButtonDidSelectedDelegate - ChatBotButtonDidSelected")
-        let message = SendChatMessage(title: (self.viewModel.buttonList?.message.listItem![index].value)!, listItem: nil)
-        if message.title == "네, 호출해주세요." {
-            AIDoctorLog.debug("119 연결 및 병원 관리자 연결이 진행됩니다.")
-            let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
-            self.viewModel.postEmergency(emergencyParam)
+        if self.viewModel.chatBot.count > 1 {
+            
+            let sendData = self.viewModel.chatBot[arrayIndex - 1]
+            
+            let param = SendChatBotRequest(message: sendData.message.listItem![index].value)
+            AIDoctorLog.debug("😍 ChatBotViewController - ChatBotButtonDidSelectedDelegate - ChatBotButtonDidSelected")
+            let message = SendChatMessage(title: sendData.message.listItem![index].value, listItem: nil)
+            if message.title == "네, 호출해주세요." {
+                AIDoctorLog.debug("119 연결 및 병원 관리자 연결이 진행됩니다.")
+                let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
+                self.viewModel.postEmergency(emergencyParam)
+            }
+            let userMessage = ChatResponse(sender: "user", type: "User", message: message)
+            self.viewModel.chatBot.append(userMessage)
+            self.viewModel.postChatSend(param)
+            
+        } else {
+            
+            let param = SendChatBotRequest(message: (self.viewModel.buttonList?.message.listItem![index].value)!)
+            AIDoctorLog.debug("😍 ChatBotViewController - ChatBotButtonDidSelectedDelegate - ChatBotButtonDidSelected")
+            let message = SendChatMessage(title: (self.viewModel.buttonList?.message.listItem![index].value)!, listItem: nil)
+            if message.title == "네, 호출해주세요." {
+                AIDoctorLog.debug("119 연결 및 병원 관리자 연결이 진행됩니다.")
+                let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
+                self.viewModel.postEmergency(emergencyParam)
+            }
+            let userMessage = ChatResponse(sender: "user", type: "User", message: message)
+            self.viewModel.chatBot.append(userMessage)
+            self.viewModel.postChatSend(param)
         }
-        let userMessage = ChatResponse(sender: "user", type: "User", message: message)
-        self.viewModel.chatBot.append(userMessage)
-        self.viewModel.postChatSend(param)
+        
+        
+        
+        
+ 
     }
 }
 

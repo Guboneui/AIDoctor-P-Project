@@ -27,13 +27,14 @@ class ChatBotViewModel {
     
     var buttonList: SendChatResults? {
         didSet {
-            //     chatView?.chatTableView.reloadData()
+            AIDoctorLog.debug("buttonList: \(String(describing: buttonList))")
         }
     }
     
-    var sendBotMessage: [SendChatResults] = [] {
+    var sendBotMessage: [SendChatResults]? = [] {
         didSet {
-            //print(sendBotMessage)
+            AIDoctorLog.debug("buttonList: \(String(describing: sendBotMessage))")
+            
         }
     }
     
@@ -106,8 +107,12 @@ class ChatBotViewModel {
                     return
                 }
                 
+                
+                
                 self.buttonList = result[result.count - 1]
-                self.sendBotMessage = response.results!
+                response.results?.forEach({ item in
+                    self.sendBotMessage?.append(item)
+                })
             } else {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
             }

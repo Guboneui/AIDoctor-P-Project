@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ChatBotButtonDidSelectedDelegate: AnyObject {
-    func chatBotButtonDidSelected(index: Int)
+    func chatBotButtonDidSelected(arrayIndex: Int, index: Int)
     
 }
 
@@ -29,7 +29,7 @@ class ChatBotButtonTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
 }

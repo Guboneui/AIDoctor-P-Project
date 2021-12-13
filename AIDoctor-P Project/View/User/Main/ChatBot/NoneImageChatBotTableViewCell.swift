@@ -19,6 +19,10 @@ class NoneImageChatBotTableViewCell: UITableViewCell {
     @IBOutlet var buttonTableViewHeight: NSLayoutConstraint!
     
     
+    
+    
+    var cellIndex: Int?
+    
     weak var mainView: ChatBotViewController?
     
     weak var delegate: ChatBotButtonDidSelectedDelegate?
@@ -77,7 +81,7 @@ extension NoneImageChatBotTableViewCell: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.chatBotButtonDidSelected(index: indexPath.row)
+        self.delegate?.chatBotButtonDidSelected(arrayIndex: self.cellIndex!, index: indexPath.row)
         mainView?.touchDelegate = self
         AIDoctorLog.debug("NoneImageChatBot - didSelectedIndex: \(indexPath.row)")
     }
