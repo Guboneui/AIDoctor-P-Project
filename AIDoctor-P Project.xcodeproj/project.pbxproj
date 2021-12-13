@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C160E5427677A9D0015506B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C160E5327677A9D0015506B /* GoogleService-Info.plist */; };
 		2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */; };
 		2C2B828D2760C89300E9ADE5 /* HospitalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */; };
 		2C2B829027611F8800E9ADE5 /* CovidResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828F27611F8800E9ADE5 /* CovidResponse.swift */; };
@@ -57,7 +58,6 @@
 		2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */; };
 		2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */; };
 		2C340244275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */; };
-		2C53D0DE276671E700951797 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C53D0DD276671E700951797 /* GoogleService-Info.plist */; };
 		2C7FC11927628AC0003C1222 /* ImageChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FC11727628AC0003C1222 /* ImageChatBotTableViewCell.swift */; };
 		2C7FC11A27628AC0003C1222 /* ImageChatBotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7FC11827628AC0003C1222 /* ImageChatBotTableViewCell.xib */; };
 		2C7FC11D27628C71003C1222 /* NoneImageChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FC11B27628C71003C1222 /* NoneImageChatBotTableViewCell.swift */; };
@@ -127,6 +127,7 @@
 
 /* Begin PBXFileReference section */
 		102E7E59E5EAA3108F4B0C55 /* Pods_AIDoctor_P_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIDoctor_P_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C160E5327677A9D0015506B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRequest.swift; sourceTree = "<group>"; };
 		2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalResponse.swift; sourceTree = "<group>"; };
 		2C2B828F27611F8800E9ADE5 /* CovidResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidResponse.swift; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatTableViewCell.swift; sourceTree = "<group>"; };
 		2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminMainChatTableViewCell.xib; sourceTree = "<group>"; };
 		2C53D0DC27666C1300951797 /* AIDoctor-P Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIDoctor-P Project.entitlements"; sourceTree = "<group>"; };
-		2C53D0DD276671E700951797 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C7FC11727628AC0003C1222 /* ImageChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatBotTableViewCell.swift; sourceTree = "<group>"; };
 		2C7FC11827628AC0003C1222 /* ImageChatBotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageChatBotTableViewCell.xib; sourceTree = "<group>"; };
 		2C7FC11B27628C71003C1222 /* NoneImageChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneImageChatBotTableViewCell.swift; sourceTree = "<group>"; };
@@ -423,7 +423,7 @@
 				2C9B1AE62757C300006FCCCA /* Assets.xcassets */,
 				2C9B1AE82757C300006FCCCA /* LaunchScreen.storyboard */,
 				2C9B1AEB2757C300006FCCCA /* Info.plist */,
-				2C53D0DD276671E700951797 /* GoogleService-Info.plist */,
+				2C160E5327677A9D0015506B /* GoogleService-Info.plist */,
 			);
 			path = "AIDoctor-P Project";
 			sourceTree = "<group>";
@@ -722,6 +722,8 @@
 			dependencies = (
 			);
 			name = "AIDoctor-P Project";
+			packageProductDependencies = (
+			);
 			productName = "AIDoctor-P Project";
 			productReference = 2C9B1ADA2757C2FF006FCCCA /* AIDoctor-P Project.app */;
 			productType = "com.apple.product-type.application";
@@ -750,6 +752,8 @@
 				Base,
 			);
 			mainGroup = 2C9B1AD12757C2FF006FCCCA;
+			packageReferences = (
+			);
 			productRefGroup = 2C9B1ADB2757C2FF006FCCCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -793,7 +797,7 @@
 				2C340218275BF3ED009BA8C2 /* map_pin_red@3x.png in Resources */,
 				2C340216275BF3ED009BA8C2 /* copyright.png in Resources */,
 				2C340211275BF3ED009BA8C2 /* map_pinup.png in Resources */,
-				2C53D0DE276671E700951797 /* GoogleService-Info.plist in Resources */,
+				2C160E5427677A9D0015506B /* GoogleService-Info.plist in Resources */,
 				2C34021C275BF3ED009BA8C2 /* map_pin_red.png in Resources */,
 				2C34021E275BF3ED009BA8C2 /* point_sprite.png in Resources */,
 				2C2F37D9275B5C0300B694D2 /* HospitalDetailTableViewCell.xib in Resources */,

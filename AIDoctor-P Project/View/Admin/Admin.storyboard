@@ -41,27 +41,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6i-NK-kCg">
                                 <rect key="frame" x="30" y="193" width="354" height="40"/>
                                 <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="채팅방 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-g1-Pbv">
+                                        <rect key="frame" x="12" y="9.5" width="293" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adminSearch" translatesAutoresizingMaskIntoConstraints="NO" id="t88-cC-hjK">
-                                        <rect key="frame" x="12" y="8" width="24" height="24"/>
+                                        <rect key="frame" x="318" y="8" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="8g7-Ts-r1f"/>
                                             <constraint firstAttribute="width" constant="24" id="Jkq-1L-4DG"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="채팅방 검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-g1-Pbv">
-                                        <rect key="frame" x="49" y="9.5" width="290" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="borderColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="27M-wb-ViZ"/>
+                                    <constraint firstItem="t88-cC-hjK" firstAttribute="leading" secondItem="IfN-g1-Pbv" secondAttribute="trailing" constant="13" id="4Bq-DL-SYw"/>
+                                    <constraint firstItem="IfN-g1-Pbv" firstAttribute="leading" secondItem="C6i-NK-kCg" secondAttribute="leading" constant="12" id="94k-fo-ctD"/>
                                     <constraint firstItem="IfN-g1-Pbv" firstAttribute="centerY" secondItem="C6i-NK-kCg" secondAttribute="centerY" id="Dcx-xn-qQK"/>
-                                    <constraint firstItem="IfN-g1-Pbv" firstAttribute="leading" secondItem="t88-cC-hjK" secondAttribute="trailing" constant="13" id="Drq-sx-XTb"/>
-                                    <constraint firstItem="t88-cC-hjK" firstAttribute="leading" secondItem="C6i-NK-kCg" secondAttribute="leading" constant="12" id="TAM-E3-AfB"/>
+                                    <constraint firstAttribute="trailing" secondItem="t88-cC-hjK" secondAttribute="trailing" constant="12" id="T4c-o3-Ejz"/>
                                     <constraint firstItem="t88-cC-hjK" firstAttribute="centerY" secondItem="C6i-NK-kCg" secondAttribute="centerY" id="fCZ-rf-gim"/>
-                                    <constraint firstAttribute="trailing" secondItem="IfN-g1-Pbv" secondAttribute="trailing" constant="15" id="qt3-yw-Js5"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y34-T0-zjv">
@@ -189,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPp-RY-OXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632" y="94"/>
+            <point key="canvasLocation" x="2672" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h9h-nO-yK4">
