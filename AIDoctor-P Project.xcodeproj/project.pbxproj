@@ -15,6 +15,10 @@
 		2C1370102767B5AD0030F520 /* UserFCMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13700F2767B5AD0030F520 /* UserFCMViewModel.swift */; };
 		2C1370122767BA1F0030F520 /* DeleteTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370112767BA1F0030F520 /* DeleteTokenRequest.swift */; };
 		2C1370142767BA3A0030F520 /* DeleteTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370132767BA3A0030F520 /* DeleteTokenResponse.swift */; };
+		2C1370162767BEA00030F520 /* EmergencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370152767BEA00030F520 /* EmergencyRequest.swift */; };
+		2C1370182767BEAB0030F520 /* EmergencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370172767BEAB0030F520 /* EmergencyResponse.swift */; };
+		2C13701A2767BF350030F520 /* EmergencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1370192767BF350030F520 /* EmergencyRepository.swift */; };
+		2C13701C2767BF790030F520 /* EmergencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13701B2767BF790030F520 /* EmergencyService.swift */; };
 		2C160E5427677A9D0015506B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C160E5327677A9D0015506B /* GoogleService-Info.plist */; };
 		2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */; };
 		2C2B828D2760C89300E9ADE5 /* HospitalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */; };
@@ -143,6 +147,10 @@
 		2C13700F2767B5AD0030F520 /* UserFCMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFCMViewModel.swift; sourceTree = "<group>"; };
 		2C1370112767BA1F0030F520 /* DeleteTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenRequest.swift; sourceTree = "<group>"; };
 		2C1370132767BA3A0030F520 /* DeleteTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTokenResponse.swift; sourceTree = "<group>"; };
+		2C1370152767BEA00030F520 /* EmergencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyRequest.swift; sourceTree = "<group>"; };
+		2C1370172767BEAB0030F520 /* EmergencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyResponse.swift; sourceTree = "<group>"; };
+		2C1370192767BF350030F520 /* EmergencyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyRepository.swift; sourceTree = "<group>"; };
+		2C13701B2767BF790030F520 /* EmergencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyService.swift; sourceTree = "<group>"; };
 		2C160E5327677A9D0015506B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C2B828A2760C87B00E9ADE5 /* HospitalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRequest.swift; sourceTree = "<group>"; };
 		2C2B828C2760C89300E9ADE5 /* HospitalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalResponse.swift; sourceTree = "<group>"; };
@@ -302,6 +310,8 @@
 				2C1370062767B3BE0030F520 /* SetTokenResponse.swift */,
 				2C1370112767BA1F0030F520 /* DeleteTokenRequest.swift */,
 				2C1370132767BA3A0030F520 /* DeleteTokenResponse.swift */,
+				2C1370152767BEA00030F520 /* EmergencyRequest.swift */,
+				2C1370172767BEAB0030F520 /* EmergencyResponse.swift */,
 			);
 			path = FCM;
 			sourceTree = "<group>";
@@ -310,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				2C1370092767B48A0030F520 /* UserFCMRepository.swift */,
+				2C1370192767BF350030F520 /* EmergencyRepository.swift */,
 			);
 			path = FCM;
 			sourceTree = "<group>";
@@ -318,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				2C13700C2767B5290030F520 /* UserFCMService.swift */,
+				2C13701B2767BF790030F520 /* EmergencyService.swift */,
 			);
 			path = FCM;
 			sourceTree = "<group>";
@@ -937,6 +949,7 @@
 				2C2F37D5275B5BA300B694D2 /* HospitalViewController.swift in Sources */,
 				2CBA1B96275D2BC9000C436C /* LoginRequest.swift in Sources */,
 				2C1370122767BA1F0030F520 /* DeleteTokenRequest.swift in Sources */,
+				2C1370182767BEAB0030F520 /* EmergencyResponse.swift in Sources */,
 				2C13700D2767B5290030F520 /* UserFCMService.swift in Sources */,
 				2C7FC11D27628C71003C1222 /* NoneImageChatBotTableViewCell.swift in Sources */,
 				2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */,
@@ -967,6 +980,7 @@
 				2CCFA3B5275A9D5200B97D2A /* DescriptionTableViewCell.swift in Sources */,
 				2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
+				2C13701C2767BF790030F520 /* EmergencyService.swift in Sources */,
 				2C1370022767B2390030F520 /* UserDefaultKey.swift in Sources */,
 				2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */,
 				2C340236275C07AC009BA8C2 /* AdminViewController.swift in Sources */,
@@ -982,9 +996,11 @@
 				2CCBA7CD2763AC7A002B18A7 /* ChatBotService.swift in Sources */,
 				2CBA1BB4275D3C5E000C436C /* UserHomeService.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
+				2C13701A2767BF350030F520 /* EmergencyRepository.swift in Sources */,
 				2CBA1B9D275D2C96000C436C /* ConstantURL.swift in Sources */,
 				2CBA1B98275D2BDC000C436C /* LoginResponse.swift in Sources */,
 				2CCFA3AA275A82BC00B97D2A /* HospitalDetailCollectionViewCell.swift in Sources */,
+				2C1370162767BEA00030F520 /* EmergencyRequest.swift in Sources */,
 				2C9B1AF62757C646006FCCCA /* SettingViewController.swift in Sources */,
 				2CBA1BAE275D3B16000C436C /* DiseaseResponse.swift in Sources */,
 				2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */,

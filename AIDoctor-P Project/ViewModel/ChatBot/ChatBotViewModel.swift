@@ -116,4 +116,28 @@ class ChatBotViewModel {
         }
     }
     
+    
+    
+    
+    //MARK: - 응급상황 FCM
+    
+    let emergencyService: EmergencyService = EmergencyService()
+    func postEmergency(_ parameters: EmergencyRequest) {
+        emergencyService.postEmergency(parameters, onCompleted: { response in
+            AIDoctorLog.debug("ChatBotViewModel - postEmergency")
+            
+            let message = response.message
+            let code = response.code
+            
+            if response.isSuccess == true {
+                AIDoctorLog.debug("code: \(code), message: \(message)")
+                
+            } else {
+                AIDoctorLog.debug("code: \(code), message: \(message)")
+            }
+        }, onError: { error in
+            AIDoctorLog.debug("UserHomeViewModel - postEmergency Error: \(error)")
+        })
+    }
+    
 }

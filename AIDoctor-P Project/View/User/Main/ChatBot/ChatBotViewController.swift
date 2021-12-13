@@ -152,6 +152,10 @@ class ChatBotViewController: UIViewController {
         let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
         cancelButton.setValue(UIColor(named: "primary2"), forKey: "titleTextColor")
         let okButton = UIAlertAction(title: "확인", style: .default, handler: {_ in
+            AIDoctorLog.debug("119 연결 및 병원 관리자 연결이 진행됩니다.")
+            let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
+            self.viewModel.postEmergency(emergencyParam)
+            
             //            if let numberURL = NSURL(string: "tel://" + "119"), UIApplication.shared.canOpenURL(numberURL as URL) {
             //                UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
             //            }
@@ -274,9 +278,6 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
-   
-   
 }
 
 
@@ -295,6 +296,11 @@ extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
         let param = SendChatBotRequest(message: (self.viewModel.buttonList?.message.listItem![index].value)!)
         AIDoctorLog.debug("😍 ChatBotViewController - ChatBotButtonDidSelectedDelegate - ChatBotButtonDidSelected")
         let message = SendChatMessage(title: (self.viewModel.buttonList?.message.listItem![index].value)!, listItem: nil)
+        if message.title == "네, 호출해주세요." {
+            AIDoctorLog.debug("119 연결 및 병원 관리자 연결이 진행됩니다.")
+            let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
+            self.viewModel.postEmergency(emergencyParam)
+        }
         let userMessage = ChatResponse(sender: "user", type: "User", message: message)
         self.viewModel.chatBot.append(userMessage)
         self.viewModel.postChatSend(param)
