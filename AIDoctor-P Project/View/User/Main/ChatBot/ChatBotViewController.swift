@@ -15,11 +15,17 @@ protocol WhenViewDisappear: AnyObject{
     func firstTabbarItem()
 }
 
+protocol TouchingDelegate: AnyObject {
+    func touch(index: Int)
+}
+
 class ChatBotViewController: UIViewController {
     
     var isStart: Bool = false
     
     weak var delegate: WhenViewDisappear?
+    
+    weak var touchDelegate: TouchingDelegate?
     
     var subscriptions = Set<AnyCancellable>()
     
@@ -252,7 +258,10 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.contentsLabel.attributedText = data.message.title.htmlToAttributedStringMethod(font: UIFont.systemFont(ofSize: 16), color: UIColor.black, lineHeight: 1.5)
                     cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                     cell.buttonList = data.message.listItem ?? []
+                    self.touchDelegate?.touch(index: indexPath.row)
                     
+            
+                    cell.mainView = self
                     cell.delegate = self
                     cell.selectionStyle = .none
                     return cell
@@ -265,7 +274,12 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+   
+   
 }
+
+
 
 extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
     func chatBotButtonDidSelected(index: Int) {

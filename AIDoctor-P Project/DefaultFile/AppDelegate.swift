@@ -112,6 +112,7 @@ extension AppDelegate: MessagingDelegate {
         )
         
         AIDoctorLog.debug("Firebase registration token: \(fcmToken ?? "")")
+        UserDefaults.standard.set(fcmToken, forKey: UserDefaultKey.fcmToken)
         AIDoctorLog.debug(NotificationCenter.default.post(
             name: Notification.Name("FCMToken"),
             object: nil,

@@ -25,12 +25,34 @@ class LogoutViewModel {
             if response.isSuccess == true {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
                 self.delegate?.goLoginView()
+                let param = DeleteTokenRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
+                self.postDeleteToken(param)
             } else {
                 AIDoctorLog.debug("code: \(code), message: \(message)")
             }
         }, onError: {error in
             AIDoctorLog.debug("LogoutViewModel - getLogout Error: \(error)")
             AIDoctorLog.debug("LogoutViewModel - getLogout")
+        })
+    }
+    
+    let userFCMService = UserFCMService()
+    func postDeleteToken(_ parameters: DeleteTokenRequest) {
+        userFCMService.postDeleteToken(parameters, onCompleted: {  response in
+            AIDoctorLog.debug("UserFCMViewModel - postDeleteToken")
+            
+            let message = response.message
+            let code = response.code
+            
+            if response.isSuccess == true {
+                AIDoctorLog.debug("code: \(code), message: \(message)")
+                
+            } else {
+                AIDoctorLog.debug("code: \(code), message: \(message)")
+            }
+        }, onError: {error in
+            AIDoctorLog.debug("UserFCMViewModel - postDeleteToken Error: \(error)")
+            AIDoctorLog.debug("UserFCMViewModel - postDeleteToken")
         })
     }
 }
