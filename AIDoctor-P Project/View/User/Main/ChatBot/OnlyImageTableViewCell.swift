@@ -18,7 +18,6 @@ class OnlyImageTableViewCell: UITableViewCell {
     }
     
 
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         layoutIfNeeded()
