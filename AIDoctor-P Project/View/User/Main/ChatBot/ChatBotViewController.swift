@@ -20,7 +20,7 @@ class ChatBotViewController: UIViewController {
     var isStart: Bool = false
     
     weak var delegate: WhenViewDisappear?
-
+    
     
     var subscriptions = Set<AnyCancellable>()
     
@@ -132,7 +132,7 @@ class ChatBotViewController: UIViewController {
         chatTableView.register(UINib(nibName: "NoneImageChatBotTableViewCell", bundle: nil), forCellReuseIdentifier: "NoneImageChatBotTableViewCell")
         chatTableView.register(UINib(nibName: "UserChatTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatTableViewCell")
         
-     
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -151,9 +151,9 @@ class ChatBotViewController: UIViewController {
             let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
             self.viewModel.postEmergency(emergencyParam)
             
-            //            if let numberURL = NSURL(string: "tel://" + "119"), UIApplication.shared.canOpenURL(numberURL as URL) {
-            //                UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
-            //            }
+            if let numberURL = NSURL(string: "tel://" + "010-8749-2753"), UIApplication.shared.canOpenURL(numberURL as URL) {
+                UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
+            }
         })
         okButton.setValue(UIColor(named: "primary2"), forKey: "titleTextColor")
         alert.addAction(cancelButton)
@@ -241,11 +241,11 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "NoneImageChatBotTableViewCell", for: indexPath) as! NoneImageChatBotTableViewCell
-                       
+                        
                         
                         
                         cell.contentsLabel.attributedText = data.message.title.htmlToAttributedStringMethod(font: UIFont.systemFont(ofSize: 16), color: UIColor.black, lineHeight: 1.5)
-
+                        
                         
                         cell.buttonTableViewHeight.constant = CGFloat((data.message.listItem?.count ?? 0) * 40)
                         cell.buttonList = data.message.listItem ?? []
@@ -261,7 +261,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.buttonList = data.message.listItem ?? []
                     cell.cellIndex = indexPath.row
                     
-            
+                    
                     cell.mainView = self
                     cell.delegate = self
                     cell.selectionStyle = .none
@@ -281,7 +281,7 @@ extension ChatBotViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
     func chatBotButtonDidSelected(arrayIndex: Int, index: Int) {
-
+        
         
         if self.viewModel.chatBot.count > 1 {
             
@@ -292,6 +292,9 @@ extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
             let message = SendChatMessage(title: sendData.message.listItem![index].value, listItem: nil)
             if message.title == "네, 호출해주세요." {
                 AIDoctorLog.debug("119 연결 및 병원 관리자 연결이 진행됩니다.")
+                if let numberURL = NSURL(string: "tel://" + "010-8749-2753"), UIApplication.shared.canOpenURL(numberURL as URL) {
+                    UIApplication.shared.open(numberURL as URL, options: [:], completionHandler: nil)
+                }
                 let emergencyParam = EmergencyRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId))
                 self.viewModel.postEmergency(emergencyParam)
             }
@@ -313,11 +316,6 @@ extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
             self.viewModel.chatBot.append(userMessage)
             self.viewModel.postChatSend(param)
         }
-        
-        
-        
-        
- 
     }
 }
 
@@ -332,13 +330,13 @@ extension ChatBotViewController {
         self.viewModel.$chatBot.sink{ updatedMessages in
             AIDoctorLog.debug("들어온 데이터 updatedMessages.count: \(updatedMessages.count)")
             
-//            if updatedMessages.count < 2 {
-//                return
-//            }
-//
-//            let indexPath = IndexPath(row: updatedMessages.count, section: 0)
-//
-//            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            //            if updatedMessages.count < 2 {
+            //                return
+            //            }
+            //
+            //            let indexPath = IndexPath(row: updatedMessages.count, section: 0)
+            //
+            //            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             
         }.store(in: &subscriptions)
     }
