@@ -23,6 +23,12 @@ class AdminSettingViewController: UIViewController {
         defaultAlertSwitch.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         self.logoutViewModel.adminSettingView = self
         self.logoutViewModel.delegate = self
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
     
 

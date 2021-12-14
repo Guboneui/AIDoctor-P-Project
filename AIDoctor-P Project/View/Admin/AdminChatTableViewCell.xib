@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-8H-XWa">
                         <rect key="frame" x="0.0" y="15" width="377" height="53"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="wWr-Pp-2uS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="wWr-Pp-2uS">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wWr-Pp-2uS" secondAttribute="height" id="5r6-Uu-Uij"/>
@@ -78,7 +78,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="test" width="300" height="300"/>
+        <image name="profile" width="100" height="100"/>
         <namedColor name="gray1">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
