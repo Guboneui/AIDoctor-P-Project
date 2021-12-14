@@ -37,7 +37,7 @@ class LoginViewModel {
                     return
                 }
                 
-                let param = SetTokenRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId), token: fcmToken)
+                let param = SetTokenRequest(userId: UserDefaults.standard.integer(forKey: UserDefaultKey.userId), token: fcmToken, os: "ios")
                 self.postSetToken(param)
                 
             } else {

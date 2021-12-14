@@ -42,6 +42,14 @@ class AdminViewController: UIViewController {
         footerView.backgroundColor = .white
         self.mainTableView.tableFooterView = footerView
     }
+    
+    @IBAction func adminSettingButtonAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Admin", bundle: nil)
+        let settingVC = storyBoard.instantiateViewController(withIdentifier: "AdminSettingViewController") as! AdminSettingViewController
+        
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
 }
 
 extension AdminViewController: UITableViewDelegate, UITableViewDataSource {

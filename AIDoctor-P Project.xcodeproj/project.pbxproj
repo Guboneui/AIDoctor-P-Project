@@ -75,6 +75,7 @@
 		2C340240275C0E42009BA8C2 /* AdminMainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */; };
 		2C340243275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */; };
 		2C340244275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */; };
+		2C3A150D27692D880003C58F /* AdminSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A150C27692D880003C58F /* AdminSettingViewController.swift */; };
 		2C63F7A12768CD1D00B7DB60 /* AdminEmListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7A02768CD1D00B7DB60 /* AdminEmListResponse.swift */; };
 		2C63F7A32768CD8600B7DB60 /* AdminHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7A22768CD8600B7DB60 /* AdminHomeRepository.swift */; };
 		2C63F7A52768CDD600B7DB60 /* AdminHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7A42768CDD600B7DB60 /* AdminHomeService.swift */; };
@@ -233,6 +234,7 @@
 		2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatViewController.swift; sourceTree = "<group>"; };
 		2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainChatTableViewCell.swift; sourceTree = "<group>"; };
 		2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminMainChatTableViewCell.xib; sourceTree = "<group>"; };
+		2C3A150C27692D880003C58F /* AdminSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingViewController.swift; sourceTree = "<group>"; };
 		2C53D0DC27666C1300951797 /* AIDoctor-P Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIDoctor-P Project.entitlements"; sourceTree = "<group>"; };
 		2C63F7A02768CD1D00B7DB60 /* AdminEmListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEmListResponse.swift; sourceTree = "<group>"; };
 		2C63F7A22768CD8600B7DB60 /* AdminHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeRepository.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				2C34023F275C0E42009BA8C2 /* AdminMainChatViewController.swift */,
 				2C340241275C0E6A009BA8C2 /* AdminMainChatTableViewCell.swift */,
 				2C340242275C0E6A009BA8C2 /* AdminMainChatTableViewCell.xib */,
+				2C3A150C27692D880003C58F /* AdminSettingViewController.swift */,
 				2CCBA7C42763A0E9002B18A7 /* MyPlayground.playground */,
 			);
 			path = Admin;
@@ -1136,6 +1139,7 @@
 				2CCBA7CD2763AC7A002B18A7 /* ChatBotService.swift in Sources */,
 				2CBA1BB4275D3C5E000C436C /* UserHomeService.swift in Sources */,
 				2C2F37E1275BA87E00B694D2 /* UserChatTableViewCell.swift in Sources */,
+				2C3A150D27692D880003C58F /* AdminSettingViewController.swift in Sources */,
 				2C13701A2767BF350030F520 /* EmergencyRepository.swift in Sources */,
 				2CBA1B9D275D2C96000C436C /* ConstantURL.swift in Sources */,
 				2CBA1B98275D2BDC000C436C /* LoginResponse.swift in Sources */,

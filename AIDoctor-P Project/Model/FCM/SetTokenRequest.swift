@@ -10,4 +10,5 @@ import Foundation
 struct SetTokenRequest: Encodable {
     var userId: Int
     var token: String
+    var os: String
 }

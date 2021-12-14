@@ -13,6 +13,7 @@ protocol LogoutViewModelDelegate: AnyObject {
 
 class LogoutViewModel {
     weak var settingView: SettingViewController?
+    weak var adminSettingView: AdminSettingViewController?
     let logoutService = LogoutService()
     weak var delegate: LogoutViewModelDelegate?
     func getLogout() {
