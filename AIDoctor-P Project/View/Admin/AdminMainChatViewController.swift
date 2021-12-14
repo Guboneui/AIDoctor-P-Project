@@ -10,13 +10,12 @@ import IQKeyboardManager
 
 class AdminMainChatViewController: UIViewController {
 
-    
-    
-    
     @IBOutlet var messageTextField: UITextField!
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var messageBaseView: UIView!
     @IBOutlet var bottomViewBottomConstraint: NSLayoutConstraint!
+    
+    var navTitle: String?
     
     lazy var viewModel: SendAdminMessageViewModel = SendAdminMessageViewModel()
     
@@ -34,6 +33,8 @@ class AdminMainChatViewController: UIViewController {
         IQKeyboardManager.shared().isEnabled = false
         
         self.viewModel.adminChatView = self
+        
+        self.title = self.navTitle
     }
     
     override func viewDidDisappear(_ animated: Bool) {

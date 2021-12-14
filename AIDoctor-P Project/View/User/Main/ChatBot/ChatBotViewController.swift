@@ -286,7 +286,6 @@ extension ChatBotViewController: ChatBotButtonDidSelectedDelegate {
         if self.viewModel.chatBot.count > 1 {
             
             let sendData = self.viewModel.chatBot[arrayIndex - 1]
-            
             let param = SendChatBotRequest(message: sendData.message.listItem![index].value)
             AIDoctorLog.debug("😍 ChatBotViewController - ChatBotButtonDidSelectedDelegate - ChatBotButtonDidSelected")
             let message = SendChatMessage(title: sendData.message.listItem![index].value, listItem: nil)

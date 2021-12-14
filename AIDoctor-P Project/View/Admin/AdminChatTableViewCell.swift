@@ -9,6 +9,8 @@ import UIKit
 
 class AdminChatTableViewCell: UITableViewCell {
 
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
