@@ -11,6 +11,13 @@ class SendAdminMessageViewModel {
     weak var adminChatView: AdminMainChatViewController?
     let adminService: SendAdminMessageService = SendAdminMessageService()
     
+    
+    var adminMessage: [String] = [] {
+        didSet {
+            adminChatView?.mainTableView.reloadData()
+        }
+    }
+    
     func postSendAdminMessage(_ parameters: AdminSendFCMRequest) {
         adminService.postSendAdminMessage(parameters, onCompleted: { response in
             AIDoctorLog.debug("SendAdminMessageViewModel - postSendAdminMessage")

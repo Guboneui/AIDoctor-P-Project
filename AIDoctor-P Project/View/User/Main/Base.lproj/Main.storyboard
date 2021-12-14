@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uuu-gk-ptN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uuu-gk-ptN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,13 +28,27 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQU-Dh-cCo">
+                                <rect key="frame" x="354" y="84" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0YS-83-mE7"/>
+                                    <constraint firstAttribute="width" constant="30" id="KdX-GV-WIX"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="alert"/>
+                                <connections>
+                                    <action selector="alertListButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3Q-nW-a5V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DVf-Yy-h3x" secondAttribute="bottom" id="0zL-zE-4J6"/>
+                            <constraint firstItem="WQU-Dh-cCo" firstAttribute="centerY" secondItem="osW-Nu-hI9" secondAttribute="centerY" id="3LS-ct-s15"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osW-Nu-hI9" secondAttribute="trailing" constant="256" id="H3N-kV-YiY"/>
                             <constraint firstItem="DVf-Yy-h3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R6t-Sp-4hg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WQU-Dh-cCo" secondAttribute="trailing" constant="30" id="Ss9-77-GGD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DVf-Yy-h3x" secondAttribute="trailing" id="inK-9a-eGl"/>
                             <constraint firstItem="DVf-Yy-h3x" firstAttribute="top" secondItem="osW-Nu-hI9" secondAttribute="bottom" constant="-25" id="kL3-QN-M05"/>
                             <constraint firstItem="osW-Nu-hI9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mtC-bf-fH5"/>
@@ -48,7 +62,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="-281"/>
+            <point key="canvasLocation" x="770" y="-308"/>
+        </scene>
+        <!--Alert List View Controller-->
+        <scene sceneID="P2e-qu-gX6">
+            <objects>
+                <viewController storyboardIdentifier="AlertListViewController" id="LI1-dr-fbM" customClass="AlertListViewController" customModule="AIDoctor_P_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lpq-5n-DlW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UA5-Yn-fWP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p0M-iz-KbJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UA5-Yn-fWP" firstAttribute="top" secondItem="p0M-iz-KbJ" secondAttribute="top" id="3RW-7a-1Fi"/>
+                            <constraint firstItem="UA5-Yn-fWP" firstAttribute="leading" secondItem="p0M-iz-KbJ" secondAttribute="leading" id="aym-qn-OQb"/>
+                            <constraint firstItem="p0M-iz-KbJ" firstAttribute="trailing" secondItem="UA5-Yn-fWP" secondAttribute="trailing" id="cNf-S4-umE"/>
+                            <constraint firstAttribute="bottom" secondItem="UA5-Yn-fWP" secondAttribute="bottom" id="cQR-DJ-xAQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertListTableView" destination="UA5-Yn-fWP" id="stQ-iv-H5T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Spg-P1-dc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618" y="-523"/>
         </scene>
         <!--Disease View Controller-->
         <scene sceneID="xtB-Ak-Qjw">
@@ -443,6 +488,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alert" width="24" height="24"/>
         <image name="ambulance" width="40" height="40"/>
         <image name="homeDefault" width="30" height="30"/>
         <image name="homeDoctor" width="110" height="110"/>

@@ -69,6 +69,7 @@ extension AdminViewController: UITableViewDelegate, UITableViewDataSource {
         let chatVC = storyBoard.instantiateViewController(withIdentifier: "AdminMainChatViewController") as! AdminMainChatViewController
         let data = self.viewModel.emList[indexPath.row]
         chatVC.navTitle = data.USER_USERID
+        chatVC.userId = data.USER_ID
         
         self.navigationController?.pushViewController(chatVC, animated: true)
     }

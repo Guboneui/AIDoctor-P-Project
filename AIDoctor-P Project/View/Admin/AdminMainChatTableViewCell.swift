@@ -11,6 +11,7 @@ class AdminMainChatTableViewCell: UITableViewCell {
 
     @IBOutlet var baseView: UIView!
     
+    @IBOutlet var messageLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()

@@ -79,6 +79,14 @@
 		2C63F7A32768CD8600B7DB60 /* AdminHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7A22768CD8600B7DB60 /* AdminHomeRepository.swift */; };
 		2C63F7A52768CDD600B7DB60 /* AdminHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7A42768CDD600B7DB60 /* AdminHomeService.swift */; };
 		2C63F7AA2768CE3900B7DB60 /* AdminHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7A92768CE3900B7DB60 /* AdminHomeViewModel.swift */; };
+		2C63F7AD2768DA0500B7DB60 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7AC2768DA0500B7DB60 /* AlertListViewController.swift */; };
+		2C63F7B02768DAFF00B7DB60 /* AlertListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F7AE2768DAFF00B7DB60 /* AlertListTableViewCell.swift */; };
+		2C63F7B12768DAFF00B7DB60 /* AlertListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C63F7AF2768DAFF00B7DB60 /* AlertListTableViewCell.xib */; };
+		2C6F34402768DF5300DF0807 /* EmAlertListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6F343F2768DF5300DF0807 /* EmAlertListRequest.swift */; };
+		2C6F34422768DFD400DF0807 /* EmAlertListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6F34412768DFD400DF0807 /* EmAlertListResponse.swift */; };
+		2C6F34452768E14000DF0807 /* EmAlertListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6F34442768E14000DF0807 /* EmAlertListRepository.swift */; };
+		2C6F34482768E1F200DF0807 /* EmAlertListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6F34472768E1F200DF0807 /* EmAlertListService.swift */; };
+		2C6F344B2768E28600DF0807 /* EmAlertListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6F344A2768E28600DF0807 /* EmAlertListViewModel.swift */; };
 		2C7FC11927628AC0003C1222 /* ImageChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FC11727628AC0003C1222 /* ImageChatBotTableViewCell.swift */; };
 		2C7FC11A27628AC0003C1222 /* ImageChatBotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7FC11827628AC0003C1222 /* ImageChatBotTableViewCell.xib */; };
 		2C7FC11D27628C71003C1222 /* NoneImageChatBotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FC11B27628C71003C1222 /* NoneImageChatBotTableViewCell.swift */; };
@@ -230,6 +238,14 @@
 		2C63F7A22768CD8600B7DB60 /* AdminHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeRepository.swift; sourceTree = "<group>"; };
 		2C63F7A42768CDD600B7DB60 /* AdminHomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeService.swift; sourceTree = "<group>"; };
 		2C63F7A92768CE3900B7DB60 /* AdminHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewModel.swift; sourceTree = "<group>"; };
+		2C63F7AC2768DA0500B7DB60 /* AlertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		2C63F7AE2768DAFF00B7DB60 /* AlertListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListTableViewCell.swift; sourceTree = "<group>"; };
+		2C63F7AF2768DAFF00B7DB60 /* AlertListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListTableViewCell.xib; sourceTree = "<group>"; };
+		2C6F343F2768DF5300DF0807 /* EmAlertListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmAlertListRequest.swift; sourceTree = "<group>"; };
+		2C6F34412768DFD400DF0807 /* EmAlertListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmAlertListResponse.swift; sourceTree = "<group>"; };
+		2C6F34442768E14000DF0807 /* EmAlertListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmAlertListRepository.swift; sourceTree = "<group>"; };
+		2C6F34472768E1F200DF0807 /* EmAlertListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmAlertListService.swift; sourceTree = "<group>"; };
+		2C6F344A2768E28600DF0807 /* EmAlertListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmAlertListViewModel.swift; sourceTree = "<group>"; };
 		2C7FC11727628AC0003C1222 /* ImageChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatBotTableViewCell.swift; sourceTree = "<group>"; };
 		2C7FC11827628AC0003C1222 /* ImageChatBotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageChatBotTableViewCell.xib; sourceTree = "<group>"; };
 		2C7FC11B27628C71003C1222 /* NoneImageChatBotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneImageChatBotTableViewCell.swift; sourceTree = "<group>"; };
@@ -508,6 +524,49 @@
 			path = Admin;
 			sourceTree = "<group>";
 		};
+		2C63F7AB2768D9ED00B7DB60 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C63F7AC2768DA0500B7DB60 /* AlertListViewController.swift */,
+				2C63F7AE2768DAFF00B7DB60 /* AlertListTableViewCell.swift */,
+				2C63F7AF2768DAFF00B7DB60 /* AlertListTableViewCell.xib */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2C6F343E2768DF3900DF0807 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C6F343F2768DF5300DF0807 /* EmAlertListRequest.swift */,
+				2C6F34412768DFD400DF0807 /* EmAlertListResponse.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2C6F34432768E13100DF0807 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C6F34442768E14000DF0807 /* EmAlertListRepository.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2C6F34462768E1E500DF0807 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C6F34472768E1F200DF0807 /* EmAlertListService.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2C6F34492768E27600DF0807 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C6F344A2768E28600DF0807 /* EmAlertListViewModel.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		2C9B1AD12757C2FF006FCCCA = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +624,7 @@
 				2CBA1BAC275D3AEF000C436C /* UserHome */,
 				2CCBA7C52763AAB8002B18A7 /* ChatBot */,
 				2C13701F2767C7050030F520 /* Admin */,
+				2C6F343E2768DF3900DF0807 /* Alert */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -572,6 +632,7 @@
 		2CBA1B91275D2B3E000C436C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2C6F34492768E27600DF0807 /* Alert */,
 				2C13700E2767B5A00030F520 /* FCM */,
 				2CBA1BA1275D2EAC000C436C /* Login Logout */,
 				2CBA1BB5275D3D6C000C436C /* UserHome */,
@@ -584,6 +645,7 @@
 		2CBA1B92275D2B44000C436C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2C6F34462768E1E500DF0807 /* Alert */,
 				2C13700B2767B5180030F520 /* FCM */,
 				2CBA1B9E275D2DA4000C436C /* Login Logout */,
 				2CBA1BB2275D3C4B000C436C /* UserHome */,
@@ -596,6 +658,7 @@
 		2CBA1B93275D2B48000C436C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2C6F34432768E13100DF0807 /* Alert */,
 				2C1370082767B45F0030F520 /* FCM */,
 				2CBA1B99275D2C16000C436C /* Login Logout */,
 				2CBA1BAF275D3BE2000C436C /* UserHome */,
@@ -755,6 +818,7 @@
 		2CCFA397275A738C00B97D2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2C63F7AB2768D9ED00B7DB60 /* Alert */,
 				2C9B1AE12757C2FF006FCCCA /* HomeViewController.swift */,
 				2CCFA398275A73A200B97D2A /* CovidTableViewCell.swift */,
 				2CCFA399275A73A200B97D2A /* CovidTableViewCell.xib */,
@@ -909,6 +973,7 @@
 				2CA7B8442764FA2A0042A846 /* OnlyImageTableViewCell.xib in Resources */,
 				2C340214275BF3ED009BA8C2 /* map_pinup@3x.png in Resources */,
 				2C340234275C0457009BA8C2 /* Admin.storyboard in Resources */,
+				2C63F7B12768DAFF00B7DB60 /* AlertListTableViewCell.xib in Resources */,
 				2C340228275BF3ED009BA8C2 /* map_pin_shadow.png in Resources */,
 				2C340215275BF3ED009BA8C2 /* map_pin_shadow@3x.png in Resources */,
 				2CCFA39B275A73A200B97D2A /* CovidTableViewCell.xib in Resources */,
@@ -1005,6 +1070,7 @@
 				2CCFA3C5275A9DB600B97D2A /* PreventionTableViewCell.swift in Sources */,
 				2C1370262767C82C0030F520 /* SendAdminMessageRepository.swift in Sources */,
 				2CBA1BAB275D390E000C436C /* LogoutViewModel.swift in Sources */,
+				2C63F7B02768DAFF00B7DB60 /* AlertListTableViewCell.swift in Sources */,
 				2C2B828D2760C89300E9ADE5 /* HospitalResponse.swift in Sources */,
 				2C63F7A52768CDD600B7DB60 /* AdminHomeService.swift in Sources */,
 				2CCBA7CA2763AB94002B18A7 /* ChatBotRepository.swift in Sources */,
@@ -1016,12 +1082,14 @@
 				2C13700D2767B5290030F520 /* UserFCMService.swift in Sources */,
 				2C7FC11D27628C71003C1222 /* NoneImageChatBotTableViewCell.swift in Sources */,
 				2C340239275C08E1009BA8C2 /* AdminChatTableViewCell.swift in Sources */,
+				2C6F34482768E1F200DF0807 /* EmAlertListService.swift in Sources */,
 				2CCFA3A6275A80F600B97D2A /* HospitalTableViewCell.swift in Sources */,
 				2CCFA3B9275A9D6C00B97D2A /* SymptomTableViewCell.swift in Sources */,
 				2C9B1AE22757C2FF006FCCCA /* HomeViewController.swift in Sources */,
 				2C9B1ADE2757C2FF006FCCCA /* AppDelegate.swift in Sources */,
 				2CBA1B9B275D2C21000C436C /* LoginRepository.swift in Sources */,
 				2C63F7A12768CD1D00B7DB60 /* AdminEmListResponse.swift in Sources */,
+				2C6F34422768DFD400DF0807 /* EmAlertListResponse.swift in Sources */,
 				2CCFA3BD275A9D7F00B97D2A /* RouteTableViewCell.swift in Sources */,
 				2C9B1AF22757C3DD006FCCCA /* MainTabbarController.swift in Sources */,
 				2C2B829027611F8800E9ADE5 /* CovidResponse.swift in Sources */,
@@ -1031,8 +1099,10 @@
 				2C1370232767C7300030F520 /* AdminSendFCMResponse.swift in Sources */,
 				2CCBA7D02763B187002B18A7 /* ChatBotViewModel.swift in Sources */,
 				2CBA1BA3275D2EB6000C436C /* LoginViewModel.swift in Sources */,
+				2C6F34402768DF5300DF0807 /* EmAlertListRequest.swift in Sources */,
 				2CCBA7D42763C2F4002B18A7 /* SendChatBotRequest.swift in Sources */,
 				2CCFA3A2275A7B3E00B97D2A /* DiseaseDetailTableViewCell.swift in Sources */,
+				2C63F7AD2768DA0500B7DB60 /* AlertListViewController.swift in Sources */,
 				2C1370052767B39D0030F520 /* SetTokenRequest.swift in Sources */,
 				2CCFA392275A616000B97D2A /* UIViewController.swift in Sources */,
 				2CCFA38E275A54AC00B97D2A /* LoginViewController.swift in Sources */,
@@ -1040,6 +1110,7 @@
 				2CCFA39E275A77CE00B97D2A /* DiseaseTableViewCell.swift in Sources */,
 				2CBA1BA0275D2DAC000C436C /* LoginService.swift in Sources */,
 				2CCFA39A275A73A200B97D2A /* CovidTableViewCell.swift in Sources */,
+				2C6F34452768E14000DF0807 /* EmAlertListRepository.swift in Sources */,
 				2CBA1BB1275D3BF6000C436C /* UserHomeRepository.swift in Sources */,
 				2CBA1BB7275D3D80000C436C /* UserHomeViewModel.swift in Sources */,
 				2CCBA7C72763AACF002B18A7 /* StartChatBotResponse.swift in Sources */,
@@ -1047,6 +1118,7 @@
 				2C2B828B2760C87B00E9ADE5 /* HospitalRequest.swift in Sources */,
 				2C1370212767C7280030F520 /* AdminSendFCMRequest.swift in Sources */,
 				2CCFA390275A60A000B97D2A /* AIDoctorLog.swift in Sources */,
+				2C6F344B2768E28600DF0807 /* EmAlertListViewModel.swift in Sources */,
 				2C13701C2767BF790030F520 /* EmergencyService.swift in Sources */,
 				2C1370022767B2390030F520 /* UserDefaultKey.swift in Sources */,
 				2C9B1AF42757C63D006FCCCA /* ChatBaseViewController.swift in Sources */,

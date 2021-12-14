@@ -16,6 +16,7 @@ class AdminMainChatViewController: UIViewController {
     @IBOutlet var bottomViewBottomConstraint: NSLayoutConstraint!
     
     var navTitle: String?
+    var userId: Int?
     
     lazy var viewModel: SendAdminMessageViewModel = SendAdminMessageViewModel()
     
@@ -104,8 +105,12 @@ class AdminMainChatViewController: UIViewController {
             AIDoctorLog.debug("메세지 창이 비어있습니다.")
             return
         }
-        let param = AdminSendFCMRequest(userId: 1, message: adminMessage)
+        
+        self.viewModel.adminMessage.append(adminMessage)
+        
+        let param = AdminSendFCMRequest(userId: self.userId!, message: adminMessage)
         self.viewModel.postSendAdminMessage(param)
+        self.messageTextField.text = nil
     }
     
 }
@@ -113,12 +118,14 @@ class AdminMainChatViewController: UIViewController {
 
 extension AdminMainChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.viewModel.adminMessage.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AdminMainChatTableViewCell", for: indexPath) as! AdminMainChatTableViewCell
         cell.selectionStyle = .none
+        let message = self.viewModel.adminMessage[indexPath.row]
+        cell.messageLabel.text = message
         return cell
     }
     

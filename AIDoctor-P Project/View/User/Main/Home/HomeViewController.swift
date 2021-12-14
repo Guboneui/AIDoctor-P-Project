@@ -63,6 +63,15 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         homeTableView.register(UINib(nibName: "DiseaseTableViewCell", bundle: nil), forCellReuseIdentifier: "DiseaseTableViewCell")
         homeTableView.register(UINib(nibName: "HospitalTableViewCell", bundle: nil), forCellReuseIdentifier: "HospitalTableViewCell")
     }
+    
+    
+    @IBAction func alertListButtonAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let alertListView = storyBoard.instantiateViewController(withIdentifier: "AlertListViewController") as! AlertListViewController
+        self.navigationController?.pushViewController(alertListView, animated: true)
+    }
+    
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -118,6 +127,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             AIDoctorLog.debug("현재 사용자의 위치정보 서비스가 거부되어있습니다.")
         }
     }
+    
+    
+    
 }
 
 extension HomeViewController: DiseaseInfoDelegate {
