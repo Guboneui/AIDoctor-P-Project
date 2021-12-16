@@ -3,19 +3,19 @@
 # 솔트룩스에서 제공된 교육용 챗봇 api 연동을 기반으로 한 질병 진단 서비스
 
 ### Splash
-<img src="https://user-images.githubusercontent.com/73548875/146412504-51f682e0-d879-498d-9d60-cb36d644cd70.jpg" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/73548875/146414551-fa1ea797-0aaf-4303-a9a7-7df2fedab390.jpg" width="200" height="400"/>
                                                                                                                                         
 
 ### Login
-<img src = "https://user-images.githubusercontent.com/73548875/146412589-a724f498-1487-4ec4-9eb5-42d74266ad14.jpg" width="200" height="400"/>                      
+<img src="https://user-images.githubusercontent.com/73548875/146414616-ce8da345-43a5-49a8-afc5-883a0cf7794b.jpg" width="200" height="400"/>                      
 
 ### UserMain
-<img src = "https://user-images.githubusercontent.com/73548875/146412638-8b73786e-9490-4b3b-b79e-226ec3fd60e9.jpg" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/73548875/146414634-b8e87005-f1b7-4ced-93b8-3cda8dc20f21.jpg" width="200" height="400"/>
 
 ### Disease Detail
-<img src = "https://user-images.githubusercontent.com/73548875/146412840-707982fc-f948-41b6-9c8d-c2054786954c.jpg" width="200" height="400"/>                                                                                                                                          
+<img src="https://user-images.githubusercontent.com/73548875/146414645-9e90d773-1f95-402c-9bbc-f9b79d9b74c2.jpg" width="200" height="400"/>                                                                                                                                          
 ### Hospital Detail
-<img src = "https://user-images.githubusercontent.com/73548875/146412962-49cf46ab-7e14-4444-ba96-ef4a0cff2b9b.jpg" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/73548875/146412962-49cf46ab-7e14-4444-ba96-ef4a0cff2b9b.jpg" width="200" height="400"/>
 
 ### ChatBot
-<img src = "https://user-images.githubusercontent.com/73548875/146413020-66f6542d-84f6-442a-86c0-e8dba5b9f554.jpg" width="200" height="400"/>                       
+<img src="https://user-images.githubusercontent.com/73548875/146414657-4d7c3f64-f96a-4b61-a55b-16617bf6b12d.jpg" width="200" height="400"/>                       
